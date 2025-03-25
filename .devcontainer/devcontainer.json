@@ -23,7 +23,8 @@
 				"bradlc.vscode-tailwindcss",
 				"vitest.explorer",
 				"marp-team.marp-vscode",
-				"ms-vscode.live-server"
+				"ms-vscode.live-server",
+				"hediet.vscode-drawio"
 			]
 		}
 	},

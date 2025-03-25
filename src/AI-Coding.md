@@ -218,6 +218,7 @@ print(f'平均値: {average}')
 
 # 3. Cursor によるコード生成 - Composer の力
 
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <div style="width: 55%;">
     <ul>
