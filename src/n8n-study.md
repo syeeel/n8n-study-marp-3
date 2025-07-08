@@ -769,32 +769,50 @@ mermaid.initialize({ startOnLoad: true });
 
 # ノードの種類
 
-<div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>🔴 トリガーノード</h3>
-    <p style="font-size: 18px;">ワークフローの開始点</p>
-    <ul style="text-align: left; font-size: 16px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 1.5em 0; gap: 0.8em;">
+  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
+    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🔴 トリガーノード</h3>
+    <p style="font-size: 14px; margin-bottom: 0.5em;">ワークフローの開始点</p>
+    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
       <li>Webhook</li>
-      <li>スケジュール</li>
-      <li>ファイル監視</li>
+      <li>Cron / Schedule</li>
+      <li>Manual Trigger</li>
     </ul>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>🟡 アクションノード</h3>
-    <p style="font-size: 18px;">処理の実行</p>
-    <ul style="text-align: left; font-size: 16px;">
+  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
+    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟢 Regular ノード</h3>
+    <p style="font-size: 14px; margin-bottom: 0.5em;">メインの処理ノード</p>
+    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
       <li>HTTP Request</li>
+      <li>サービス連携（600+）</li>
       <li>データベース操作</li>
-      <li>メール送信</li>
     </ul>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>🟢 変換ノード</h3>
-    <p style="font-size: 18px;">データの変換・加工</p>
-    <ul style="text-align: left; font-size: 16px;">
-      <li>Set</li>
-      <li>Function</li>
-      <li>Code</li>
+  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
+    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟡 Core ノード</h3>
+    <p style="font-size: 14px; margin-bottom: 0.5em;">基本的なデータ操作</p>
+    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
+      <li>Set / Edit Fields</li>
+      <li>If / Switch</li>
+      <li>Merge / Split</li>
+    </ul>
+  </div>
+  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
+    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🔵 Sub-workflow ノード</h3>
+    <p style="font-size: 14px; margin-bottom: 0.5em;">ワークフロー管理</p>
+    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
+      <li>Execute Workflow</li>
+      <li>Wait</li>
+      <li>Stop and Error</li>
+    </ul>
+  </div>
+  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
+    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟣 Community ノード</h3>
+    <p style="font-size: 14px; margin-bottom: 0.5em;">コミュニティ制作</p>
+    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
+      <li>npm パッケージ</li>
+      <li>カスタムノード</li>
+      <li>サードパーティ拡張</li>
     </ul>
   </div>
 </div>
@@ -816,6 +834,8 @@ mermaid.initialize({ startOnLoad: true });
 - **MongoDB** - NoSQL DB
 - **MySQL** - オープンソース DB
 
+---
+
 ### 📧 コミュニケーション
 
 - **Email** - SMTP 送信
@@ -832,10 +852,10 @@ mermaid.initialize({ startOnLoad: true });
 
 # 主要統合サービス
 
-![Available Integrations](https://docs.n8n.io/assets/images/integrations/available-integrations.png)
-
 #### カテゴリ別統合
 
+- **コミュニケーションツール** - Slack, Teams, Gmail
+- **オンラインドライブ** - Google Drive, Box, AWS S3, Cloud Storage
 - **E コマース** - Shopify, WooCommerce, Stripe
 - **CRM** - Salesforce, HubSpot, Pipedrive
 - **マーケティング** - Mailchimp, ConvertKit, ActiveCampaign
@@ -845,19 +865,25 @@ mermaid.initialize({ startOnLoad: true });
 
 # 7. 実際のワークフロー作成デモ
 
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <img src="https://docs.n8n.io/assets/images/workflows/contact-form-automation.png" alt="Contact Form Automation" style="width: 90%; border-radius: 8px;">
+<div style="margin-top: 1em;">
+  <h3>メールサマリの通知 : Gmail summary</h3>
+  <ol>
+    <li><strong>マニュアルトリガー</strong> - 手動で実行</li>
+    <li><strong>Gmail情報取得</strong> - 直近10件の受信メールを確認</li>
+    <li><strong>テキストの成形</strong> - 後の工程で処理しやすい形に</li>
+    <li><strong>AIエージェントで要約を作成</strong> - 全てのメールを確認し、重み付け</li>
+    <li><strong>通知送信</strong> - チームへSlack通知</li>
+  </ol>
 </div>
 
+---
+
 <div style="margin-top: 1em;">
-  <h3>お問い合わせフォーム自動化</h3>
-  <ol>
-    <li><strong>Webhook受信</strong> - フォーム送信をトリガー</li>
-    <li><strong>データ検証</strong> - 必須項目チェック</li>
-    <li><strong>CRM登録</strong> - HubSpotにリード追加</li>
-    <li><strong>自動返信</strong> - 顧客へ確認メール</li>
-    <li><strong>通知送信</strong> - 営業チームへSlack通知</li>
-  </ol>
+  <h3>Drag on Dropと少しのコードでワークフローを実現</h3>
+</div>
+
+<div style="display: flex; justify-content: center; margin: 2em 0;">
+  <img src="..//src/images/GmailSummary.png" alt="Gmail Summary Workflow" style="width: 90%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
 </div>
 
 ---
