@@ -330,13 +330,15 @@ mermaid.initialize({ startOnLoad: true });
 ## 基礎編
 
 <div class="card animated">
-1. **n8n とは何か** - 基本概念と特徴
-2. **n8n の特徴と強み** - 他のツールとの違い
-3. **n8n のアーキテクチャ概要** - システム構成
-4. **n8n の主な利用シーン** - 実用例
-5. **ワークフローの基本構造** - ノードとコネクション
-6. **コアノードと統合例** - 主要機能
-7. **実際のワークフロー作成デモ** - 実践例
+  <ol>
+    <li><strong>n8n とは何か</strong> - 基本概念と特徴</li>
+    <li><strong>n8n の特徴と強み</strong> - 他のツールとの違い</li>
+    <li><strong>n8n のアーキテクチャ概要</strong> - システム構成</li>
+    <li><strong>n8n の主な利用シーン</strong> - 実用例</li>
+    <li><strong>ワークフローの基本構造</strong> - ノードとコネクション</li>
+    <li><strong>コアノードと統合例</strong> - 主要機能</li>
+    <li><strong>実際のワークフロー作成デモ</strong> - 実践例</li>
+  </ol>
 </div>
 
 ---
@@ -346,15 +348,17 @@ mermaid.initialize({ startOnLoad: true });
 ## 応用編
 
 <div class="card animated">
-8. **n8n の拡張性** - カスタムノード・API 連携
-9. **セキュリティと運用** - 本格運用に向けて
-10. **n8n の導入方法** - Cloud/Self-host/Docker
-11. **パフォーマンス最適化** - 高速化とスケーリング
-12. **トラブルシューティング** - よくある問題と解決策
-13. **ベストプラクティス** - 設計と運用の指針
-14. **企業導入事例** - 実際の活用例
-15. **コミュニティと学習リソース** - 学習支援
-16. **今後の展望とまとめ** - 発展性
+  <ol>
+    <li><strong>n8n の拡張性</strong> - カスタムノード・API 連携</li>
+    <li><strong>セキュリティと運用</strong> - 本格運用に向けて</li>
+    <li><strong>n8n の導入方法</strong> - Cloud/Self-host/Docker</li>
+    <li><strong>パフォーマンス最適化</strong> - 高速化とスケーリング</li>
+    <li><strong>トラブルシューティング</strong> - よくある問題と解決策</li>
+    <li><strong>ベストプラクティス</strong> - 設計と運用の指針</li>
+    <li><strong>企業導入事例</strong> - 実際の活用例</li>
+    <li><strong>コミュニティと学習リソース</strong> - 学習支援</li>
+    <li><strong>今後の展望とまとめ</strong> - 発展性</li>
+  </ol>
 </div>
 
 ---
@@ -362,7 +366,7 @@ mermaid.initialize({ startOnLoad: true });
 # n8n 企業情報
 
 <div class="card animated">
-### 🏢 企業概要
+ 🏢 企業概要
 
 - **企業名**: n8n.io GmbH
 - **設立**: 2019 年
@@ -380,23 +384,23 @@ mermaid.initialize({ startOnLoad: true });
 # 創業ストーリー
 
 <div class="card animated">
-#### 🚀 創業の背景
+ 🚀 創業の背景
 
 - **2019 年** - Jan Oberhauser が n8n を開発開始
 - **オープンソース** - コミュニティ主導の開発
 - **Fair-code** - 新しいライセンスモデルの確立
-- **グローバル展開** - 世界中の開発者に採用
 
 **💡 創業者のビジョン**
 
 - プライバシー重視の自動化ツール
 - 開発者フレンドリーな設計
-- 企業の完全制御を可能にする
 - コミュニティ主導の成長
 </div>
 
+---
+
 <div class="card animated">
-#### 📈 成長軌跡
+ 📈 成長軌跡
 
 - **2019 年** - GitHub でオープンソース公開
 - **2020 年** - 初回資金調達
@@ -425,6 +429,8 @@ mermaid.initialize({ startOnLoad: true });
 - 専用サポート
 - SLA 保証
 
+---
+
 #### 🤝 パートナー
 
 - エコシステム構築
@@ -442,16 +448,16 @@ mermaid.initialize({ startOnLoad: true });
 ### 📊 市場シェアと競合
 
 - **Zapier**: 市場リーダー、最も普及している
-- **Make (Integromat)**: 視覚的設計、高度なカスタマイズ
-- **n8n**: プライバシー重視、自己ホスト可能
+- **Dify**: 自己ホスト可能、ワークフロー、AI エージェント
+- **n8n**: 自己ホスト可能、ワークフロー、AI エージェント
 - **Microsoft Power Automate**: エンタープライズ、Microsoft 統合
 
 ### 🎯 n8n の差別化要因
 
-- **プライバシー重視** - データの完全制御
 - **自己ホスト可能** - オンプレミス展開
 - **Fair-code ライセンス** - 柔軟な利用モデル
 - **開発者フレンドリー** - カスタマイズ性
+- **豊富な接続先設定** - Slack / Gmail / Calender /などなど
 
 ---
 
@@ -471,6 +477,8 @@ mermaid.initialize({ startOnLoad: true });
 - **FirstMark Capital** - 早期投資家
 - **GitHub** - 戦略的投資家
 
+---
+
 ### 📈 企業価値
 
 - **バリュエーション** - $1B+（ユニコーン）
@@ -480,75 +488,9 @@ mermaid.initialize({ startOnLoad: true });
 
 ### 🌍 グローバル展開
 
-- 北米市場での急成長
-- ヨーロッパでの基盤強化
-- アジア太平洋地域への展開
-- 多言語対応の強化
-
----
-
-# 組織体制と文化
-
-### 👥 組織構造
-
-- **エンジニアリング** - 開発・QA・DevOps
-- **プロダクト** - プロダクトマネージャー・デザイナー
-- **セールス** - エンタープライズ・パートナー
-- **マーケティング** - ブランディング・コンテンツ・コミュニティ
-- **サポート** - カスタマーサクセス・テクニカルサポート
-
-### 🌍 リモートワーク
-
-- フルリモート体制
-- グローバルチーム
-- フレックスな勤務時間
-- 多様性重視の文化
-
-### 🎯 企業文化
-
-- **オープンソース精神** - 透明性と協働
-- **プライバシー重視** - ユーザーの権利保護
-- **イノベーション** - 継続的な改善
-- **コミュニティ** - 開発者コミュニティとの共生
-
-### 🏆 価値観
-
-- ユーザーファースト
-- 技術的卓越性
-- 持続可能性
-- 社会的責任
-
----
-
-# 技術戦略とロードマップ
-
-### 🚀 短期目標（6-12 ヶ月）
-
-- **AI 機能強化** - ChatGPT 統合の拡張
-- **パフォーマンス改善** - 実行速度の向上
-- **UI/UX 改善** - ユーザビリティの向上
-- **エンタープライズ機能** - 大企業向け機能
-
-### 📊 中期目標（1-2 年）
-
-- リアルタイム処理の強化
-- エッジコンピューティング対応
-- ブロックチェーン統合
-- IoT デバイス連携
-
-### 🌐 長期ビジョン（3-5 年）
-
-- **プラットフォーム化** - エコシステム構築
-- **グローバル展開** - 新興市場への進出
-- **業界特化** - 垂直統合ソリューション
-- **AI ファースト** - AI 主導の自動化
-
-### 🔬 研究開発
-
-- 機械学習の活用
-- 自然言語処理
-- 予測分析
-- 自動最適化
+- **北米市場での急成長** - AI エージェントともに急成長
+- **ヨーロッパでの基盤強化** - ヨーロッパ発の SaaS サービスとして
+- **アジア太平洋地域への展開** - 日本語化などへの取り組み強化
 
 ---
 
@@ -565,12 +507,9 @@ mermaid.initialize({ startOnLoad: true });
       <li>コードを書かずに複雑なワークフローを構築可能</li>
     </ul>
     
-    <div class="highlight-box">
-      <strong>核心理念:</strong> プライバシー重視、高度にカスタマイズ可能、便利な統合環境
-    </div>
   </div>
-  <div style="width: 40%;">
-    <img src="https://n8n.io/images/n8n-logo.svg" alt="n8n Logo" style="width: 100%; margin: 0 auto;">
+  <div style="width: 45%;">
+    <img src="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_ITO_Ps_5a5aac3fda.webp" alt="n8n" style="width: 100%; margin: 0 auto;">
   </div>
 </div>
 </div>
@@ -602,42 +541,39 @@ mermaid.initialize({ startOnLoad: true });
 
 # 2. n8n の特徴と強み
 
-<div class="card animated">
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🔒 プライバシー重視</h3>
-    <ul>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔒 プライバシー重視</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>Fair-codeライセンス</li>
       <li>自己ホスト可能</li>
       <li>データの完全制御</li>
-      <li>オープンソースベース</li>
-    </ul>
-    
-    <h3>🎨 高度なカスタマイズ</h3>
-    <ul>
-      <li>カスタムノード開発</li>
-      <li>JavaScript/TypeScript対応</li>
-      <li>柔軟なデータ変換</li>
     </ul>
   </div>
-  
-  <div style="width: 45%;">
-    <h3>🚀 豊富な統合</h3>
-    <ul>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🚀 豊富な統合</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>400+のノード</li>
       <li>主要SaaSサービス対応</li>
       <li>Webhook/API対応</li>
-      <li>データベース連携</li>
     </ul>
-    
-    <h3>💡 直感的なUI</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🎨 高度なカスタマイズ</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>カスタムノード開発</li>
+      <li>TypeScript対応</li>
+      <li>柔軟なデータ変換</li>
+    </ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">💡 直感的なUI</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>ドラッグ&ドロップ</li>
       <li>リアルタイムプレビュー</li>
       <li>視覚的なワークフロー</li>
     </ul>
   </div>
-</div>
 </div>
 
 ---
@@ -1403,3 +1339,24 @@ volumes:
     <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" alt="Questions" style="width: 150px; margin: 0 auto;">
   </div>
 </div>
+
+/_ .card.animated の特別なスタイル _/
+.card.animated {
+animation: fadeInUpCard 0.8s cubic-bezier(0.23, 1, 0.32, 1) !important;
+box-shadow: 0 10px 32px rgba(235, 111, 146, 0.18), 0 2px 8px rgba(49, 116, 143, 0.10) !important;
+border: 2px solid var(--rp-iris) !important;
+background: linear-gradient(135deg, var(--rp-overlay) 60%, var(--rp-highlight-low) 100%) !important;
+}
+
+@keyframes fadeInUpCard {
+from {
+opacity: 0;
+transform: translateY(40px) scale(0.98);
+filter: blur(4px);
+}
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+filter: blur(0);
+}
+}
