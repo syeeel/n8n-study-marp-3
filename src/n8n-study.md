@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 lang: "ja"
-header: "n8n - ワークフロー自動化プラットフォーム"
+header: "n8n - AIワークフロー自動化プラットフォーム"
 footer: "©2025 n8n Study"
 style: |
   /* プレゼンテーション全体のスタイル */
@@ -168,7 +168,7 @@ mermaid.initialize({ startOnLoad: true });
 
 # n8n
 
-## ワークフロー自動化プラットフォーム
+## AI ワークフロー自動化プラットフォーム
 
 <!-- _class: title-slide -->
 
@@ -201,6 +201,191 @@ mermaid.initialize({ startOnLoad: true });
 14. **企業導入事例** - 実際の活用例
 15. **コミュニティと学習リソース** - 学習支援
 16. **今後の展望とまとめ** - 発展性
+
+---
+
+# n8n 企業情報
+
+### 🏢 企業概要
+
+- **企業名**: n8n.io GmbH
+- **設立**: 2019 年
+- **創業者**: Jan Oberhauser
+- **本社**: ドイツ・ベルリン
+- **従業員数**: 100 名以上（2024 年時点）
+
+> **ミッション:** プライバシー重視のワークフロー自動化で、誰もが簡単にシステムを統合できる世界を創造する
+
+---
+
+# 創業ストーリー
+
+#### 🚀 創業の背景
+
+- **2019 年** - Jan Oberhauser が n8n を開発開始
+- **オープンソース** - コミュニティ主導の開発
+- **Fair-code** - 新しいライセンスモデルの確立
+- **グローバル展開** - 世界中の開発者に採用
+
+**💡 創業者のビジョン**
+
+- プライバシー重視の自動化ツール
+- 開発者フレンドリーな設計
+- 企業の完全制御を可能にする
+- コミュニティ主導の成長
+
+#### 📈 成長軌跡
+
+- **2019 年** - GitHub でオープンソース公開
+- **2020 年** - 初回資金調達
+- **2021 年** - n8n Cloud サービス開始
+- **2022 年** - 企業向け機能強化
+- **2023 年** - グローバル展開加速
+- **2024 年** - AI 機能統合強化
+
+---
+
+# ビジネスモデル
+
+#### ☁️ n8n Cloud
+
+- SaaS 型サービス
+- 月額・年額サブスクリプション
+- 自動スケーリング
+- 24/7 サポート
+
+#### 🏢 エンタープライズ
+
+- 企業向けソリューション
+- オンプレミス導入
+- カスタマイズ開発
+- 専用サポート
+- SLA 保証
+
+#### 🤝 パートナー
+
+- エコシステム構築
+- システムインテグレーター
+- コンサルティング
+- トレーニング
+- カスタム開発
+
+> **特徴:** Fair-code ライセンスにより、個人・小規模利用は無料、商用利用は有料という柔軟なモデル
+
+---
+
+# 市場ポジション
+
+### 📊 市場シェアと競合
+
+- **Zapier**: 市場リーダー、最も普及している
+- **Make (Integromat)**: 視覚的設計、高度なカスタマイズ
+- **n8n**: プライバシー重視、自己ホスト可能
+- **Microsoft Power Automate**: エンタープライズ、Microsoft 統合
+
+### 🎯 n8n の差別化要因
+
+- **プライバシー重視** - データの完全制御
+- **自己ホスト可能** - オンプレミス展開
+- **Fair-code ライセンス** - 柔軟な利用モデル
+- **開発者フレンドリー** - カスタマイズ性
+
+---
+
+# 資金調達と投資家
+
+### 💰 資金調達履歴
+
+- **2020 年** - シリーズ A: $12M
+- **2021 年** - シリーズ B: $50M
+- **2023 年** - シリーズ C: $100M+
+- **総調達額** - $200M 以上
+
+### 🎯 投資家
+
+- **Sequoia Capital** - リード投資家
+- **Bessemer Venture Partners** - 主要投資家
+- **FirstMark Capital** - 早期投資家
+- **GitHub** - 戦略的投資家
+
+### 📈 企業価値
+
+- **バリュエーション** - $1B+（ユニコーン）
+- **成長率** - 年間 300%+
+- **顧客数** - 10,000+企業
+- **従業員数** - 100 名+（急成長中）
+
+### 🌍 グローバル展開
+
+- 北米市場での急成長
+- ヨーロッパでの基盤強化
+- アジア太平洋地域への展開
+- 多言語対応の強化
+
+---
+
+# 組織体制と文化
+
+### 👥 組織構造
+
+- **エンジニアリング** - 開発・QA・DevOps
+- **プロダクト** - プロダクトマネージャー・デザイナー
+- **セールス** - エンタープライズ・パートナー
+- **マーケティング** - ブランディング・コンテンツ・コミュニティ
+- **サポート** - カスタマーサクセス・テクニカルサポート
+
+### 🌍 リモートワーク
+
+- フルリモート体制
+- グローバルチーム
+- フレックスな勤務時間
+- 多様性重視の文化
+
+### 🎯 企業文化
+
+- **オープンソース精神** - 透明性と協働
+- **プライバシー重視** - ユーザーの権利保護
+- **イノベーション** - 継続的な改善
+- **コミュニティ** - 開発者コミュニティとの共生
+
+### 🏆 価値観
+
+- ユーザーファースト
+- 技術的卓越性
+- 持続可能性
+- 社会的責任
+
+---
+
+# 技術戦略とロードマップ
+
+### 🚀 短期目標（6-12 ヶ月）
+
+- **AI 機能強化** - ChatGPT 統合の拡張
+- **パフォーマンス改善** - 実行速度の向上
+- **UI/UX 改善** - ユーザビリティの向上
+- **エンタープライズ機能** - 大企業向け機能
+
+### 📊 中期目標（1-2 年）
+
+- リアルタイム処理の強化
+- エッジコンピューティング対応
+- ブロックチェーン統合
+- IoT デバイス連携
+
+### 🌐 長期ビジョン（3-5 年）
+
+- **プラットフォーム化** - エコシステム構築
+- **グローバル展開** - 新興市場への進出
+- **業界特化** - 垂直統合ソリューション
+- **AI ファースト** - AI 主導の自動化
+
+### 🔬 研究開発
+
+- 機械学習の活用
+- 自然言語処理
+- 予測分析
+- 自動最適化
 
 ---
 
@@ -380,58 +565,43 @@ mermaid.initialize({ startOnLoad: true });
 
 # 4. n8n の主な利用シーン
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 48%;">
-    <h3>📧 メール自動化</h3>
-    <ul>
-      <li>フォーム送信時の自動返信</li>
-      <li>リード管理システム連携</li>
-      <li>メール配信の自動化</li>
-    </ul>
-    
-    <h3>📊 データ同期</h3>
-    <ul>
-      <li>CRMとメール配信の同期</li>
-      <li>在庫管理システム連携</li>
-      <li>売上データの自動集計</li>
-    </ul>
-  </div>
-  
-  <div style="width: 48%;">
-    <h3>🤖 AI・機械学習</h3>
-    <ul>
-      <li>ChatGPT API連携</li>
-      <li>画像認識・分析</li>
-      <li>自然言語処理</li>
-    </ul>
-    
-    <h3>🛠️ 開発支援</h3>
-    <ul>
-      <li>CI/CDパイプライン</li>
-      <li>テスト自動化</li>
-      <li>デプロイメント自動化</li>
-    </ul>
-  </div>
-</div>
+### 📧 メール自動化
+
+- フォーム送信時の自動返信
+- リード管理システム連携
+- メール配信の自動化
+
+### 📊 データ同期
+
+- CRM とメール配信の同期
+- 在庫管理システム連携
+- 売上データの自動集計
+
+### 🤖 AI・機械学習
+
+- ChatGPT API 連携
+- 画像認識・分析
+- 自然言語処理
+
+### 🛠️ 開発支援
+
+- CI/CD パイプライン
+- テスト自動化
+- デプロイメント自動化
 
 ---
 
 # 実用例：E コマース自動化
 
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <img src="https://docs.n8n.io/assets/images/workflows/ecommerce-automation.png" alt="E-commerce Automation" style="width: 90%; border-radius: 8px;">
-</div>
+![E-commerce Automation](https://docs.n8n.io/assets/images/workflows/ecommerce-automation.png)
 
-<div style="margin-top: 1em;">
-  <h3>ワークフロー例</h3>
-  <ol>
-    <li><strong>注文受信</strong> - Shopify Webhook</li>
-    <li><strong>在庫確認</strong> - データベース照会</li>
-    <li><strong>メール通知</strong> - 顧客・管理者へ</li>
-    <li><strong>配送手配</strong> - 配送業者API連携</li>
-    <li><strong>在庫更新</strong> - リアルタイム同期</li>
-  </ol>
-</div>
+#### ワークフロー例
+
+1. **注文受信** - Shopify Webhook
+2. **在庫確認** - データベース照会
+3. **メール通知** - 顧客・管理者へ
+4. **配送手配** - 配送業者 API 連携
+5. **在庫更新** - リアルタイム同期
 
 ---
 
@@ -489,58 +659,43 @@ mermaid.initialize({ startOnLoad: true });
 
 # 6. コアノードと統合例
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🔗 統合ノード</h3>
-    <ul>
-      <li><strong>HTTP Request</strong> - 任意のAPI呼び出し</li>
-      <li><strong>Webhook</strong> - 外部からの呼び出し受信</li>
-      <li><strong>REST API</strong> - RESTful API連携</li>
-      <li><strong>GraphQL</strong> - GraphQL API連携</li>
-    </ul>
-    
-    <h3>📊 データベース</h3>
-    <ul>
-      <li><strong>PostgreSQL</strong> - リレーショナルDB</li>
-      <li><strong>MongoDB</strong> - NoSQL DB</li>
-      <li><strong>MySQL</strong> - オープンソースDB</li>
-    </ul>
-  </div>
-  
-  <div style="width: 45%;">
-    <h3>📧 コミュニケーション</h3>
-    <ul>
-      <li><strong>Email</strong> - SMTP送信</li>
-      <li><strong>Slack</strong> - チーム連携</li>
-      <li><strong>Discord</strong> - ゲーミングコミュニティ</li>
-    </ul>
-    
-    <h3>🤖 AI・機械学習</h3>
-    <ul>
-      <li><strong>OpenAI</strong> - ChatGPT API</li>
-      <li><strong>Hugging Face</strong> - 機械学習モデル</li>
-      <li><strong>Google AI</strong> - Gemini API</li>
-    </ul>
-  </div>
-</div>
+### 🔗 統合ノード
+
+- **HTTP Request** - 任意の API 呼び出し
+- **Webhook** - 外部からの呼び出し受信
+- **REST API** - RESTful API 連携
+- **GraphQL** - GraphQL API 連携
+
+### 📊 データベース
+
+- **PostgreSQL** - リレーショナル DB
+- **MongoDB** - NoSQL DB
+- **MySQL** - オープンソース DB
+
+### 📧 コミュニケーション
+
+- **Email** - SMTP 送信
+- **Slack** - チーム連携
+- **Discord** - ゲーミングコミュニティ
+
+### 🤖 AI・機械学習
+
+- **OpenAI** - ChatGPT API
+- **Hugging Face** - 機械学習モデル
+- **Google AI** - Gemini API
 
 ---
 
 # 主要統合サービス
 
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <img src="https://docs.n8n.io/assets/images/integrations/available-integrations.png" alt="Available Integrations" style="width: 90%; border-radius: 8px;">
-</div>
+![Available Integrations](https://docs.n8n.io/assets/images/integrations/available-integrations.png)
 
-<div style="margin-top: 1em;">
-  <h3>カテゴリ別統合</h3>
-  <ul>
-    <li><strong>Eコマース</strong> - Shopify, WooCommerce, Stripe</li>
-    <li><strong>CRM</strong> - Salesforce, HubSpot, Pipedrive</li>
-    <li><strong>マーケティング</strong> - Mailchimp, ConvertKit, ActiveCampaign</li>
-    <li><strong>プロジェクト管理</strong> - Trello, Asana, Monday.com</li>
-  </ul>
-</div>
+#### カテゴリ別統合
+
+- **E コマース** - Shopify, WooCommerce, Stripe
+- **CRM** - Salesforce, HubSpot, Pipedrive
+- **マーケティング** - Mailchimp, ConvertKit, ActiveCampaign
+- **プロジェクト管理** - Trello, Asana, Monday.com
 
 ---
 
@@ -592,72 +747,52 @@ mermaid.initialize({ startOnLoad: true });
 
 # 8. n8n の拡張性
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🔧 カスタムノード開発</h3>
-    <ul>
-      <li>TypeScript/JavaScriptで開発</li>
-      <li>npmパッケージとして配布</li>
-      <li>コミュニティへの貢献</li>
-      <li>企業固有の統合</li>
-    </ul>
-    
-    <h3>📡 API連携</h3>
-    <ul>
-      <li>REST API提供</li>
-      <li>Webhook受信</li>
-      <li>外部システム連携</li>
-      <li>CI/CD統合</li>
-    </ul>
-  </div>
-  
-  <div style="width: 45%;">
-    <h3>🎨 UIカスタマイズ</h3>
-    <ul>
-      <li>テーマカスタマイズ</li>
-      <li>ブランディング対応</li>
-      <li>多言語対応</li>
-      <li>アクセシビリティ</li>
-    </ul>
-    
-    <h3>🔌 プラグインシステム</h3>
-    <ul>
-      <li>認証方式拡張</li>
-      <li>データ形式変換</li>
-      <li>特殊処理追加</li>
-    </ul>
-  </div>
-</div>
+### 🔧 カスタムノード開発
+
+- TypeScript/JavaScript で開発
+- npm パッケージとして配布
+- コミュニティへの貢献
+- 企業固有の統合
+
+### 📡 API 連携
+
+- REST API 提供
+- Webhook 受信
+- 外部システム連携
+- CI/CD 統合
+
+### 🎨 UI カスタマイズ
+
+- テーマカスタマイズ
+- ブランディング対応
+- 多言語対応
+- アクセシビリティ
+
+### 🔌 プラグインシステム
+
+- 認証方式拡張
+- データ形式変換
+- 特殊処理追加
 
 ---
 
 # カスタムノード開発例
 
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <div style="width: 90%; background-color: #f8f9fa; padding: 1.5em; border-radius: 8px; font-family: monospace;">
-    <div style="margin-bottom: 1.5em; border-left: 4px solid #2563EB; padding-left: 1em;">
-      <p style="color: #555; margin-bottom: 0.3em; font-weight: bold;">カスタムノードの基本構造:</p>
-      <div class="code-example">
 ```typescript
-import { IExecuteFunctions } from 'n8n-core';
-import { INodeExecutionData } from 'n8n-workflow';
+import { IExecuteFunctions } from "n8n-core";
+import { INodeExecutionData } from "n8n-workflow";
 
 export async function execute(
-this: IExecuteFunctions,
-items: INodeExecutionData[]
+  this: IExecuteFunctions,
+  items: INodeExecutionData[]
 ): Promise<INodeExecutionData[]> {
-// カスタム処理の実装
-return items.map(item => {
-// データ変換処理
-return item;
-});
+  // カスタム処理の実装
+  return items.map((item) => {
+    // データ変換処理
+    return item;
+  });
 }
-
-````
-      </div>
-    </div>
-  </div>
-</div>
+```
 
 ---
 
@@ -680,6 +815,7 @@ return item;
       <li>エラー通知システム</li>
       <li>メトリクス収集</li>
     </ul>
+
   </div>
 
   <div style="width: 45%;">
@@ -698,12 +834,13 @@ return item;
       <li>キャッシュ機能</li>
       <li>リソース最適化</li>
     </ul>
+
   </div>
 </div>
 
 ---
 
-# 10. n8nの導入方法
+# 10. n8n の導入方法
 
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
   <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
@@ -762,7 +899,7 @@ services:
       - n8n_data:/home/node/.n8n
 volumes:
   n8n_data:
-````
+```
 
       </div>
     </div>
@@ -865,85 +1002,65 @@ volumes:
 
 # 13. ベストプラクティス
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🏗️ 設計原則</h3>
-    <ul>
-      <li><strong>単一責任</strong> - 1つのノードに1つの機能</li>
-      <li><strong>エラーハンドリング</strong> - 例外処理の実装</li>
-      <li><strong>ログ記録</strong> - 実行履歴の保存</li>
-      <li><strong>バージョン管理</strong> - 変更履歴の追跡</li>
-    </ul>
-    
-    <h3>🔒 セキュリティ</h3>
-    <ul>
-      <li>機密情報の暗号化</li>
-      <li>アクセス権限の最小化</li>
-      <li>定期的なセキュリティ監査</li>
-      <li>セキュリティパッチの適用</li>
-    </ul>
-  </div>
-  
-  <div style="width: 45%;">
-    <h3>📈 運用管理</h3>
-    <ul>
-      <li><strong>監視体制</strong> - 24/7監視の構築</li>
-      <li><strong>バックアップ</strong> - 定期的なデータバックアップ</li>
-      <li><strong>障害対応</strong> - インシデント対応手順</li>
-      <li><strong>更新管理</strong> - 定期的なアップデート</li>
-    </ul>
-    
-    <h3>👥 チーム協働</h3>
-    <ul>
-      <li>ドキュメント整備</li>
-      <li>コードレビュー</li>
-      <li>知識共有</li>
-      <li>継続的改善</li>
-    </ul>
-  </div>
-</div>
+### 設計原則
+
+- **単一責任** - 1 つのノードに 1 つの機能
+- **エラーハンドリング** - 例外処理の実装
+- **ログ記録** - 実行履歴の保存
+- **バージョン管理** - 変更履歴の追跡
+
+#### 🔒 セキュリティ
+
+- 機密情報の暗号化
+- アクセス権限の最小化
+- 定期的なセキュリティ監査
+- セキュリティパッチの適用
+
+### 運用管理
+
+- **監視体制** - 24/7 監視の構築
+- **バックアップ** - 定期的なデータバックアップ
+- **障害対応** - インシデント対応手順
+- **更新管理** - 定期的なアップデート
+
+#### 🧑‍🤝‍🧑 チーム協働
+
+- ドキュメント整備
+- コードレビュー
+- 知識共有
+- 継続的改善
 
 ---
 
 # 14. 企業導入事例
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🏢 製造業での活用</h3>
-    <ul>
-      <li><strong>在庫管理自動化</strong> - リアルタイム在庫追跡</li>
-      <li><strong>品質管理</strong> - 検査データの自動収集</li>
-      <li><strong>サプライチェーン</strong> - 発注・配送の自動化</li>
-      <li><strong>設備監視</strong> - IoTセンサーとの連携</li>
-    </ul>
-    
-    <h3>🏥 医療・ヘルスケア</h3>
-    <ul>
-      <li>患者データの自動同期</li>
-      <li>予約システムの連携</li>
-      <li>医療機器の監視</li>
-      <li>コンプライアンス管理</li>
-    </ul>
-  </div>
-  
-  <div style="width: 45%;">
-    <h3>🏦 金融・保険</h3>
-    <ul>
-      <li><strong>リスク管理</strong> - リアルタイム監視</li>
-      <li><strong>コンプライアンス</strong> - 規制対応の自動化</li>
-      <li><strong>顧客サービス</strong> - 問い合わせ対応</li>
-      <li><strong>不正検知</strong> - 異常検知システム</li>
-    </ul>
-    
-    <h3>🛍️ 小売・Eコマース</h3>
-    <ul>
-      <li>在庫・価格の自動更新</li>
-      <li>顧客行動分析</li>
-      <li>マーケティング自動化</li>
-      <li>配送・物流の最適化</li>
-    </ul>
-  </div>
-</div>
+### 製造業での活用
+
+- 在庫管理自動化 - リアルタイム在庫追跡
+- 品質管理 - 検査データの自動収集
+- サプライチェーン - 発注・配送の自動化
+- 設備監視 - IoT センサーとの連携
+
+#### 🏥 医療・ヘルスケア
+
+- 患者データの自動同期
+- 予約システムの連携
+- 医療機器の監視
+- コンプライアンス管理
+
+### 金融・保険
+
+- リスク管理 - リアルタイム監視
+- コンプライアンス - 規制対応の自動化
+- 顧客サービス - 問い合わせ対応
+- 不正検知 - 異常検知システム
+
+#### 🛒 小売・E コマース
+
+- 在庫・価格の自動更新
+- 顧客行動分析
+- マーケティング自動化
+- 配送・物流の最適化
 
 ---
 
@@ -991,41 +1108,31 @@ volumes:
 
 # 15. コミュニティと学習リソース
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🌐 公式リソース</h3>
-    <ul>
-      <li><strong>ドキュメント</strong> - 詳細な技術文書</li>
-      <li><strong>チュートリアル</strong> - ステップバイステップ</li>
-      <li><strong>API リファレンス</strong> - 開発者向け</li>
-      <li><strong>サンプルワークフロー</strong> - 実用例</li>
-    </ul>
-    
-    <h3>🎓 学習コース</h3>
-    <ul>
-      <li><strong>ビデオコース</strong> - 初心者・上級者向け</li>
-      <li><strong>テキストコース</strong> - 実践的な学習</li>
-      <li><strong>認定プログラム</strong> - スキル証明</li>
-    </ul>
-  </div>
-  
-  <div style="width: 45%;">
-    <h3>👥 コミュニティ</h3>
-    <ul>
-      <li><strong>フォーラム</strong> - 質問・回答</li>
-      <li><strong>GitHub</strong> - 開発・バグ報告</li>
-      <li><strong>Discord</strong> - リアルタイム交流</li>
-      <li><strong>ブログ</strong> - 最新情報</li>
-    </ul>
-    
-    <h3>🛠️ 開発支援</h3>
-    <ul>
-      <li><strong>カスタムノード</strong> - コミュニティ開発</li>
-      <li><strong>プラグイン</strong> - 機能拡張</li>
-      <li><strong>テーマ</strong> - UIカスタマイズ</li>
-    </ul>
-  </div>
-</div>
+### 🌐 公式リソース
+
+- **ドキュメント** - 詳細な技術文書
+- **チュートリアル** - ステップバイステップ
+- **API リファレンス** - 開発者向け
+- **サンプルワークフロー** - 実用例
+
+### 🎓 学習コース
+
+- **ビデオコース** - 初心者・上級者向け
+- **テキストコース** - 実践的な学習
+- **認定プログラム** - スキル証明
+
+### 👥 コミュニティ
+
+- **フォーラム** - 質問・回答
+- **GitHub** - 開発・バグ報告
+- **Discord** - リアルタイム交流
+- **ブログ** - 最新情報
+
+### 🛠️ 開発支援
+
+- **カスタムノード** - コミュニティ開発
+- **プラグイン** - 機能拡張
+- **テーマ** - UI カスタマイズ
 
 ---
 
