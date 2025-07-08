@@ -3,13 +3,32 @@ marp: true
 theme: default
 paginate: true
 lang: "ja"
-header: "n8n - AIワークフロー自動化プラットフォーム"
 footer: "©2025 n8n Study"
 style: |
+  /* Rosé Pine カラーパレット */
+  :root {
+    --rp-base: #191724;
+    --rp-surface: #1f1d2e;
+    --rp-overlay: #26233a;
+    --rp-muted: #6e6a86;
+    --rp-subtle: #908caa;
+    --rp-text: #e0def4;
+    --rp-love: #eb6f92;
+    --rp-gold: #f6c177;
+    --rp-rose: #ebbcba;
+    --rp-pine: #31748f;
+    --rp-foam: #9ccfd8;
+    --rp-iris: #c4a7e7;
+    --rp-highlight-low: #21202e;
+    --rp-highlight-med: #403d52;
+    --rp-highlight-high: #524f67;
+  }
+
   /* プレゼンテーション全体のスタイル */
   section {
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    background-color: white;
+    background: linear-gradient(135deg, var(--rp-base) 0%, var(--rp-surface) 100%);
+    color: var(--rp-text);
     font-size: 24px;
     line-height: 1.5;
     justify-content: flex-start;
@@ -23,16 +42,24 @@ style: |
 
   /* 見出しのスタイル */
   h1 {
-    color: #2563EB;
+    color: var(--rp-iris);
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 1em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   h2 {
-    color: #2563EB;
+    color: var(--rp-foam);
     font-size: 32px;
     margin-bottom: 0.8em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  h3 {
+    color: var(--rp-gold);
+    font-size: 28px;
+    margin-bottom: 0.6em;
   }
 
   /* リストのスタイル */
@@ -40,6 +67,7 @@ style: |
     font-size: 22px;
     margin-left: 1em;
     line-height: 1.6;
+    color: var(--rp-text);
   }
 
   /* ネストされたリストのスタイル */
@@ -47,6 +75,7 @@ style: |
     font-size: 20px;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
+    color: var(--rp-subtle);
   }
 
   /* リストアイテムの間隔 */
@@ -58,18 +87,21 @@ style: |
   p {
     font-size: 24px;
     margin-bottom: 1em;
+    color: var(--rp-text);
   }
 
   /* コードブロックのスタイル */
   pre {
-    background-color: #f8f9fa;
-    border-radius: 4px;
+    background-color: var(--rp-highlight-low);
+    border: 1px solid var(--rp-highlight-med);
+    border-radius: 8px;
     padding: 1em;
+    color: var(--rp-text);
   }
 
   /* ヘッダーとフッターのスタイル */
   header, footer {
-    color: #666;
+    color: var(--rp-muted);
     font-size: 0.8em;
   }
 
@@ -77,6 +109,8 @@ style: |
   section img {
     max-width: 80%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
   /* テーブルのスタイル */
@@ -84,44 +118,76 @@ style: |
     width: 100%;
     border-collapse: collapse;
     margin: 1em 0;
+    background-color: var(--rp-overlay);
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   th, td {
-    padding: 0.6em;
-    border: 1px solid #ddd;
+    padding: 0.8em;
+    border: 1px solid var(--rp-highlight-med);
+    color: var(--rp-text);
   }
 
   th {
-    background-color: #f0f0f0;
+    background-color: var(--rp-highlight-med);
+    color: var(--rp-iris);
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--rp-highlight-low);
   }
 
   /* タイトルページのスタイル */
   section.title-slide {
-    background: linear-gradient(135deg, #4169e1 0%, #00bfff 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--rp-base) 0%, var(--rp-surface) 50%, var(--rp-overlay) 100%);
+    color: var(--rp-text);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.title-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, var(--rp-iris) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, var(--rp-pine) 0%, transparent 50%);
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  section.title-slide > * {
+    position: relative;
+    z-index: 1;
   }
 
   section.title-slide h1 {
-    color: white;
+    color: var(--rp-iris);
     font-size: 5em;
     margin-bottom: 0.2em;
     line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
   }
 
   section.title-slide h2 {
-    color: white;
+    color: var(--rp-foam);
     font-size: 2em;
     margin-bottom: 2em;
     font-weight: normal;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   section.title-slide footer {
-    color: white;
+    color: var(--rp-muted);
     font-size: 1.2em;
     position: absolute;
     bottom: 40px;
@@ -138,21 +204,106 @@ style: |
 
   /* ハイライトボックスのスタイル */
   .highlight-box {
-    background-color: #f0f7ff;
-    border-left: 4px solid #2563EB;
-    padding: 1em;
-    border-radius: 4px;
+    background: linear-gradient(135deg, var(--rp-highlight-low) 0%, var(--rp-overlay) 100%);
+    border-left: 4px solid var(--rp-iris);
+    padding: 1.5em;
+    border-radius: 8px;
     margin: 1em 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
 
   /* コードハイライト */
   .code-example {
-    background-color: #272822;
-    color: #f8f8f2;
-    padding: 1em;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, var(--rp-base) 0%, var(--rp-highlight-low) 100%);
+    color: var(--rp-text);
+    padding: 1.5em;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
     font-size: 18px;
+    border: 1px solid var(--rp-highlight-med);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* カードスタイル */
+  .card {
+    background: linear-gradient(135deg, var(--rp-overlay) 0%, var(--rp-highlight-low) 100%);
+    border-radius: 12px;
+    padding: 1.5em;
+    margin: 1em 0;
+    border: 1px solid var(--rp-highlight-med);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  }
+
+  /* グラデーションテキスト */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--rp-iris) 0%, var(--rp-foam) 50%, var(--rp-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+  }
+
+  /* アニメーション要素 */
+  .animated {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* スライド番号 */
+  section::after {
+    color: var(--rp-muted);
+    font-size: 0.8em;
+  }
+
+  /* リンクスタイル */
+  a {
+    color: var(--rp-foam);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rp-foam);
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--rp-iris);
+  }
+
+  /* 強調テキスト */
+  strong {
+    color: var(--rp-gold);
+  }
+
+  /* 引用スタイル */
+  blockquote {
+    border-left: 4px solid var(--rp-rose);
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+    color: var(--rp-subtle);
+  }
+
+  /* リストマーカー */
+  ul li::marker {
+    color: var(--rp-iris);
+  }
+
+  ol li::marker {
+    color: var(--rp-foam);
   }
 math: mathjax
 mermaid: true
@@ -166,7 +317,7 @@ mermaid.initialize({ startOnLoad: true });
 
 <!-- タイトルスライド -->
 
-# n8n
+# <span>n8n</span>
 
 ## AI ワークフロー自動化プラットフォーム
 
@@ -178,6 +329,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ## 基礎編
 
+<div class="card animated">
 1. **n8n とは何か** - 基本概念と特徴
 2. **n8n の特徴と強み** - 他のツールとの違い
 3. **n8n のアーキテクチャ概要** - システム構成
@@ -185,6 +337,7 @@ mermaid.initialize({ startOnLoad: true });
 5. **ワークフローの基本構造** - ノードとコネクション
 6. **コアノードと統合例** - 主要機能
 7. **実際のワークフロー作成デモ** - 実践例
+</div>
 
 ---
 
@@ -192,6 +345,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ## 応用編
 
+<div class="card animated">
 8. **n8n の拡張性** - カスタムノード・API 連携
 9. **セキュリティと運用** - 本格運用に向けて
 10. **n8n の導入方法** - Cloud/Self-host/Docker
@@ -201,11 +355,13 @@ mermaid.initialize({ startOnLoad: true });
 14. **企業導入事例** - 実際の活用例
 15. **コミュニティと学習リソース** - 学習支援
 16. **今後の展望とまとめ** - 発展性
+</div>
 
 ---
 
 # n8n 企業情報
 
+<div class="card animated">
 ### 🏢 企業概要
 
 - **企業名**: n8n.io GmbH
@@ -213,13 +369,17 @@ mermaid.initialize({ startOnLoad: true });
 - **創業者**: Jan Oberhauser
 - **本社**: ドイツ・ベルリン
 - **従業員数**: 100 名以上（2024 年時点）
+</div>
 
+<div class="highlight-box">
 > **ミッション:** プライバシー重視のワークフロー自動化で、誰もが簡単にシステムを統合できる世界を創造する
+</div>
 
 ---
 
 # 創業ストーリー
 
+<div class="card animated">
 #### 🚀 創業の背景
 
 - **2019 年** - Jan Oberhauser が n8n を開発開始
@@ -233,7 +393,9 @@ mermaid.initialize({ startOnLoad: true });
 - 開発者フレンドリーな設計
 - 企業の完全制御を可能にする
 - コミュニティ主導の成長
+</div>
 
+<div class="card animated">
 #### 📈 成長軌跡
 
 - **2019 年** - GitHub でオープンソース公開
@@ -242,6 +404,7 @@ mermaid.initialize({ startOnLoad: true });
 - **2022 年** - 企業向け機能強化
 - **2023 年** - グローバル展開加速
 - **2024 年** - AI 機能統合強化
+</div>
 
 ---
 
@@ -391,9 +554,10 @@ mermaid.initialize({ startOnLoad: true });
 
 # 1. n8n とは何か
 
+<div class="card animated">
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <div style="width: 55%;">
-    <h3>n8n（n-eight-n）とは</h3>
+    <h3><span class="gradient-text">n8n（n-eight-n）とは</span></h3>
     <ul>
       <li><strong>Fair-code</strong>ライセンスのワークフロー自動化ツール</li>
       <li>APIを持つアプリケーション間の接続とデータ操作</li>
@@ -409,27 +573,28 @@ mermaid.initialize({ startOnLoad: true });
     <img src="https://n8n.io/images/n8n-logo.svg" alt="n8n Logo" style="width: 100%; margin: 0 auto;">
   </div>
 </div>
+</div>
 
 ---
 
 # n8n の基本概念
 
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
     <h3>🔗 統合</h3>
     <p style="font-size: 18px;">APIを持つアプリケーション間の接続</p>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
     <h3>⚙️ 自動化</h3>
     <p style="font-size: 18px;">ビジネスプロセスの自動実行</p>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
     <h3>🤖 AI機能</h3>
     <p style="font-size: 18px;">AIを活用した高度な処理</p>
   </div>
 </div>
 
-<div style="margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 8px;">
+<div class="highlight-box">
   <strong>特徴:</strong> プライバシー重視（自己ホスト可能）、高度にカスタマイズ可能、直感的なUI
 </div>
 
@@ -437,6 +602,7 @@ mermaid.initialize({ startOnLoad: true });
 
 # 2. n8n の特徴と強み
 
+<div class="card animated">
 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
   <div style="width: 50%;">
     <h3>🔒 プライバシー重視</h3>
@@ -472,54 +638,58 @@ mermaid.initialize({ startOnLoad: true });
     </ul>
   </div>
 </div>
+</div>
 
 ---
 
 # 他の自動化ツールとの比較
 
+<div class="card animated">
 <div style="overflow-x: auto; margin: 1.5em 0;">
-  <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+  <table style="width: 100%; border-collapse: collapse;">
     <thead>
-      <tr style="background-color: #f0f7ff;">
-        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">特徴</th>
-        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">n8n</th>
-        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Zapier</th>
-        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Make</th>
+      <tr>
+        <th style="padding: 12px; text-align: left;">特徴</th>
+        <th style="padding: 12px; text-align: left;">n8n</th>
+        <th style="padding: 12px; text-align: left;">Zapier</th>
+        <th style="padding: 12px; text-align: left;">Make</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">ライセンス</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">Fair-code</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">プロプライエタリ</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">プロプライエタリ</td>
-      </tr>
-      <tr style="background-color: #f8f9fa;">
-        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">ホスティング</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">自己ホスト可能</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">クラウドのみ</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">クラウドのみ</td>
+        <td style="padding: 12px; font-weight: bold;">ライセンス</td>
+        <td style="padding: 12px;">Fair-code</td>
+        <td style="padding: 12px;">プロプライエタリ</td>
+        <td style="padding: 12px;">プロプライエタリ</td>
       </tr>
       <tr>
-        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">カスタマイズ</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">高度</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">制限的</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">中程度</td>
+        <td style="padding: 12px; font-weight: bold;">ホスティング</td>
+        <td style="padding: 12px;">自己ホスト可能</td>
+        <td style="padding: 12px;">クラウドのみ</td>
+        <td style="padding: 12px;">クラウドのみ</td>
       </tr>
-      <tr style="background-color: #f8f9fa;">
-        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">コスト</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">低コスト</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">高コスト</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">中コスト</td>
+      <tr>
+        <td style="padding: 12px; font-weight: bold;">カスタマイズ</td>
+        <td style="padding: 12px;">高度</td>
+        <td style="padding: 12px;">制限的</td>
+        <td style="padding: 12px;">中程度</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; font-weight: bold;">コスト</td>
+        <td style="padding: 12px;">低コスト</td>
+        <td style="padding: 12px;">高コスト</td>
+        <td style="padding: 12px;">中コスト</td>
       </tr>
     </tbody>
   </table>
+</div>
 </div>
 
 ---
 
 # 3. n8n のアーキテクチャ概要
 
+<div class="card animated">
 <div style="display: flex; justify-content: center; margin: 2em 0;">
   <img src="https://docs.n8n.io/assets/images/architecture-overview.png" alt="n8n Architecture" style="width: 90%; border-radius: 8px;">
 </div>
@@ -532,6 +702,7 @@ mermaid.initialize({ startOnLoad: true });
     <li><strong>Database</strong> - ワークフローと実行履歴の保存</li>
     <li><strong>Queue System</strong> - 非同期処理の管理</li>
   </ul>
+</div>
 </div>
 
 ---
@@ -1066,28 +1237,29 @@ volumes:
 
 # 導入効果の測定
 
+<div class="card animated">
 <div style="display: flex; justify-content: center; margin: 1em 0;">
-  <div style="width: 90%; background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+  <div style="width: 90%; padding: 1.5em; border-radius: 8px;">
     <h3>📊 定量的効果</h3>
     <div style="display: flex; justify-content: space-around; margin: 2em 0;">
-      <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
         <h4>時間短縮</h4>
-        <p style="font-size: 18px; color: #2563EB; font-weight: bold;">80%</p>
+        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">80%</p>
         <p style="font-size: 14px;">手作業の削減</p>
       </div>
-      <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
         <h4>エラー削減</h4>
-        <p style="font-size: 18px; color: #2563EB; font-weight: bold;">95%</p>
+        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">95%</p>
         <p style="font-size: 14px;">人的ミスの削減</p>
       </div>
-      <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
         <h4>コスト削減</h4>
-        <p style="font-size: 18px; color: #2563EB; font-weight: bold;">60%</p>
+        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">60%</p>
         <p style="font-size: 14px;">運用コストの削減</p>
       </div>
-      <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
+      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
         <h4>ROI向上</h4>
-        <p style="font-size: 18px; color: #2563EB; font-weight: bold;">300%</p>
+        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">300%</p>
         <p style="font-size: 14px;">投資対効果</p>
       </div>
     </div>
@@ -1108,6 +1280,7 @@ volumes:
 
 # 15. コミュニティと学習リソース
 
+<div class="card animated">
 ### 🌐 公式リソース
 
 - **ドキュメント** - 詳細な技術文書
@@ -1133,11 +1306,13 @@ volumes:
 - **カスタムノード** - コミュニティ開発
 - **プラグイン** - 機能拡張
 - **テーマ** - UI カスタマイズ
+</div>
 
 ---
 
 # 学習パス
 
+<div class="card animated">
 <div style="display: flex; justify-content: center; margin: 1em 0;">
   <img src="https://docs.n8n.io/assets/images/learning-path/learning-path-overview.png" alt="Learning Path" style="width: 90%; border-radius: 8px;">
 </div>
@@ -1151,14 +1326,16 @@ volumes:
     <li><strong>コミュニティ参加</strong> - 実践と交流</li>
   </ol>
 </div>
+</div>
 
 ---
 
 # 16. 今後の展望とまとめ
 
+<div class="card animated">
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
   <div style="width: 45%;">
-    <h3 style="color: #2563EB; margin-bottom: 1em;">🚀 技術発展</h3>
+    <h3 style="color: var(--rp-iris); margin-bottom: 1em;">🚀 技術発展</h3>
     <ul>
       <li>AI機能の強化</li>
       <li>リアルタイム処理</li>
@@ -1169,7 +1346,7 @@ volumes:
   </div>
 
   <div style="width: 45%;">
-    <h3 style="color: #e34c26; margin-bottom: 1em;">📈 市場動向</h3>
+    <h3 style="color: var(--rp-rose); margin-bottom: 1em;">📈 市場動向</h3>
     <ul>
       <li>自動化需要の増加</li>
       <li>ノーコード/ローコードの普及</li>
@@ -1178,6 +1355,7 @@ volumes:
       <li>セキュリティ強化</li>
     </ul>
   </div>
+</div>
 </div>
 
 <div class="highlight-box">
@@ -1188,23 +1366,24 @@ volumes:
 
 # n8n の核心価値
 
+<div class="card animated">
 <div style="display: flex; justify-content: center; margin: 1em 0 2em 0;">
-  <div style="width: 90%; background-color: #f0f7ff; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  <div style="width: 90%; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
     <ul style="list-style-type: none; padding-left: 0;">
       <li style="margin-bottom: 1em; display: flex; align-items: center;">
-        <span style="background-color: #2563EB; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">1</span>
+        <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">1</span>
         <span><strong>Fair-codeライセンス</strong> - プライバシーと制御の両立</span>
       </li>
       <li style="margin-bottom: 1em; display: flex; align-items: center;">
-        <span style="background-color: #2563EB; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">2</span>
+        <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">2</span>
         <span><strong>高度なカスタマイズ</strong> - 企業固有のニーズに対応</span>
       </li>
       <li style="margin-bottom: 1em; display: flex; align-items: center;">
-        <span style="background-color: #2563EB; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">3</span>
+        <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">3</span>
         <span><strong>豊富な統合</strong> - 400+のノードで幅広い連携</span>
       </li>
       <li style="display: flex; align-items: center;">
-        <span style="background-color: #2563EB; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">4</span>
+        <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">4</span>
         <span><strong>活発なコミュニティ</strong> - 継続的な発展と支援</span>
       </li>
     </ul>
@@ -1212,14 +1391,15 @@ volumes:
 </div>
 
 <div style="text-align: center; margin-top: 3em;">
-  <p style="font-size: 28px; font-weight: bold; color: #2563EB;">n8nでワークフロー自動化の未来を創造しよう</p>
+  <p style="font-size: 28px; font-weight: bold; color: var(--rp-iris);">n8nでワークフロー自動化の未来を創造しよう</p>
+</div>
 </div>
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+<div class="card animated" style="display: flex; justify-content: center; align-items: center; height: 70vh;">
   <div style="text-align: center;">
-    <h2 style="font-size: 36px; margin-bottom: 1em; color: #2563EB;">Questions?</h2>
+    <h2 style="font-size: 36px; margin-bottom: 1em; color: var(--rp-iris);">Questions?</h2>
     <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" alt="Questions" style="width: 150px; margin: 0 auto;">
   </div>
 </div>
