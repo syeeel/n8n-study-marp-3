@@ -116,28 +116,55 @@ style: |
   /* テーブルのスタイル */
   table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    background-color: var(--rp-overlay);
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5em 0;
+    background-color: var(--rp-base);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--rp-highlight-med);
   }
 
   th, td {
-    padding: 0.8em;
-    border: 1px solid var(--rp-highlight-med);
+    padding: 1em;
+    border-bottom: 1px solid var(--rp-highlight-med);
     color: var(--rp-text);
+    font-size: 18px;
+    text-align: left;
+    vertical-align: middle;
+    background-color: var(--rp-base);
   }
 
   th {
-    background-color: var(--rp-highlight-med);
+    background-color: var(--rp-overlay);
     color: var(--rp-iris);
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* テーブル内の強調テキスト */
+  table strong {
+    color: var(--rp-gold);
     font-weight: bold;
   }
 
-  tr:nth-child(even) {
-    background-color: var(--rp-highlight-low);
+  /* テーブルヘッダーのアニメーション効果 */
+  /*
+  th::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rp-rose) 0%, var(--rp-gold) 100%);
   }
+  */
 
   /* タイトルページのスタイル */
   section.title-slide {
@@ -580,45 +607,55 @@ mermaid.initialize({ startOnLoad: true });
 
 # 他の自動化ツールとの比較
 
-<div class="card animated">
-<div style="overflow-x: auto; margin: 1.5em 0;">
-  <table style="width: 100%; border-collapse: collapse;">
+<div style="text-align: center; width: 100%; margin: 2em 0;">
+  <table style="border-collapse: separate !important; border-spacing: 0 !important; background-color: var(--rp-base) !important; border-radius: 8px !important; overflow: hidden !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important; border: 1px solid var(--rp-highlight-med) !important; margin: 0 auto !important; display: table !important; width: auto !important;">
     <thead>
       <tr>
-        <th style="padding: 12px; text-align: left;">特徴</th>
-        <th style="padding: 12px; text-align: left;">n8n</th>
-        <th style="padding: 12px; text-align: left;">Zapier</th>
-        <th style="padding: 12px; text-align: left;">Make</th>
+        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">特徴</th>
+        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">n8n</th>
+        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Dify</th>
+        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Zapier</th>
+        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Make</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 12px; font-weight: bold;">ライセンス</td>
-        <td style="padding: 12px;">Fair-code</td>
-        <td style="padding: 12px;">プロプライエタリ</td>
-        <td style="padding: 12px;">プロプライエタリ</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">ライセンス</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">Fair-code</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">オープンソース</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">プロプライエタリ</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">プロプライエタリ</td>
       </tr>
       <tr>
-        <td style="padding: 12px; font-weight: bold;">ホスティング</td>
-        <td style="padding: 12px;">自己ホスト可能</td>
-        <td style="padding: 12px;">クラウドのみ</td>
-        <td style="padding: 12px;">クラウドのみ</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">ホスティング</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">自己ホスト可能</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">自己ホスト可能</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">クラウドのみ</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">クラウドのみ</td>
       </tr>
       <tr>
-        <td style="padding: 12px; font-weight: bold;">カスタマイズ</td>
-        <td style="padding: 12px;">高度</td>
-        <td style="padding: 12px;">制限的</td>
-        <td style="padding: 12px;">中程度</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">AI機能</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">豊富な統合</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">AI特化</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">基本的</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">基本的</td>
       </tr>
       <tr>
-        <td style="padding: 12px; font-weight: bold;">コスト</td>
-        <td style="padding: 12px;">低コスト</td>
-        <td style="padding: 12px;">高コスト</td>
-        <td style="padding: 12px;">中コスト</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">カスタマイズ</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高度</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高度</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">制限的</td>
+        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">中程度</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">コスト</td>
+        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">低コスト</td>
+        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">低コスト</td>
+        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高コスト</td>
+        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">中コスト</td>
       </tr>
     </tbody>
   </table>
-</div>
 </div>
 
 ---
