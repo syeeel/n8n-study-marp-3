@@ -354,7 +354,7 @@ mermaid.initialize({ startOnLoad: true });
 
 # 目次
 
-## AI エージェントと AI ワークフロー
+## Part 1: AI エージェントと AI ワークフロー
 
 <div class="card animated">
   <ol>
@@ -371,17 +371,15 @@ mermaid.initialize({ startOnLoad: true });
 
 # 目次
 
-## n8n とは
+## Part 2: n8n とは
 
 <div class="card animated">
   <ol>
-    <li><strong>n8n とは何か</strong> - 基本概念と特徴</li>
-    <li><strong>n8n の特徴と強み</strong> - 他のツールとの違い</li>
-    <li><strong>n8n のアーキテクチャ概要</strong> - システム構成</li>
-    <li><strong>n8n の主な利用シーン</strong> - 実用例</li>
-    <li><strong>ワークフローの基本構造</strong> - ノードとコネクション</li>
-    <li><strong>コアノードと統合例</strong> - 主要機能</li>
-    <li><strong>実際のワークフロー作成デモ</strong> - 実践例</li>
+    <li><strong>n8n 企業情報</strong> - 会社概要と背景</li>
+    <li><strong>創業ストーリー</strong> - 設立の経緯と成長</li>
+    <li><strong>ビジネスモデル</strong> - 収益構造と提供価値</li>
+    <li><strong>市場ポジション</strong> - 競合分析と差別化</li>
+    <li><strong>実際のワークフロー作成デモ</strong> - Gmail Summary実例</li>
   </ol>
 </div>
 
@@ -389,25 +387,23 @@ mermaid.initialize({ startOnLoad: true });
 
 # 目次
 
-## n8n Deep Dive
+## Part 3: n8n Deep Dive
 
 <div class="card animated">
   <ol>
     <li><strong>n8n の拡張性</strong> - カスタムノード・API 連携</li>
     <li><strong>セキュリティと運用</strong> - 本格運用に向けて</li>
     <li><strong>n8n の導入方法</strong> - Cloud/Self-host/Docker</li>
-    <li><strong>パフォーマンス最適化</strong> - 高速化とスケーリング</li>
     <li><strong>トラブルシューティング</strong> - よくある問題と解決策</li>
     <li><strong>ベストプラクティス</strong> - 設計と運用の指針</li>
     <li><strong>企業導入事例</strong> - 実際の活用例</li>
-    <li><strong>コミュニティと学習リソース</strong> - 学習支援</li>
-    <li><strong>今後の展望とまとめ</strong> - 発展性</li>
+    <li><strong>学習パスと今後の展望</strong> - 継続的な学習とまとめ</li>
   </ol>
 </div>
 
 ---
 
-# 1. 生成 AI とは？
+# Part1-1. 生成 AI とは？
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin: 1em 0;">
@@ -480,7 +476,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 2. これまでの運転
+# Part1-2. これまでの運転
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
@@ -500,7 +496,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 3. Copilot の登場
+# Part1-3. Copilot の登場
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
@@ -521,7 +517,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 4. 運転席の譲歩
+# Part1-4. 運転席の譲歩
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
@@ -545,7 +541,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 5. 自立
+# Part1-5. 自立
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
@@ -568,7 +564,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 6. AI エージェントと AI ワークフローの違い
+# Part1-6. AI エージェントと AI ワークフローの違い
 
 <div class="card animated">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
@@ -681,7 +677,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# n8n 企業情報
+# Part2-1. n8n 企業情報
 
 <div class="card animated">
 
@@ -700,7 +696,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 創業ストーリー
+# Part2-2. 創業ストーリー
 
 <div class="card animated">
 
@@ -733,7 +729,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# ビジネスモデル
+# Part2-3. ビジネスモデル
 
 ### ☁️ n8n Cloud
 
@@ -764,7 +760,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 市場ポジション
+# Part2-4. 市場ポジション
 
 ### 📊 市場シェアと競合
 
@@ -797,7 +793,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 7. 実際のワークフロー作成デモ
+# Part2-5. 実際のワークフロー作成デモ
 
 <div style="margin-top: 1em;">
   <h3>メールサマリの通知 : Gmail summary</h3>
@@ -849,7 +845,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 8. n8n の拡張性
+# Part3-1. n8n の拡張性
 
 ### 🔧 カスタムノード開発
 
@@ -882,7 +878,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 9. セキュリティと運用
+# Part3-2. セキュリティと運用
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
   <div class="card animated" style="padding: 0.6em;">
@@ -921,7 +917,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 10. n8n の導入方法
+# Part3-3. n8n の導入方法
 
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
   <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
@@ -958,7 +954,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 12. トラブルシューティング
+# Part3-4. トラブルシューティング
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
   <div class="card animated" style="padding: 0.6em;">
@@ -997,7 +993,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 13. ベストプラクティス
+# Part3-5. ベストプラクティス
 
 ### 設計原則
 
@@ -1015,7 +1011,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 14. 企業導入事例
+# Part3-6. 企業導入事例
 
 ### 製造業での活用
 
@@ -1049,7 +1045,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 学習パス
+# Part3-7. 学習パスと今後の展望
 
 <div style="margin-top: 1em;">
   <h3>推奨学習順序</h3>
