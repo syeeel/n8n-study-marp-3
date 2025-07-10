@@ -683,21 +683,21 @@ mermaid.initialize({ startOnLoad: true });
 # n8n の技術スタック
 
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>フロントエンド</h3>
-    <p style="font-size: 18px;">Vue.js + TypeScript</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-iris); font-size: 24px; margin-bottom: 0.5em;">フロントエンド</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">Vue.js + TypeScript</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>バックエンド</h3>
-    <p style="font-size: 18px;">Node.js + TypeScript</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-foam); font-size: 24px; margin-bottom: 0.5em;">バックエンド</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">Node.js + TypeScript</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>データベース</h3>
-    <p style="font-size: 18px;">SQLite / PostgreSQL</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-gold); font-size: 24px; margin-bottom: 0.5em;">データベース</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">SQLite / PostgreSQL</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>デプロイ</h3>
-    <p style="font-size: 18px;">Docker / npm</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-rose); font-size: 24px; margin-bottom: 0.5em;">デプロイ</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">Docker / npm</p>
   </div>
 </div>
 
@@ -721,6 +721,8 @@ mermaid.initialize({ startOnLoad: true });
 - 在庫管理システム連携
 - 売上データの自動集計
 
+---
+
 ### 🤖 AI・機械学習
 
 - ChatGPT API 連携
@@ -737,8 +739,6 @@ mermaid.initialize({ startOnLoad: true });
 
 # 実用例：E コマース自動化
 
-![E-commerce Automation](https://docs.n8n.io/assets/images/workflows/ecommerce-automation.png)
-
 #### ワークフロー例
 
 1. **注文受信** - Shopify Webhook
@@ -750,10 +750,6 @@ mermaid.initialize({ startOnLoad: true });
 ---
 
 # 5. ワークフローの基本構造
-
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <img src="https://docs.n8n.io/assets/images/workflows/basic-workflow-structure.png" alt="Workflow Structure" style="width: 90%; border-radius: 8px;">
-</div>
 
 <div style="margin-top: 1em;">
   <h3>基本要素</h3>
@@ -950,43 +946,38 @@ mermaid.initialize({ startOnLoad: true });
 
 # 9. セキュリティと運用
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🔐 セキュリティ機能</h3>
-    <ul>
-      <li><strong>認証・認可</strong> - JWT, OAuth2対応</li>
-      <li><strong>暗号化</strong> - 機密データの暗号化保存</li>
-      <li><strong>アクセス制御</strong> - ロールベース権限管理</li>
-      <li><strong>監査ログ</strong> - 操作履歴の記録</li>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔐 セキュリティ機能</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>認証・認可</li>
+      <li>暗号化</li>
+      <li>アクセス制御</li>
     </ul>
-
-    <h3>📊 監視・ログ</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">📊 監視・ログ</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>実行ログの詳細記録</li>
       <li>パフォーマンス監視</li>
       <li>エラー通知システム</li>
-      <li>メトリクス収集</li>
     </ul>
-
   </div>
-
-  <div style="width: 45%;">
-    <h3>🔄 運用管理</h3>
-    <ul>
-      <li><strong>バックアップ</strong> - 自動バックアップ設定</li>
-      <li><strong>スケーリング</strong> - 負荷分散対応</li>
-      <li><strong>更新管理</strong> - セキュリティパッチ適用</li>
-      <li><strong>障害対応</strong> - 自動復旧機能</li>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔄 運用管理</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>バックアップ</li>
+      <li>スケーリング</li>
+      <li>更新管理</li>
     </ul>
-
-    <h3>📈 パフォーマンス</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">📈 パフォーマンス</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>非同期処理</li>
       <li>キューシステム</li>
       <li>キャッシュ機能</li>
-      <li>リソース最適化</li>
     </ul>
-
   </div>
 </div>
 
@@ -1031,39 +1022,36 @@ mermaid.initialize({ startOnLoad: true });
 
 # 11. パフォーマンス最適化
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🚀 実行最適化</h3>
-    <ul>
-      <li><strong>バッチ処理</strong> - 大量データの効率的処理</li>
-      <li><strong>並列実行</strong> - 複数ノードの同時実行</li>
-      <li><strong>キャッシュ活用</strong> - 重複処理の回避</li>
-      <li><strong>リソース制限</strong> - メモリ・CPU使用量の制御</li>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🚀 実行最適化</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>バッチ処理</li>
+      <li>並列実行</li>
+      <li>キャッシュ活用</li>
     </ul>
-    
-    <h3>📊 監視・メトリクス</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">⚡ スケーリング戦略</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>水平スケーリング</li>
+      <li>垂直スケーリング</li>
+      <li>負荷分散</li>
+    </ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">📊 監視・メトリクス</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>実行時間の測定</li>
       <li>エラー率の監視</li>
       <li>リソース使用量の追跡</li>
-      <li>ボトルネックの特定</li>
     </ul>
   </div>
-  
-  <div style="width: 45%;">
-    <h3>⚡ スケーリング戦略</h3>
-    <ul>
-      <li><strong>水平スケーリング</strong> - 複数インスタンス</li>
-      <li><strong>垂直スケーリング</strong> - リソース増強</li>
-      <li><strong>負荷分散</strong> - トラフィック分散</li>
-      <li><strong>自動スケーリング</strong> - 需要に応じた調整</li>
-    </ul>
-    
-    <h3>🔧 最適化テクニック</h3>
-    <ul>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔧 最適化テクニック</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>データベースクエリの最適化</li>
       <li>API呼び出しの効率化</li>
-      <li>不要な処理の削除</li>
       <li>非同期処理の活用</li>
     </ul>
   </div>
@@ -1073,40 +1061,37 @@ mermaid.initialize({ startOnLoad: true });
 
 # 12. トラブルシューティング
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-  <div style="width: 50%;">
-    <h3>🔍 よくある問題</h3>
-    <ul>
-      <li><strong>認証エラー</strong> - API認証情報の確認</li>
-      <li><strong>タイムアウト</strong> - ネットワーク接続の確認</li>
-      <li><strong>データ形式エラー</strong> - JSON/XML形式の検証</li>
-      <li><strong>メモリ不足</strong> - リソース使用量の確認</li>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔍 よくある問題</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>認証エラー</li>
+      <li>タイムアウト</li>
+      <li>データ形式エラー</li>
     </ul>
-    
-    <h3>🛠️ デバッグ手法</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🛠️ デバッグ手法</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>実行ログの詳細確認</li>
       <li>ノード単位でのテスト実行</li>
       <li>データフローの可視化</li>
-      <li>エラーメッセージの解析</li>
     </ul>
   </div>
-  
-  <div style="width: 45%;">
-    <h3>📋 診断チェックリスト</h3>
-    <ul>
-      <li><strong>接続確認</strong> - ネットワーク・API接続</li>
-      <li><strong>認証確認</strong> - トークン・キーの有効性</li>
-      <li><strong>権限確認</strong> - アクセス権限の確認</li>
-      <li><strong>設定確認</strong> - 環境変数・設定値</li>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">📋 診断チェックリスト</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
+      <li>接続確認</li>
+      <li>認証確認</li>
+      <li>権限確認</li>
     </ul>
-    
-    <h3>🔧 解決策</h3>
-    <ul>
+  </div>
+  <div class="card animated" style="padding: 0.6em;">
+    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔧 解決策</h3>
+    <ul style="font-size: 0.9em; line-height: 1.1;">
       <li>再認証の実行</li>
       <li>タイムアウト値の調整</li>
       <li>データ形式の変換</li>
-      <li>リソース制限の緩和</li>
     </ul>
   </div>
 </div>
@@ -1124,10 +1109,12 @@ mermaid.initialize({ startOnLoad: true });
 
 #### 🔒 セキュリティ
 
-- 機密情報の暗号化
-- アクセス権限の最小化
-- 定期的なセキュリティ監査
-- セキュリティパッチの適用
+- **機密情報の暗号化** - サービスで利用する機密情報は暗号化
+- **アクセス権限の最小化** - サービスに必要な最小権限で
+- **定期的なセキュリティ監査** - ワークフローの見直し
+- **セキュリティパッチの適用** - 主にインフラで
+
+---
 
 ### 運用管理
 
@@ -1138,10 +1125,10 @@ mermaid.initialize({ startOnLoad: true });
 
 #### 🧑‍🤝‍🧑 チーム協働
 
-- ドキュメント整備
-- コードレビュー
-- 知識共有
-- 継続的改善
+- **ドキュメント整備** - Confluence などで
+- **コードレビュー** - Github 利用も視野に
+- **知識共有** - Confluence などで
+- **継続的改善** - レビューや定期的な見直し
 
 ---
 
