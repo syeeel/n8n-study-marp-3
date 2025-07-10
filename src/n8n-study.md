@@ -344,7 +344,7 @@ mermaid.initialize({ startOnLoad: true });
 
 <!-- タイトルスライド -->
 
-# <span>n8n</span>
+# <span>AI Agent & n8n</span>
 
 ## AI ワークフロー自動化プラットフォーム
 
@@ -684,7 +684,8 @@ mermaid.initialize({ startOnLoad: true });
 # n8n 企業情報
 
 <div class="card animated">
- 🏢 企業概要
+
+**🏢 企業概要**
 
 - **企業名**: n8n.io GmbH
 - **設立**: 2019 年
@@ -694,7 +695,7 @@ mermaid.initialize({ startOnLoad: true });
 </div>
 
 <div class="highlight-box">
-> **ミッション:** プライバシー重視のワークフロー自動化で、誰もが簡単にシステムを統合できる世界を創造する
+<strong>ミッション</strong>: プライバシー重視のワークフロー自動化で、誰もが簡単にシステムを統合できる世界を創造する
 </div>
 
 ---
@@ -702,7 +703,8 @@ mermaid.initialize({ startOnLoad: true });
 # 創業ストーリー
 
 <div class="card animated">
- 🚀 創業の背景
+
+**🚀 創業の背景**
 
 - **2019 年** - Jan Oberhauser が n8n を開発開始
 - **オープンソース** - コミュニティ主導の開発
@@ -710,15 +712,16 @@ mermaid.initialize({ startOnLoad: true });
 
 **💡 創業者のビジョン**
 
-- プライバシー重視の自動化ツール
-- 開発者フレンドリーな設計
-- コミュニティ主導の成長
+- **プライバシー重視の自動化ツール** - 個人のワークフロー重視
+- **開発者フレンドリーな設計** - カスタマイズ可能な設計
+- **コミュニティ主導の成長** - 北米でも拡大中
 </div>
 
 ---
 
 <div class="card animated">
- 📈 成長軌跡
+
+**📈 成長軌跡**
 
 - **2019 年** - GitHub でオープンソース公開
 - **2020 年** - 初回資金調達
@@ -732,14 +735,14 @@ mermaid.initialize({ startOnLoad: true });
 
 # ビジネスモデル
 
-#### ☁️ n8n Cloud
+### ☁️ n8n Cloud
 
 - SaaS 型サービス
 - 月額・年額サブスクリプション
 - 自動スケーリング
 - 24/7 サポート
 
-#### 🏢 エンタープライズ
+### 🏢 エンタープライズ
 
 - 企業向けソリューション
 - オンプレミス導入
@@ -749,7 +752,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-#### 🤝 パートナー
+### 🤝 パートナー
 
 - エコシステム構築
 - システムインテグレーター
@@ -832,7 +835,7 @@ mermaid.initialize({ startOnLoad: true });
   </div>
   <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
     <h3 style="color: var(--rp-gold); font-size: 24px; margin-bottom: 0.5em;">3. 接続設定</h3>
-    <p style="font-size: 18px; color: var(--rp-text);">ノード間のデータフローを定義</p>
+    <p style="font-size: 18px; color: var(--rp-text);">データフローを定義</p>
   </div>
   <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
     <h3 style="color: var(--rp-rose); font-size: 24px; margin-bottom: 0.5em;">4. テスト実行</h3>
@@ -955,45 +958,6 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 11. パフォーマンス最適化
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🚀 実行最適化</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>バッチ処理</li>
-      <li>並列実行</li>
-      <li>キャッシュ活用</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">⚡ スケーリング戦略</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>水平スケーリング</li>
-      <li>垂直スケーリング</li>
-      <li>負荷分散</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">📊 監視・メトリクス</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>実行時間の測定</li>
-      <li>エラー率の監視</li>
-      <li>リソース使用量の追跡</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔧 最適化テクニック</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>データベースクエリの最適化</li>
-      <li>API呼び出しの効率化</li>
-      <li>非同期処理の活用</li>
-    </ul>
-  </div>
-</div>
-
----
-
 # 12. トラブルシューティング
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
@@ -1051,22 +1015,6 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-### 運用管理
-
-- 監視体制 - 24/7 監視の構築
-- バックアップ - 定期的なデータバックアップ
-- 障害対応 - インシデント対応手順
-- 更新管理 - 定期的なアップデート
-
-### 🧑‍🤝‍🧑 チーム協働
-
-- ドキュメント整備 - Confluence などで
-- コードレビュー - Github 利用も視野に
-- 知識共有 - Confluence などで
-- 継続的改善 - レビューや定期的な見直し
-
----
-
 # 14. 企業導入事例
 
 ### 製造業での活用
@@ -1116,7 +1064,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# n8n の核心価値
+# n8n のまとめ
 
 <div class="card animated">
 <div style="display: flex; justify-content: center; margin: 1em 0 2em 0;">
