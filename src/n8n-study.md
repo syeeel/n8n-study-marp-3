@@ -354,7 +354,24 @@ mermaid.initialize({ startOnLoad: true });
 
 # 目次
 
-## 基礎編
+## AI エージェントと AI ワークフロー
+
+<div class="card animated">
+  <ol>
+    <li><strong>生成AIとは？</strong> - 基本概念と特徴</li>
+    <li><strong>これまでの運転</strong> - 従来のアプローチ</li>
+    <li><strong>Copilotの登場</strong> - 新しいパラダイム</li>
+    <li><strong>運転席の譲歩</strong> - 役割の変化</li>
+    <li><strong>自立</strong> - 自律的なAI</li>
+    <li><strong>AIエージェントとAIワークフローの違い</strong> - 概念の整理</li>
+  </ol>
+</div>
+
+---
+
+# 目次
+
+## n8n とは
 
 <div class="card animated">
   <ol>
@@ -372,7 +389,7 @@ mermaid.initialize({ startOnLoad: true });
 
 # 目次
 
-## 応用編
+## n8n Deep Dive
 
 <div class="card animated">
   <ol>
@@ -386,6 +403,124 @@ mermaid.initialize({ startOnLoad: true });
     <li><strong>コミュニティと学習リソース</strong> - 学習支援</li>
     <li><strong>今後の展望とまとめ</strong> - 発展性</li>
   </ol>
+</div>
+
+---
+
+# 1. 生成 AI とは？
+
+<div class="card animated">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin: 1em 0;">
+    <div>
+      <h4>🤖 生成AIの定義</h4>
+      <ul>
+        <li>新しいコンテンツを生成するAI技術</li>
+        <li>テキスト、画像、音声、動画など</li>
+        <li>大量のデータから学習したパターン</li>
+        <li>人間らしい創造的な出力</li>
+      </ul>
+    </div>
+    <div>
+      <h4>⚡ 主な特徴</h4>
+      <ul>
+        <li><strong>自然言語理解</strong> - 人間の言葉を理解</li>
+        <li><strong>コンテキスト保持</strong> - 文脈を把握</li>
+        <li><strong>創造性</strong> - 新しいアイデアを生成</li>
+        <li><strong>汎用性</strong> - 様々なタスクに対応</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🔄 従来のAI vs 生成AI</h3>
+  <div style="display: flex; justify-content: space-around; margin: 1em 0;">
+    <div style="text-align: center; padding: 1em; background: var(--rp-overlay); border-radius: 8px; width: 40%;">
+      <h4 style="color: var(--rp-subtle);">従来のAI</h4>
+      <ul style="text-align: left; color: var(--rp-text);">
+        <li>分類・予測に特化</li>
+        <li>決められたタスクのみ</li>
+        <li>ルールベースの処理</li>
+        <li>限定的な応用範囲</li>
+      </ul>
+    </div>
+    <div style="text-align: center; padding: 1em; background: var(--rp-iris); border-radius: 8px; width: 40%;">
+      <h4 style="color: white;">生成AI</h4>
+      <ul style="text-align: left; color: white;">
+        <li>コンテンツ生成・創造</li>
+        <li>多様なタスクに対応</li>
+        <li>学習ベースの処理</li>
+        <li>幅広い応用可能性</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🎯 生成AIの応用領域</h3>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8em; margin: 1em 0;">
+    <div style="text-align: center; padding: 0.8em; background: var(--rp-love); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">📝 テキスト</h4>
+      <p style="color: white; font-size: 0.9em;">記事作成、翻訳、要約、コード生成</p>
+    </div>
+    <div style="text-align: center; padding: 0.8em; background: var(--rp-gold); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">🎨 画像</h4>
+      <p style="color: white; font-size: 0.9em;">イラスト生成、写真編集、デザイン</p>
+    </div>
+    <div style="text-align: center; padding: 0.8em; background: var(--rp-foam); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">🎵 音声</h4>
+      <p style="color: white; font-size: 0.9em;">音声合成、音楽生成、翻訳</p>
+    </div>
+  </div>
+</div>
+
+---
+
+# 2. これまでの運転
+
+<div class="card animated">
+  <h3>従来のアプローチ</h3>
+  <!-- 内容は後で追加 -->
+</div>
+
+---
+
+# 3. Copilot の登場
+
+<div class="card animated">
+  <h3>新しいパラダイム</h3>
+  <!-- 内容は後で追加 -->
+</div>
+
+---
+
+# 4. 運転席の譲歩
+
+<div class="card animated">
+  <h3>役割の変化</h3>
+  <!-- 内容は後で追加 -->
+</div>
+
+---
+
+# 5. 自立
+
+<div class="card animated">
+  <h3>自律的なAI</h3>
+  <!-- 内容は後で追加 -->
+</div>
+
+---
+
+# 6. AI エージェントと AI ワークフローの違い
+
+<div class="card animated">
+  <h3>概念の整理</h3>
+  <!-- 内容は後で追加 -->
 </div>
 
 ---
@@ -518,344 +653,6 @@ mermaid.initialize({ startOnLoad: true });
 - **北米市場での急成長** - AI エージェントともに急成長
 - **ヨーロッパでの基盤強化** - ヨーロッパ発の SaaS サービスとして
 - **アジア太平洋地域への展開** - 日本語化などへの取り組み強化
-
----
-
-# 1. n8n とは何か
-
-<div class="card animated">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="width: 55%;">
-    <h3><span class="gradient-text">n8n（n-eight-n）とは</span></h3>
-    <ul>
-      <li><strong>Fair-code</strong>ライセンスのワークフロー自動化ツール</li>
-      <li>APIを持つアプリケーション間の接続とデータ操作</li>
-      <li>AI機能とビジネスプロセス自動化の組み合わせ</li>
-      <li>コードを書かずに複雑なワークフローを構築可能</li>
-    </ul>
-    
-  </div>
-  <div style="width: 45%;">
-    <img src="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_ITO_Ps_5a5aac3fda.webp" alt="n8n" style="width: 100%; margin: 0 auto;">
-  </div>
-</div>
-</div>
-
----
-
-# n8n の基本概念
-
-<div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
-    <h3>🔗 統合</h3>
-    <p style="font-size: 18px;">APIを持つアプリケーション間の接続</p>
-  </div>
-  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
-    <h3>⚙️ 自動化</h3>
-    <p style="font-size: 18px;">ビジネスプロセスの自動実行</p>
-  </div>
-  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
-    <h3>🤖 AI機能</h3>
-    <p style="font-size: 18px;">AIを活用した高度な処理</p>
-  </div>
-</div>
-
-<div class="highlight-box">
-  <strong>特徴:</strong> プライバシー重視（自己ホスト可能）、高度にカスタマイズ可能、直感的なUI
-</div>
-
----
-
-# 2. n8n の特徴と強み
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 46vh;">
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🔒 プライバシー重視</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>Fair-codeライセンス</li>
-      <li>自己ホスト可能</li>
-      <li>データの完全制御</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🚀 豊富な統合</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>400+のノード</li>
-      <li>主要SaaSサービス対応</li>
-      <li>Webhook/API対応</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">🎨 高度なカスタマイズ</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>カスタムノード開発</li>
-      <li>TypeScript対応</li>
-      <li>柔軟なデータ変換</li>
-    </ul>
-  </div>
-  <div class="card animated" style="padding: 0.6em;">
-    <h3 style="font-size: 1em; margin-bottom: 0.3em;">💡 直感的なUI</h3>
-    <ul style="font-size: 0.9em; line-height: 1.1;">
-      <li>ドラッグ&ドロップ</li>
-      <li>リアルタイムプレビュー</li>
-      <li>視覚的なワークフロー</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# 他の自動化ツールとの比較
-
-<div style="text-align: center; width: 100%; margin: 2em 0;">
-  <table style="border-collapse: separate !important; border-spacing: 0 !important; background-color: var(--rp-base) !important; border-radius: 8px !important; overflow: hidden !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important; border: 1px solid var(--rp-highlight-med) !important; margin: 0 auto !important; display: table !important; width: auto !important;">
-    <thead>
-      <tr>
-        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">特徴</th>
-        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">n8n</th>
-        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Dify</th>
-        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Zapier</th>
-        <th style="padding: 1em; background-color: var(--rp-overlay); color: var(--rp-iris); font-weight: bold; font-size: 20px; text-align: left; border-bottom: 1px solid var(--rp-highlight-med);">Make</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">ライセンス</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">Fair-code</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">オープンソース</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">プロプライエタリ</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">プロプライエタリ</td>
-      </tr>
-      <tr>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">ホスティング</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">自己ホスト可能</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">自己ホスト可能</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">クラウドのみ</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">クラウドのみ</td>
-      </tr>
-      <tr>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">AI機能</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">豊富な統合</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">AI特化</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">基本的</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">基本的</td>
-      </tr>
-      <tr>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">カスタマイズ</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高度</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高度</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">制限的</td>
-        <td style="padding: 0.8em; border-bottom: 1px solid var(--rp-highlight-med); color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">中程度</td>
-      </tr>
-      <tr>
-        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; font-weight: bold; background-color: var(--rp-base);">コスト</td>
-        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">低コスト</td>
-        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">低コスト</td>
-        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">高コスト</td>
-        <td style="padding: 0.8em; color: var(--rp-text); font-size: 18px; background-color: var(--rp-base);">中コスト</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
----
-
-# 3. n8n のアーキテクチャ概要
-
-<div class="card animated">
-<div style="display: flex; justify-content: center; margin: 2em 0;">
-  <img src="https://docs.n8n.io/assets/images/architecture-overview.png" alt="n8n Architecture" style="width: 90%; border-radius: 8px;">
-</div>
-
-<div style="margin-top: 1em;">
-  <h3>主要コンポーネント</h3>
-  <ul>
-    <li><strong>Web UI</strong> - ワークフローエディタと管理画面</li>
-    <li><strong>Execution Engine</strong> - ワークフローの実行エンジン</li>
-    <li><strong>Database</strong> - ワークフローと実行履歴の保存</li>
-    <li><strong>Queue System</strong> - 非同期処理の管理</li>
-  </ul>
-</div>
-</div>
-
----
-
-# n8n の技術スタック
-
-<div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-    <h3 style="color: var(--rp-iris); font-size: 24px; margin-bottom: 0.5em;">フロントエンド</h3>
-    <p style="font-size: 18px; color: var(--rp-text);">Vue.js + TypeScript</p>
-  </div>
-  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-    <h3 style="color: var(--rp-foam); font-size: 24px; margin-bottom: 0.5em;">バックエンド</h3>
-    <p style="font-size: 18px; color: var(--rp-text);">Node.js + TypeScript</p>
-  </div>
-  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-    <h3 style="color: var(--rp-gold); font-size: 24px; margin-bottom: 0.5em;">データベース</h3>
-    <p style="font-size: 18px; color: var(--rp-text);">SQLite / PostgreSQL</p>
-  </div>
-  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-    <h3 style="color: var(--rp-rose); font-size: 24px; margin-bottom: 0.5em;">デプロイ</h3>
-    <p style="font-size: 18px; color: var(--rp-text);">Docker / npm</p>
-  </div>
-</div>
-
-<div class="highlight-box">
-  <strong>特徴:</strong> TypeScriptによる型安全性、モジュラー設計、拡張可能なアーキテクチャ
-</div>
-
----
-
-# 4. n8n の主な利用シーン
-
-### 📧 メール自動化
-
-- フォーム送信時の自動返信
-- リード管理システム連携
-- メール配信の自動化
-
-### 📊 データ同期
-
-- CRM とメール配信の同期
-- 在庫管理システム連携
-- 売上データの自動集計
-
----
-
-### 🤖 AI・機械学習
-
-- ChatGPT API 連携
-- 画像認識・分析
-- 自然言語処理
-
-### 🛠️ 開発支援
-
-- CI/CD パイプライン
-- テスト自動化
-- デプロイメント自動化
-
----
-
-# 実用例：E コマース自動化
-
-#### ワークフロー例
-
-1. **注文受信** - Shopify Webhook
-2. **在庫確認** - データベース照会
-3. **メール通知** - 顧客・管理者へ
-4. **配送手配** - 配送業者 API 連携
-5. **在庫更新** - リアルタイム同期
-
----
-
-# 5. ワークフローの基本構造
-
-<div style="margin-top: 1em;">
-  <h3>基本要素</h3>
-  <ul>
-    <li><strong>ノード（Node）</strong> - 個別の処理単位</li>
-    <li><strong>コネクション（Connection）</strong> - ノード間のデータフロー</li>
-    <li><strong>トリガー（Trigger）</strong> - ワークフロー開始点</li>
-    <li><strong>アクション（Action）</strong> - 実行処理</li>
-  </ul>
-</div>
-
----
-
-# ノードの種類
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 1.5em 0; gap: 0.8em;">
-  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
-    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🔴 トリガーノード</h3>
-    <p style="font-size: 14px; margin-bottom: 0.5em;">ワークフローの開始点</p>
-    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
-      <li>Webhook</li>
-      <li>Cron / Schedule</li>
-      <li>Manual Trigger</li>
-    </ul>
-  </div>
-  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
-    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟢 Regular ノード</h3>
-    <p style="font-size: 14px; margin-bottom: 0.5em;">メインの処理ノード</p>
-    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
-      <li>HTTP Request</li>
-      <li>サービス連携（600+）</li>
-      <li>データベース操作</li>
-    </ul>
-  </div>
-  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
-    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟡 Core ノード</h3>
-    <p style="font-size: 14px; margin-bottom: 0.5em;">基本的なデータ操作</p>
-    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
-      <li>Set / Edit Fields</li>
-      <li>If / Switch</li>
-      <li>Merge / Split</li>
-    </ul>
-  </div>
-  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
-    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🔵 Sub-workflow ノード</h3>
-    <p style="font-size: 14px; margin-bottom: 0.5em;">ワークフロー管理</p>
-    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
-      <li>Execute Workflow</li>
-      <li>Wait</li>
-      <li>Stop and Error</li>
-    </ul>
-  </div>
-  <div class="card animated" style="width: 28%; text-align: center; padding: 0.8em;">
-    <h3 style="font-size: 18px; margin-bottom: 0.5em;">🟣 Community ノード</h3>
-    <p style="font-size: 14px; margin-bottom: 0.5em;">コミュニティ制作</p>
-    <ul style="text-align: left; font-size: 13px; margin: 0; padding-left: 1.2em;">
-      <li>npm パッケージ</li>
-      <li>カスタムノード</li>
-      <li>サードパーティ拡張</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# 6. コアノードと統合例
-
-### 🔗 統合ノード
-
-- **HTTP Request** - 任意の API 呼び出し
-- **Webhook** - 外部からの呼び出し受信
-- **REST API** - RESTful API 連携
-- **GraphQL** - GraphQL API 連携
-
-### 📊 データベース
-
-- **PostgreSQL** - リレーショナル DB
-- **MongoDB** - NoSQL DB
-- **MySQL** - オープンソース DB
-
----
-
-### 📧 コミュニケーション
-
-- **Email** - SMTP 送信
-- **Slack** - チーム連携
-- **Discord** - ゲーミングコミュニティ
-
-### 🤖 AI・機械学習
-
-- **OpenAI** - ChatGPT API
-- **Hugging Face** - 機械学習モデル
-- **Google AI** - Gemini API
-
----
-
-# 主要統合サービス
-
-#### カテゴリ別統合
-
-- **コミュニケーションツール** - Slack, Teams, Gmail
-- **オンラインドライブ** - Google Drive, Box, AWS S3, Cloud Storage
-- **E コマース** - Shopify, WooCommerce, Stripe
-- **CRM** - Salesforce, HubSpot, Pipedrive
-- **マーケティング** - Mailchimp, ConvertKit, ActiveCampaign
-- **プロジェクト管理** - Trello, Asana, Monday.com
 
 ---
 
