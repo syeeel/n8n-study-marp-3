@@ -891,25 +891,25 @@ mermaid.initialize({ startOnLoad: true });
 # ワークフロー作成手順
 
 <div style="display: flex; justify-content: space-around; margin-top: 2em;">
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>1. トリガー設定</h3>
-    <p style="font-size: 18px;">ワークフローの開始点を定義</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-iris); font-size: 24px; margin-bottom: 0.5em;">1. トリガー設定</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">ワークフローの開始点を定義</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>2. ノード追加</h3>
-    <p style="font-size: 18px;">必要な処理ノードを配置</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-foam); font-size: 24px; margin-bottom: 0.5em;">2. ノード追加</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">必要な処理ノードを配置</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>3. 接続設定</h3>
-    <p style="font-size: 18px;">ノード間のデータフローを定義</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-gold); font-size: 24px; margin-bottom: 0.5em;">3. 接続設定</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">ノード間のデータフローを定義</p>
   </div>
-  <div style="width: 22%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>4. テスト実行</h3>
-    <p style="font-size: 18px;">動作確認とデバッグ</p>
+  <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-rose); font-size: 24px; margin-bottom: 0.5em;">4. テスト実行</h3>
+    <p style="font-size: 18px; color: var(--rp-text);">動作確認とデバッグ</p>
   </div>
 </div>
 
-<div style="margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 8px;">
+<div class="highlight-box">
   <strong>ポイント:</strong> 段階的に構築し、各ステップでテストを実行することが重要
 </div>
 
@@ -931,6 +931,8 @@ mermaid.initialize({ startOnLoad: true });
 - 外部システム連携
 - CI/CD 統合
 
+---
+
 ### 🎨 UI カスタマイズ
 
 - テーマカスタマイズ
@@ -943,26 +945,6 @@ mermaid.initialize({ startOnLoad: true });
 - 認証方式拡張
 - データ形式変換
 - 特殊処理追加
-
----
-
-# カスタムノード開発例
-
-```typescript
-import { IExecuteFunctions } from "n8n-core";
-import { INodeExecutionData } from "n8n-workflow";
-
-export async function execute(
-  this: IExecuteFunctions,
-  items: INodeExecutionData[]
-): Promise<INodeExecutionData[]> {
-  // カスタム処理の実装
-  return items.map((item) => {
-    // データ変換処理
-    return item;
-  });
-}
-```
 
 ---
 
@@ -1013,74 +995,35 @@ export async function execute(
 # 10. n8n の導入方法
 
 <div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>☁️ n8n Cloud</h3>
-    <p style="font-size: 18px;">マネージドサービス</p>
-    <ul style="text-align: left; font-size: 16px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-iris); font-size: 24px; margin-bottom: 0.5em;">☁️ n8n Cloud</h3>
+    <p style="font-size: 18px; color: var(--rp-gold); font-weight: bold;">マネージドサービス</p>
+    <ul style="text-align: left; font-size: 16px; color: var(--rp-text);">
       <li>簡単セットアップ</li>
       <li>自動スケーリング</li>
       <li>24/7サポート</li>
       <li>有料プラン</li>
     </ul>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>🐳 Docker</h3>
-    <p style="font-size: 18px;">推奨方法</p>
-    <ul style="text-align: left; font-size: 16px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-foam); font-size: 24px; margin-bottom: 0.5em;">🐳 Docker</h3>
+    <p style="font-size: 18px; color: var(--rp-gold); font-weight: bold;">推奨方法</p>
+    <ul style="text-align: left; font-size: 16px; color: var(--rp-text);">
       <li>環境分離</li>
       <li>簡単デプロイ</li>
       <li>バージョン管理</li>
       <li>無料</li>
     </ul>
   </div>
-  <div style="width: 30%; text-align: center; padding: 1em; background-color: #f0f7ff; border-radius: 8px;">
-    <h3>📦 npm</h3>
-    <p style="font-size: 18px;">直接インストール</p>
-    <ul style="text-align: left; font-size: 16px;">
+  <div class="card animated" style="width: 30%; text-align: center; padding: 1em;">
+    <h3 style="color: var(--rp-rose); font-size: 24px; margin-bottom: 0.5em;">📦 npm</h3>
+    <p style="font-size: 18px; color: var(--rp-gold); font-weight: bold;">直接インストール</p>
+    <ul style="text-align: left; font-size: 16px; color: var(--rp-text);">
       <li>完全制御</li>
       <li>カスタマイズ可能</li>
       <li>開発環境向け</li>
       <li>無料</li>
     </ul>
-  </div>
-</div>
-
----
-
-# Docker での導入例
-
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <div style="width: 90%; background-color: #f8f9fa; padding: 1.5em; border-radius: 8px; font-family: monospace;">
-    <div style="margin-bottom: 1.5em; border-left: 4px solid #2563EB; padding-left: 1em;">
-      <p style="color: #555; margin-bottom: 0.3em; font-weight: bold;">docker-compose.yml:</p>
-      <div class="code-example">
-```yaml
-version: '3.8'
-services:
-  n8n:
-    image: n8nio/n8n
-    ports:
-      - "5678:5678"
-    environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=admin
-      - N8N_BASIC_AUTH_PASSWORD=password
-    volumes:
-      - n8n_data:/home/node/.n8n
-volumes:
-  n8n_data:
-```
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div style="margin-top: 1em;">
-  <h3>起動コマンド</h3>
-  <div class="code-example">
-    docker-compose up -d
   </div>
 </div>
 
