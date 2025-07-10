@@ -638,68 +638,37 @@ mermaid.initialize({ startOnLoad: true });
 ---
 
 <div class="card animated">
-  <h3>🔄 Human-LLM-Environment ループ</h3>
-  
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1.5em 0; align-items: center;">
-    <div>
-      <h4 style="color: var(--rp-gold); margin-bottom: 1em;">相互作用のサイクル</h4>
-      <ol style="color: var(--rp-text); line-height: 1.6;">
-        <li><strong>Human</strong> - 目標設定・監視</li>
-        <li><strong>LLM Call</strong> - 推論・判断</li>
-        <li><strong>Action</strong> - 環境への働きかけ</li>
-        <li><strong>Environment</strong> - 結果・フィードバック</li>
-        <li><strong>Feedback</strong> - 学習・調整</li>
-      </ol>
-    </div>
-    <div style="text-align: center;">
-      <div style="background: var(--rp-overlay); border-radius: 12px; padding: 1.5em;">
-        <div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 1em;">
-          <div style="background: var(--rp-love); border-radius: 50%; padding: 0.8em; color: white;">Human</div>
-          <div style="background: var(--rp-pine); border-radius: 50%; padding: 0.8em; color: white;">LLM</div>
-        </div>
-        <div style="text-align: center; margin: 1em 0;">
-          <span style="color: var(--rp-gold);">↕️ Action/Feedback</span>
-        </div>
-        <div style="background: var(--rp-rose); border-radius: 8px; padding: 0.8em; color: white;">Environment</div>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="card animated">
   <h3>🎯 実践的な選択指針</h3>
   
-  <div style="margin: 1.5em 0;">
-    <table style="width: 100%; margin: 1em 0;">
+  <div style="text-align: center; margin: 1.5em 0;">
+    <table style="width: 70% !important; margin: 0 auto !important; text-align: center !important; table-layout: fixed !important; background-color: var(--rp-base) !important; border: 1px solid var(--rp-highlight-med) !important; display: inline-table !important;">
       <thead>
         <tr>
-          <th>要求</th>
-          <th>推奨アプローチ</th>
-          <th>理由</th>
+          <th style="width: 30% !important; background-color: var(--rp-overlay) !important;">要求</th>
+          <th style="width: 30% !important; background-color: var(--rp-overlay) !important;">推奨アプローチ</th>
+          <th style="width: 40% !important; background-color: var(--rp-overlay) !important;">理由</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>定型業務の自動化</strong></td>
-          <td>AI Workflow</td>
-          <td>予測可能性・安定性が重要</td>
+          <td style="background-color: var(--rp-base) !important;"><strong>定型業務の自動化</strong></td>
+          <td style="background-color: var(--rp-base) !important;">AI Workflow</td>
+          <td style="background-color: var(--rp-base) !important;">予測可能性・安定性が重要</td>
         </tr>
         <tr>
-          <td><strong>創造的タスク</strong></td>
-          <td>AI Agent</td>
-          <td>柔軟性・適応性が重要</td>
+          <td style="background-color: var(--rp-base) !important;"><strong>創造的タスク</strong></td>
+          <td style="background-color: var(--rp-base) !important;">AI Agent</td>
+          <td style="background-color: var(--rp-base) !important;">柔軟性・適応性が重要</td>
         </tr>
         <tr>
-          <td><strong>ハイブリッド業務</strong></td>
-          <td>Agentic Workflow</td>
-          <td>両方の特徴を組み合わせ</td>
+          <td style="background-color: var(--rp-base) !important;"><strong>ハイブリッド業務</strong></td>
+          <td style="background-color: var(--rp-base) !important;">Agentic Workflow</td>
+          <td style="background-color: var(--rp-base) !important;">両方の特徴を組み合わせ</td>
         </tr>
         <tr>
-          <td><strong>探索的分析</strong></td>
-          <td>AI Agent</td>
-          <td>未知の領域での発見が重要</td>
+          <td style="background-color: var(--rp-base) !important;"><strong>探索的分析</strong></td>
+          <td style="background-color: var(--rp-base) !important;">AI Agent</td>
+          <td style="background-color: var(--rp-base) !important;">未知の領域での発見が重要</td>
         </tr>
       </tbody>
     </table>
@@ -807,24 +776,6 @@ mermaid.initialize({ startOnLoad: true });
 - **Fair-code ライセンス** - 柔軟な利用モデル
 - **開発者フレンドリー** - カスタマイズ性
 - **豊富な接続先設定** - Slack / Gmail / Calender /などなど
-
----
-
-# 資金調達と投資家
-
-### 💰 資金調達履歴
-
-- **2020 年** - シリーズ A: $12M
-- **2021 年** - シリーズ B: $50M
-- **2023 年** - シリーズ C: $100M+
-- **総調達額** - $200M 以上
-
-### 🎯 投資家
-
-- **Sequoia Capital** - リード投資家
-- **Bessemer Venture Partners** - 主要投資家
-- **FirstMark Capital** - 早期投資家
-- **GitHub** - 戦略的投資家
 
 ---
 
@@ -1086,33 +1037,33 @@ mermaid.initialize({ startOnLoad: true });
 
 ### 設計原則
 
-- **単一責任** - 1 つのノードに 1 つの機能
-- **エラーハンドリング** - 例外処理の実装
-- **ログ記録** - 実行履歴の保存
-- **バージョン管理** - 変更履歴の追跡
+- 単一責任 - 1 つのノードに 1 つの機能
+- エラーハンドリング - 例外処理の実装
+- ログ記録 - 実行履歴の保存
+- バージョン管理 - 変更履歴の追跡
 
-#### 🔒 セキュリティ
+### 🔒 セキュリティ
 
-- **機密情報の暗号化** - サービスで利用する機密情報は暗号化
-- **アクセス権限の最小化** - サービスに必要な最小権限で
-- **定期的なセキュリティ監査** - ワークフローの見直し
-- **セキュリティパッチの適用** - 主にインフラで
+- 機密情報の暗号化 - サービスで利用する機密情報は暗号化
+- アクセス権限の最小化 - サービスに必要な最小権限で
+- 定期的なセキュリティ監査 - ワークフローの見直し
+- セキュリティパッチの適用 - 主にインフラで
 
 ---
 
 ### 運用管理
 
-- **監視体制** - 24/7 監視の構築
-- **バックアップ** - 定期的なデータバックアップ
-- **障害対応** - インシデント対応手順
-- **更新管理** - 定期的なアップデート
+- 監視体制 - 24/7 監視の構築
+- バックアップ - 定期的なデータバックアップ
+- 障害対応 - インシデント対応手順
+- 更新管理 - 定期的なアップデート
 
-#### 🧑‍🤝‍🧑 チーム協働
+### 🧑‍🤝‍🧑 チーム協働
 
-- **ドキュメント整備** - Confluence などで
-- **コードレビュー** - Github 利用も視野に
-- **知識共有** - Confluence などで
-- **継続的改善** - レビューや定期的な見直し
+- ドキュメント整備 - Confluence などで
+- コードレビュー - Github 利用も視野に
+- 知識共有 - Confluence などで
+- 継続的改善 - レビューや定期的な見直し
 
 ---
 
@@ -1125,12 +1076,14 @@ mermaid.initialize({ startOnLoad: true });
 - サプライチェーン - 発注・配送の自動化
 - 設備監視 - IoT センサーとの連携
 
-#### 🏥 医療・ヘルスケア
+### 🏥 医療・ヘルスケア
 
 - 患者データの自動同期
 - 予約システムの連携
 - 医療機器の監視
 - コンプライアンス管理
+
+---
 
 ### 金融・保険
 
@@ -1139,7 +1092,7 @@ mermaid.initialize({ startOnLoad: true });
 - 顧客サービス - 問い合わせ対応
 - 不正検知 - 異常検知システム
 
-#### 🛒 小売・E コマース
+### 🛒 小売・E コマース
 
 - 在庫・価格の自動更新
 - 顧客行動分析
@@ -1148,87 +1101,7 @@ mermaid.initialize({ startOnLoad: true });
 
 ---
 
-# 導入効果の測定
-
-<div class="card animated">
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <div style="width: 90%; padding: 1.5em; border-radius: 8px;">
-    <h3>📊 定量的効果</h3>
-    <div style="display: flex; justify-content: space-around; margin: 2em 0;">
-      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-        <h4>時間短縮</h4>
-        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">80%</p>
-        <p style="font-size: 14px;">手作業の削減</p>
-      </div>
-      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-        <h4>エラー削減</h4>
-        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">95%</p>
-        <p style="font-size: 14px;">人的ミスの削減</p>
-      </div>
-      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-        <h4>コスト削減</h4>
-        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">60%</p>
-        <p style="font-size: 14px;">運用コストの削減</p>
-      </div>
-      <div class="card animated" style="width: 22%; text-align: center; padding: 1em;">
-        <h4>ROI向上</h4>
-        <p style="font-size: 18px; color: var(--rp-iris); font-weight: bold;">300%</p>
-        <p style="font-size: 14px;">投資対効果</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div style="margin-top: 1em;">
-  <h3>📈 定性的効果</h3>
-  <ul>
-    <li><strong>従業員満足度向上</strong> - 反復作業からの解放</li>
-    <li><strong>意思決定の迅速化</strong> - リアルタイムデータ活用</li>
-    <li><strong>顧客満足度向上</strong> - 迅速な対応</li>
-    <li><strong>競争力強化</strong> - 効率化による差別化</li>
-  </ul>
-</div>
-
----
-
-# 15. コミュニティと学習リソース
-
-<div class="card animated">
-### 🌐 公式リソース
-
-- **ドキュメント** - 詳細な技術文書
-- **チュートリアル** - ステップバイステップ
-- **API リファレンス** - 開発者向け
-- **サンプルワークフロー** - 実用例
-
-### 🎓 学習コース
-
-- **ビデオコース** - 初心者・上級者向け
-- **テキストコース** - 実践的な学習
-- **認定プログラム** - スキル証明
-
-### 👥 コミュニティ
-
-- **フォーラム** - 質問・回答
-- **GitHub** - 開発・バグ報告
-- **Discord** - リアルタイム交流
-- **ブログ** - 最新情報
-
-### 🛠️ 開発支援
-
-- **カスタムノード** - コミュニティ開発
-- **プラグイン** - 機能拡張
-- **テーマ** - UI カスタマイズ
-</div>
-
----
-
 # 学習パス
-
-<div class="card animated">
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <img src="https://docs.n8n.io/assets/images/learning-path/learning-path-overview.png" alt="Learning Path" style="width: 90%; border-radius: 8px;">
-</div>
 
 <div style="margin-top: 1em;">
   <h3>推奨学習順序</h3>
@@ -1239,40 +1112,6 @@ mermaid.initialize({ startOnLoad: true });
     <li><strong>コミュニティ参加</strong> - 実践と交流</li>
   </ol>
 </div>
-</div>
-
----
-
-# 16. 今後の展望とまとめ
-
-<div class="card animated">
-<div style="display: flex; justify-content: space-around; margin: 2em 0;">
-  <div style="width: 45%;">
-    <h3 style="color: var(--rp-iris); margin-bottom: 1em;">🚀 技術発展</h3>
-    <ul>
-      <li>AI機能の強化</li>
-      <li>リアルタイム処理</li>
-      <li>エッジコンピューティング</li>
-      <li>ブロックチェーン統合</li>
-      <li>IoTデバイス連携</li>
-    </ul>
-  </div>
-
-  <div style="width: 45%;">
-    <h3 style="color: var(--rp-rose); margin-bottom: 1em;">📈 市場動向</h3>
-    <ul>
-      <li>自動化需要の増加</li>
-      <li>ノーコード/ローコードの普及</li>
-      <li>企業のDX推進</li>
-      <li>クラウドネイティブ化</li>
-      <li>セキュリティ強化</li>
-    </ul>
-  </div>
-</div>
-</div>
-
-<div class="highlight-box">
-  <strong>n8nの価値:</strong> プライバシー重視、高度なカスタマイズ、豊富な統合、活発なコミュニティ
 </div>
 
 ---
@@ -1312,8 +1151,8 @@ mermaid.initialize({ startOnLoad: true });
 
 <div class="card animated" style="display: flex; justify-content: center; align-items: center; height: 70vh;">
   <div style="text-align: center;">
-    <h2 style="font-size: 36px; margin-bottom: 1em; color: var(--rp-iris);">Questions?</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" alt="Questions" style="width: 150px; margin: 0 auto;">
+    <h2 style="font-size: 36px; margin-bottom: 1em; color: var(--rp-iris);">That's all, thank you</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/889/889221.png" alt="Thank you" style="width: 150px !important; margin: 0 auto !important;">
   </div>
 </div>
 
