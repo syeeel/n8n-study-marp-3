@@ -571,13 +571,19 @@ mermaid.initialize({ startOnLoad: true });
 # 6. AI エージェントと AI ワークフローの違い
 
 <div class="card animated">
-  <h3>🔄 Agentic Systems の概念</h3>
-  <p>AI エージェントとワークフローは、実際には明確に分離されたものではなく、<strong>グラデーション</strong>な関係にあります。</p>
-  
-  <blockquote style="margin: 1em 0; padding: 1em; border-left: 4px solid var(--rp-iris); background: var(--rp-overlay);">
-    <em>"Agentic systems consist of both workflows and agents (and everything in between)"</em>
-    <footer style="margin-top: 0.5em; font-size: 0.9em; color: var(--rp-muted);">— LangChain Blog</footer>
-  </blockquote>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
+    <div>
+      <h3>🔄 Agentic Systems の概念</h3>
+      <p>AI エージェントとワークフローは、実際には明確に分離されたものではなく、<strong>グラデーション</strong>な関係にあります。</p>
+      <blockquote style="margin: 1em 0; padding: 1em; border-left: 4px solid var(--rp-iris); background: var(--rp-overlay);">
+        <em>"Agentic systems consist of both workflows and agents (and everything in between)"</em>
+        <footer style="margin-top: 0.5em; font-size: 0.9em; color: var(--rp-muted);">— LangChain Blog</footer>
+      </blockquote>
+    </div>
+    <div style="text-align: center;">
+      <img src="../src/images/graph.png" alt="Agenticシステムのスペクトラム" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+    </div>
+  </div>
 </div>
 
 ---
