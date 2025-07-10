@@ -483,8 +483,19 @@ mermaid.initialize({ startOnLoad: true });
 # 2. これまでの運転
 
 <div class="card animated">
-  <h3>従来のアプローチ</h3>
-  <!-- 内容は後で追加 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
+    <div>
+      <h3>🚗 生成AIが登場する前は</h3>
+      <ul style="color: var(--rp-text); font-size: 1.1em; line-height: 1.6;">
+        <li>人間がハンドルを握る</li>
+        <li>全てのケースで人間が判断</li>
+        <li>限定的な自動化</li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <img src="../src/images/driver1.png" alt="従来のAI運転モデル" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+    </div>
+  </div>
 </div>
 
 ---
@@ -492,8 +503,20 @@ mermaid.initialize({ startOnLoad: true });
 # 3. Copilot の登場
 
 <div class="card animated">
-  <h3>新しいパラダイム</h3>
-  <!-- 内容は後で追加 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
+    <div style="text-align: center;">
+      <img src="../src/images/driver2.png" alt="Copilot登場" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+    </div>
+    <div>
+      <h3>🤖 Copilotが登場すると</h3>
+      <ul style="color: var(--rp-text); font-size: 1.1em; line-height: 1.6;">
+        <li>AIが副運転手として支援</li>
+        <li>人間とAIの協働作業</li>
+        <li>提案・補完・自動化の組み合わせ</li>
+        <li>人間の判断をサポート</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 ---
@@ -501,8 +524,23 @@ mermaid.initialize({ startOnLoad: true });
 # 4. 運転席の譲歩
 
 <div class="card animated">
-  <h3>役割の変化</h3>
-  <!-- 内容は後で追加 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
+    <div>
+      <h3>🔄 役割の変化</h3>
+      <div style="margin-bottom: 1.5em;">
+        <h4 style="color: var(--rp-iris); margin-bottom: 0.5em;">👤 人間の新しい役割</h4>
+        <ul style="color: var(--rp-text); font-size: 1em; line-height: 1.5;">
+          <li>戦略的思考と意思決定</li>
+          <li>AIの監視と調整</li>
+          <li>創造性とイノベーション</li>
+          <li>倫理的判断と価値観の設定</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <img src="../src/images/driver3.png" alt="運転席の譲歩" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+    </div>
+  </div>
 </div>
 
 ---
@@ -510,8 +548,22 @@ mermaid.initialize({ startOnLoad: true });
 # 5. 自立
 
 <div class="card animated">
-  <h3>自律的なAI</h3>
-  <!-- 内容は後で追加 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1em 0; align-items: center;">
+    <div style="text-align: center;">
+      <img src="../src/images/driver4.png" alt="AI自立" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+    </div>
+    <div>
+      <h3>🚀 自律的なAI</h3>
+      <div style="margin-bottom: 1.5em;">
+        <h4 style="color: var(--rp-iris); margin-bottom: 0.5em;">🤖 完全自律の特徴</h4>
+        <ul style="color: var(--rp-text); font-size: 1em; line-height: 1.5;">
+          <li>目標設定と計画立案</li>
+          <li>自己学習と適応</li>
+          <li>意思決定の自動化</li>
+          <li>自動化の多くを適宜判断して行っていく</li>
+        </ul>
+      </div>
+  </div>
 </div>
 
 ---
@@ -519,8 +571,137 @@ mermaid.initialize({ startOnLoad: true });
 # 6. AI エージェントと AI ワークフローの違い
 
 <div class="card animated">
-  <h3>概念の整理</h3>
-  <!-- 内容は後で追加 -->
+  <h3>🔄 Agentic Systems の概念</h3>
+  <p>AI エージェントとワークフローは、実際には明確に分離されたものではなく、<strong>グラデーション</strong>な関係にあります。</p>
+  
+  <blockquote style="margin: 1em 0; padding: 1em; border-left: 4px solid var(--rp-iris); background: var(--rp-overlay);">
+    <em>"Agentic systems consist of both workflows and agents (and everything in between)"</em>
+    <footer style="margin-top: 0.5em; font-size: 0.9em; color: var(--rp-muted);">— LangChain Blog</footer>
+  </blockquote>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>⚖️ 予測可能性 vs 自律性のトレードオフ</h3>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1.5em 0;">
+    <div>
+      <h4 style="color: var(--rp-foam); margin-bottom: 1em;">🔄 AI Workflow</h4>
+      <ul style="color: var(--rp-text); line-height: 1.6;">
+        <li><strong>高い予測可能性</strong></li>
+        <li>決められた手順通りに実行</li>
+        <li>結果が予想しやすい</li>
+        <li>デバッグが容易</li>
+        <li>企業での運用に適している</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-iris); margin-bottom: 1em;">🤖 AI Agent</h4>
+      <ul style="color: var(--rp-text); line-height: 1.6;">
+        <li><strong>高い自律性</strong></li>
+        <li>状況に応じて柔軟に判断</li>
+        <li>創造的な問題解決</li>
+        <li>予期しない結果の可能性</li>
+        <li>研究・探索に適している</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>📊 システム設計の考慮点</h3>
+  
+  <div style="margin: 1.5em 0;">
+    <p><strong>システムに求められる予測可能性</strong>によって、どの程度Agenticにできるかが決まります。</p>
+    <div style="display: flex; justify-content: space-around; margin: 2em 0;">
+      <div style="text-align: center; padding: 1em; background: var(--rp-overlay); border-radius: 8px; width: 45%;">
+        <h4 style="color: var(--rp-foam);">🏢 企業システム</h4>
+        <p style="color: var(--rp-text);">予測可能性を重視<br/>→ Workflow寄り</p>
+      </div>
+      <div style="text-align: center; padding: 1em; background: var(--rp-overlay); border-radius: 8px; width: 45%;">
+        <h4 style="color: var(--rp-iris);">🔬 研究・開発</h4>
+        <p style="color: var(--rp-text);">創造性を重視<br/>→ Agent寄り</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🔄 Human-LLM-Environment ループ</h3>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 1.5em 0; align-items: center;">
+    <div>
+      <h4 style="color: var(--rp-gold); margin-bottom: 1em;">相互作用のサイクル</h4>
+      <ol style="color: var(--rp-text); line-height: 1.6;">
+        <li><strong>Human</strong> - 目標設定・監視</li>
+        <li><strong>LLM Call</strong> - 推論・判断</li>
+        <li><strong>Action</strong> - 環境への働きかけ</li>
+        <li><strong>Environment</strong> - 結果・フィードバック</li>
+        <li><strong>Feedback</strong> - 学習・調整</li>
+      </ol>
+    </div>
+    <div style="text-align: center;">
+      <div style="background: var(--rp-overlay); border-radius: 12px; padding: 1.5em;">
+        <div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 1em;">
+          <div style="background: var(--rp-love); border-radius: 50%; padding: 0.8em; color: white;">Human</div>
+          <div style="background: var(--rp-pine); border-radius: 50%; padding: 0.8em; color: white;">LLM</div>
+        </div>
+        <div style="text-align: center; margin: 1em 0;">
+          <span style="color: var(--rp-gold);">↕️ Action/Feedback</span>
+        </div>
+        <div style="background: var(--rp-rose); border-radius: 8px; padding: 0.8em; color: white;">Environment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🎯 実践的な選択指針</h3>
+  
+  <div style="margin: 1.5em 0;">
+    <table style="width: 100%; margin: 1em 0;">
+      <thead>
+        <tr>
+          <th>要求</th>
+          <th>推奨アプローチ</th>
+          <th>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>定型業務の自動化</strong></td>
+          <td>AI Workflow</td>
+          <td>予測可能性・安定性が重要</td>
+        </tr>
+        <tr>
+          <td><strong>創造的タスク</strong></td>
+          <td>AI Agent</td>
+          <td>柔軟性・適応性が重要</td>
+        </tr>
+        <tr>
+          <td><strong>ハイブリッド業務</strong></td>
+          <td>Agentic Workflow</td>
+          <td>両方の特徴を組み合わせ</td>
+        </tr>
+        <tr>
+          <td><strong>探索的分析</strong></td>
+          <td>AI Agent</td>
+          <td>未知の領域での発見が重要</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <strong>重要:</strong> n8nでは、ワークフローベースでありながらAI機能を組み込むことで、予測可能性と柔軟性のバランスを実現できます。
 </div>
 
 ---
