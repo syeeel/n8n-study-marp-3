@@ -1,4 +1,4 @@
-# AI Codeing 入門
+# n8n 勉強会資料 2
 
 # git clone から新たにレポジトリを作成する
 
@@ -40,19 +40,19 @@ mermaid.initialize({ startOnLoad: true });
 ## Github Pages で公開する場合、以下のコマンドで docs/index.html を生成する必要があります。
 
 ```
-npx marp src/AI-Coding.md --html --allow-local-files --theme-set ./style/ -o docs/index.html --embed-cs
+npx marp src/n8n-study.md --html --allow-local-files --theme-set ./style/ -o docs/index.html --embed-cs
 ```
 
 # PDF 生成コマンド
 
 ```
-npx marp src/AI-Coding.md --pdf --allow-local-files -o docs/index.pdf
+npx marp src/n8n-study.md --pdf --allow-local-files -o docs/index.pdf
 ```
 
 # 編集可能な PPTX に変換するコマンド
 
 ```
-marp --pptx --pptx-editable AI-Coding.md
+marp --pptx --pptx-editable n8n-study.md
 ```
 
 ※ Chrome や LibreOffice がインストールされている必要があります。そのため、ローカルでの実行が望ましいです。
