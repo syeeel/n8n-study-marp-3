@@ -381,6 +381,7 @@ Content-Type: application/json
 {
 "name": "John Doe"
 }
+
 </div>
 </div>
 <div>
@@ -395,6 +396,7 @@ Content-Length: 45
 "name": "John Doe",
 "status": "active"
 }
+
 </div>
 </div>
 
@@ -499,7 +501,9 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
 
 <div class="card animated">
   <h3>🔍 よく遭遇するステータスコード</h3>
-  
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <div style="overflow-x: auto; max-width: 100%;">
+  <div style="text-align: center !important;">
   <table style="width: 100%;">
     <thead>
       <tr>
@@ -581,8 +585,7 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
   <h3>🏗️ REST APIの概念</h3>
   
   <div class="highlight-box">
-    <strong>REST</strong> = Representational State Transfer
-    <br>Webの仕組みを活用したAPI設計の考え方
+    <strong>REST</strong> = Representational State Transfer Webの仕組みを活用したAPI設計の考え方
   </div>
   
   <div class="grid-2">
@@ -673,6 +676,7 @@ Response: 201 Created
 "name": "John Doe",
 "email": "john@example.com"
 }
+
 </div>
 </div>
 
@@ -698,21 +702,13 @@ Response: 201 Created
     </div>
     <div>
       <h4>APIキーの使用方法</h4>
+      <h5>Headerで送信</h5>
       <div class="code-example" style="font-size: 0.8em;">
-# ヘッダーで送信
-Authorization: Bearer sk-1234567890abcdef
+
+Authorization: Bearer your-api-key-here
+または
 X-API-Key: your-api-key-here
 
-# クエリパラメータで送信
-
-GET /api/data?api_key=your-key
-
-# ボディで送信
-
-{
-"api_key": "your-key",
-"data": "..."
-}
 </div>
 </div>
 
@@ -734,7 +730,7 @@ GET /api/data?api_key=your-key
       <ol>
         <li><strong>認可要求</strong> - ユーザーに許可を求める</li>
         <li><strong>認可許可</strong> - ユーザーが許可</li>
-        <li><strong>アクセストークン取得</strong> - サーバーからトークン取得</li>
+        <li><strong>アクセストークン取得</strong> - トークン取得</li>
         <li><strong>リソースアクセス</strong> - トークンでAPI利用</li>
       </ol>
     </div>
@@ -767,14 +763,10 @@ GET /api/data?api_key=your-key
     </div>
     <div>
       <h4>使用例</h4>
+      <h3>リクエストヘッダーに含める</h3>
       <div class="code-example">
-# リクエストヘッダー
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
-# cURL コマンド例
-
-curl -H "Authorization: Bearer your-token" \
- https://api.example.com/data
 </div>
 </div>
 
@@ -838,20 +830,15 @@ curl -H "Authorization: Bearer your-token" \
     <div>
       <h4>使用例</h4>
       <div class="code-example">
-# 基本的な使用
+
+## 基本的な使用
+
 /api/users?page=2&limit=10
 
-# フィルタリング
+## フィルタリング
 
 /api/products?category=electronics&price_min=100
 
-# ソート
-
-/api/posts?sort=created_at&order=desc
-
-# 複数値
-
-/api/search?tags=tech&tags=programming
 </div>
 </div>
 
@@ -948,8 +935,14 @@ X-Custom-Header: custom-value
     </div>
   </div>
   
+</div>
+
+---
+
   <div class="code-example">
+
 # 成功レスポンス例
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 X-Rate-Limit-Remaining: 99
@@ -963,7 +956,6 @@ X-Rate-Limit-Remaining: 99
 }
 
   </div>
-</div>
 
 ---
 
@@ -1063,9 +1055,10 @@ https://your-app.com/webhooks/github
 https://your-app.com/webhooks/stripe
 https://your-app.com/webhooks/slack
 
-# n8n での例
+## n8n での例
 
 https://your-n8n.com/webhook/abc123
+
 </div>
 </div>
 
@@ -1082,7 +1075,7 @@ https://your-n8n.com/webhook/abc123
       <h4>ペイロードとは</h4>
       <ul>
         <li>Webhookで送信されるデータ</li>
-        <li>通常はJSON形式</li>
+        <li>JSON形式が多い</li>
         <li>イベントの詳細情報を含む</li>
         <li>サービスごとに形式が異なる</li>
       </ul>
@@ -1124,12 +1117,12 @@ https://your-n8n.com/webhook/abc123
       <h4>Basic認証</h4>
       <ul>
         <li>ユーザー名とパスワード</li>
-        <li>Base64エンコード</li>
         <li>HTTPヘッダーで送信</li>
         <li>シンプルだが安全性に課題</li>
       </ul>
       <div class="code-example" style="font-size: 0.7em;">
 Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+<br>
 # username:password をBase64エンコード
       </div>
     </div>
@@ -1139,11 +1132,9 @@ Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
         <li>トークンによる認証</li>
         <li>期限付きの認証情報</li>
         <li>より安全性が高い</li>
-        <li>Bearer Token形式</li>
       </ul>
       <div class="code-example" style="font-size: 0.7em;">
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-# JWTトークンの例
       </div>
     </div>
   </div>
@@ -1251,10 +1242,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
     <div>
       <h4>JSONのルール</h4>
       <ul style="font-size: 0.9em;">
-        <li>キーは必ず文字列</li>
-        <li>文字列はダブルクォート</li>
-        <li>末尾にカンマ不可</li>
-        <li>コメント不可</li>
+        <li><strong>キーは必ず文字列</strong></li>
+        <li><strong>文字列はダブルクォート</strong></li>
+        <li><strong>末尾にカンマ不可</strong></li>
+        <li><strong>コメント不可</strong></li>
       </ul>
     </div>
   </div>
@@ -1265,26 +1256,73 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ## 5.2 データ構造の基本
 
 <div class="card animated">
-  <h3>🗂️ 配列（Array）とオブジェクト（Object）</h3>
+  <h3>🏗️ データ構造の基本概念</h3>
   
   <div class="grid-2">
     <div>
-      <h4>配列の特徴</h4>
+      <h4>データ構造とは</h4>
       <ul>
-        <li>順序のあるデータの集合</li>
-        <li>インデックスでアクセス</li>
-        <li>同じ型のデータを格納</li>
-        <li>動的にサイズ変更可能</li>
+        <li>データを効率的に格納・操作する方法</li>
+        <li>プログラムでのデータ管理の基盤</li>
+        <li>用途に応じた最適な構造選択</li>
+        <li>データアクセスの効率性を決定</li>
       </ul>
+    </div>
+    <div>
+      <h4>主要なデータ構造</h4>
+      <ul>
+        <li><strong>配列</strong> - 順序付きデータの集合</li>
+        <li><strong>オブジェクト</strong> - キー・値ペアの集合</li>
+        <li><strong>ネスト構造</strong> - 構造の入れ子</li>
+        <li><strong>ツリー構造</strong> - 階層的なデータ</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🗂️ 配列（Array）とオブジェクト（Object）</h3>
+  <div class="grid-2">
+    <div>
+      <h4>配列とオブジェクトの使い分け</h4>
+      <ul>
+        <li><strong>配列</strong> - 同種のデータの集合</li>
+        <li><strong>オブジェクト</strong> - 属性を持つエンティティ</li>
+        <li><strong>配列</strong> - ループ処理に適している</li>
+        <li><strong>オブジェクト</strong> - 構造化されたデータ</li>
+      </ul>
+    </div>
+    <div>
+      <h4>実際の使用例</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+## ユーザーリスト（配列）<br>
+[
+  {"id": 1, "name": "Alice"},
+  {"id": 2, "name": "Bob"}
+]<br>
+## ユーザー詳細（オブジェクト）<br>
+{
+  "id": 1,
+  "name": "Alice",
+  "email": "alice@example.com",
+  "preferences": ["music", "books"]
+}
+      </div>
+    </div>
+  </div>
+
+---
+
+<h4>配列の例</h4>
       <div class="code-example" style="font-size: 0.7em;">
 [
   "apple",
   "banana",
   "orange"
-]
-
+]<br>
 # アクセス例: array[0] → "apple"
-
       </div>
     </div>
     <div>
@@ -1296,20 +1334,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
         <li>構造化されたデータ</li>
       </ul>
       <div class="code-example" style="font-size: 0.7em;">
-
 {
-"name": "John",
-"age": 30,
-"active": true
-}
-
+  "name": "John",
+  "age": 30,
+  "email": "john@example.com",
+  "isActive": true
+}<br>
 # アクセス例: object.name → "John"
-
-      </div>
-    </div>
-
-  </div>
-</div>
 
 ---
 
@@ -1329,13 +1360,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
         <li>値の変換</li>
         <li>構造の再構築</li>
       </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-# 入力
-{"first_name": "John", "last_name": "Doe"}
-
-# 出力
-
-{"fullName": "John Doe"}
+      <div>
 </div>
 </div>
 <div>
@@ -1346,15 +1371,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 <li>特定条件のデータ抽出</li>
 <li>データの絞り込み</li>
 </ul>
-<div class="code-example" style="font-size: 0.6em;">
-
-# 入力
-
-[{"age": 25}, {"age": 35}, {"age": 45}]
-
-# 条件: age > 30
-
-[{"age": 35}, {"age": 45}]
 </div>
 </div>
 
@@ -1513,15 +1529,13 @@ END FOR
       <ul>
         <li><strong>JSONデータの読み書き</strong>
           <ul>
-            <li>JSONファイルの解析</li>
             <li>データの抽出と変換</li>
-            <li>新しいJSON構造の作成</li>
+            <li>データのアウトプット</li>
           </ul>
         </li>
         <li><strong>簡単なAPI呼び出し</strong>
           <ul>
             <li>公開APIの利用</li>
-            <li>パラメータの設定</li>
             <li>レスポンスの処理</li>
           </ul>
         </li>
@@ -1533,7 +1547,6 @@ END FOR
         <li><strong>Webhookの受信テスト</strong>
           <ul>
             <li>テスト用エンドポイント設定</li>
-            <li>ペイロードの確認</li>
             <li>データの処理と保存</li>
           </ul>
         </li>
@@ -1541,7 +1554,6 @@ END FOR
           <ul>
             <li>複雑なデータ構造の変換</li>
             <li>条件分岐の実装</li>
-            <li>エラーハンドリング</li>
           </ul>
         </li>
       </ul>
@@ -1556,6 +1568,9 @@ END FOR
 <div class="card animated">
   <h3>🔧 よくある問題と対処法</h3>
   
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <div style="overflow-x: auto; max-width: 100%;">
+
   <table style="width: 100%;">
     <thead>
       <tr>
