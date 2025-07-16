@@ -349,8 +349,8 @@ style: |
     <div>
       <h4>n8nとは</h4>
       <ul>
-        <li><strong>Node-based automation tool</strong></li>
-        <li><strong>視覚的なワークフロー作成</li>
+        <li>Node-based automation tool</li>
+        <li>視覚的なワークフロー作成</li>
         <li>200+ のサービス連携</li>
         <li>オープンソース</li>
         <li>セルフホスト可能</li>
