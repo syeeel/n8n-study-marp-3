@@ -2088,11 +2088,10 @@ return [{ json: result }];
 } catch (error) {
 lastError = error;
 retryCount++;
-
-    if (retryCount < maxRetries) {
-      const delay = Math.pow(2, retryCount) * 1000; // 指数バックオフ
-      await new Promise(resolve => setTimeout(resolve, delay));
-    }
+if (retryCount < maxRetries) {
+const delay = Math.pow(2, retryCount) \* 1000; // 指数バックオフ
+await new Promise(resolve => setTimeout(resolve, delay));
+}
 
 }
 }
@@ -2603,15 +2602,14 @@ throw new Error('Circuit breaker is OPEN');
 }
 this.state = 'HALF_OPEN';
 }
-
-    try {
-      const result = await fn();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
+try {
+const result = await fn();
+this.onSuccess();
+return result;
+} catch (error) {
+this.onFailure();
+throw error;
+}
 
 }
 }
@@ -2631,17 +2629,14 @@ this.requests = [];
 async makeRequest(apiCall) {
 const now = Date.now();
 const oneMinuteAgo = now - 60000;
-
-    // 1分以内のリクエストをフィルタ
-    this.requests = this.requests.filter(time => time > oneMinuteAgo);
-
-    if (this.requests.length >= this.requestsPerMinute) {
-      const waitTime = this.requests[0] + 60000 - now;
-      await new Promise(resolve => setTimeout(resolve, waitTime));
-    }
-
-    this.requests.push(now);
-    return await apiCall();
+// 1 分以内のリクエストをフィルタ
+this.requests = this.requests.filter(time => time > oneMinuteAgo);
+if (this.requests.length >= this.requestsPerMinute) {
+const waitTime = this.requests[0] + 60000 - now;
+await new Promise(resolve => setTimeout(resolve, waitTime));
+}
+this.requests.push(now);
+return await apiCall();
 
 }
 }
