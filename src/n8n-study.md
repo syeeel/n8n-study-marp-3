@@ -2477,7 +2477,7 @@ await addToApprovalQueue(item);
 {{ $json.tags.includes("urgent") }}
 
 // 正規表現による判定
-{{ /^\d{4}-\d{2}-\d{2}$/.test($json.date) }}
+{{ /^\d{4}-\d{2}-\d{2}/.test($json.date) }}
 
 // ネストしたプロパティの確認
 {{ $json.user?.profile?.verified === true }}
