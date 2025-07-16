@@ -158,6 +158,11 @@ style: |
     overflow: hidden;
   }
 
+  /* タイトルページのフッターを非表示 */
+  section.title-slide footer {
+    display: none;
+  }
+
   section.title-slide::before {
     content: '';
     position: absolute;
@@ -511,25 +516,23 @@ style: |
     <div>
       <h4>キーボードショートカット</h4>
       <div class="code-example" style="font-size: 0.8em;">
-Ctrl + S     # 保存
-Ctrl + Z     # 元に戻す
-Ctrl + Y     # やり直し
-Delete       # ノード削除
-Ctrl + A     # 全選択
-Ctrl + C/V   # コピー&ペースト
-Space        # ノード追加
-Tab          # ノード検索
+Command + S     # 保存<br>
+Command + Z     # 元に戻す<br>
+Delete       # ノード削除<br>
+Command + A     # 全選択<br>
+Command + C/V   # コピー&ペースト<br>
+Space + カーソル移動       # 画面スクロース<br>
+Tab          # ノード検索<br>
       </div>
     </div>
     <div>
       <h4>便利な機能</h4>
       <ul>
-        <li><strong>ズーム機能</strong> - マウスホイール</li>
-        <li><strong>パン機能</strong> - 中クリック + ドラッグ</li>
-        <li><strong>選択範囲</strong> - Shift + ドラッグ</li>
+        <li><strong>ズーム機能</strong> - command + マウスホイール</li>
+        <li><strong>選択範囲</strong> - ドラッグ</li>
         <li><strong>接続線</strong> - ドラッグで接続</li>
-        <li><strong>ノード複製</strong> - Ctrl + ドラッグ</li>
-        <li><strong>グリッドスナップ</strong> - 整列機能</li>
+        <li><strong>ノードメニュー</strong> - Ctrl + クリック</li>
+        <li><strong>整列機能</strong> - option + shift + T</li>
       </ul>
     </div>
   </div>
@@ -546,7 +549,6 @@ Tab          # ノード検索
       <ul style="font-size: 0.9em;">
         <li>Tabキーでノード検索</li>
         <li>カテゴリ別フィルタ</li>
-        <li>よく使うノードをブックマーク</li>
         <li>テンプレート活用</li>
       </ul>
     </div>
@@ -578,13 +580,12 @@ Tab          # ノード検索
 ## 2.1 ワークフローの作成方法
 
 <div class="card animated">
-  <h3>🏗️ ワークフロー作成の基本手順</h3>
   
   <div class="grid-2">
     <div>
       <h4>作成手順</h4>
       <ol>
-        <li><strong>新規ワークフロー作成</strong> - "New Workflow"ボタン</li>
+        <li><strong>新規ワークフロー作成</strong> - "New Workflow"</li>
         <li><strong>トリガーノード追加</strong> - 開始点の設定</li>
         <li><strong>アクションノード追加</strong> - 処理内容の定義</li>
         <li><strong>ノード接続</strong> - データフローの構築</li>
@@ -609,9 +610,7 @@ Tab          # ノード検索
 
 ## 2.2 ノードの種類と役割
 
-<div class="card animated">
-  <h3>🔗 ノードの分類</h3>
-  
+<div class="card animated">  
   <div class="grid-3">
     <div>
       <h4 style="color: var(--rp-iris);">🚀 トリガーノード</h4>
@@ -757,30 +756,18 @@ Tab          # ノード検索
     <div>
       <h4>実際の使用例</h4>
       <div class="code-example" style="font-size: 0.7em;">
-# 現在のデータから名前取得
+
+### 現在のデータから名前取得
+
 {{ $json.name }}
 
-# 前のノードのデータ参照
+### 前のノードのデータ参照
 
 {{ $node["HTTP Request"].json.data }}
 
-# 条件式での使用
+### 条件式での使用
 
 {{ $json.age > 18 }}
-
-# 複数データの結合
-
-{{ $json.firstName + " " + $json.lastName }}
-
-# 配列の処理
-
-{{ $json.items.length }}
-
-</div>
-</div>
-
-  </div>
-</div>
 
 ---
 
@@ -838,20 +825,18 @@ Tab          # ノード検索
     <div>
       <h4>Schedule Trigger設定例</h4>
       <div class="code-example" style="font-size: 0.8em;">
-# 毎日午前9時に実行
-0 9 * * *
 
-# 毎週月曜日の午前 10 時
+### 毎日午前 9 時に実行
+
+0 9 \* \* \*
+
+### 毎週月曜日の午前 10 時
 
 0 10 \* \* 1
 
-# 毎月 1 日の午後 2 時
+### 毎月 1 日の午後 2 時
 
 0 14 1 \* \*
-
-# 平日の毎時 0 分（営業時間内）
-
-0 9-17 \* \* 1-5
 
 </div>
 </div>
@@ -863,18 +848,6 @@ Tab          # ノード検索
 <li><strong>認証</strong> - セキュリティ設定</li>
 <li><strong>レスポンス</strong> - 返却データの設定</li>
 </ul>
-<div class="code-example" style="font-size: 0.7em;">
-
-# Webhook URL 例
-
-https://your-n8n.com/webhook/user-signup
-https://your-n8n.com/webhook/payment-completed
-
-</div>
-</div>
-
-  </div>
-</div>
 
 ---
 
@@ -1164,22 +1137,14 @@ Host: api.example.com
     <div>
       <h4>設定例</h4>
       <div class="code-example" style="font-size: 0.8em;">
-# 環境変数設定
-export OPENAI_API_KEY="sk-xxx...xxx"
-export SLACK_BOT_TOKEN="xoxb-xxx...xxx"
-export DATABASE_URL="postgresql://..."
 
-# n8n での参照
+### 環境変数設定
+
+export OPENAI_API_KEY="sk-xxx...xxx"
+
+### n8n での参照
 
 {{ $env.OPENAI_API_KEY }}
-{{ $env.SLACK_BOT_TOKEN }}
-{{ $env.DATABASE_URL }}
-
-</div>
-</div>
-
-  </div>
-</div>
 
 ---
 
