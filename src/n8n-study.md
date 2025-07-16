@@ -1932,7 +1932,7 @@ const confidence = $json.usage.total_tokens < 400 ? "high" : "medium";
 ## 7.1 一般的なエラーの種類と対処法
 
 <div class="card animated">
-  <h3>🚨 エラーの分類と対処戦略</h3>
+  <h3>🚨 エラーの分類と対応戦略</h3>
   
   <div style="display: flex; justify-content: center; margin: 20px 0;">
     <div style="overflow-x: auto; max-width: 100%;">
@@ -2445,4 +2445,661 @@ await addToApprovalQueue(item);
       </ul>
     </div>
     <div>
-      <h4>ディザスタリカバリ計
+      <h4>ディザスタリカバリ計画</h4>
+      <ul>
+        <li><strong>RTO (Recovery Time Objective)</strong> - 復旧目標時間</li>
+        <li><strong>RPO (Recovery Point Objective)</strong> - 復旧目標地点</li>
+        <li><strong>代替サイト</strong> - 障害時の運用継続</li>
+        <li><strong>緊急時対応</strong> - エスカレーション手順</li>
+        <li><strong>文書化</strong> - 復旧手順の明文化</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+# 10. 応用テクニック
+
+## 10.1 高度な制御フロー
+
+<div class="card animated">
+  <h3>🌊 複雑な条件分岐とループ</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>高度な条件分岐</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+// 複数条件の組み合わせ
+{{ $json.status === "active" && $json.priority > 5 }}
+
+// 配列の条件チェック
+{{ $json.tags.includes("urgent") }}
+
+// 正規表現による判定
+{{ /^\d{4}-\d{2}-\d{2}$/.test($json.date) }}
+
+// ネストしたプロパティの確認
+{{ $json.user?.profile?.verified === true }}
+
+</div>
+</div>
+<div>
+<h4>動的なループ処理</h4>
+<div class="code-example" style="font-size: 0.7em;">
+// 配列の各要素に対して処理
+for (const item of $input.all()) {
+if (item.json.amount > 1000) {
+// 高額な取引の処理
+await processHighValueTransaction(item.json);
+}
+}
+
+// 条件に基づくバッチ処理
+const batchSize = 50;
+for (let i = 0; i < items.length; i += batchSize) {
+const batch = items.slice(i, i + batchSize);
+await processBatch(batch);
+}
+
+</div>
+</div>
+
+  </div>
+</div>
+
+---
+
+## 10.2 カスタム関数とヘルパー
+
+<div class="card animated">
+  <h3>🔧 再利用可能な関数の作成</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>ユーティリティ関数</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+// 日付フォーマット関数
+function formatDate(date, format = 'YYYY-MM-DD') {
+  const d = new Date(date);
+  return d.toISOString().split('T')[0];
+}
+
+// データ検証関数
+function validateEmail(email) {
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return regex.test(email);
+}
+
+// エラーハンドリング関数
+function safeJsonParse(jsonString, defaultValue = {}) {
+try {
+return JSON.parse(jsonString);
+} catch (error) {
+console.error('JSON parse error:', error);
+return defaultValue;
+}
+}
+
+</div>
+</div>
+<div>
+<h4>データ変換ヘルパー</h4>
+<div class="code-example" style="font-size: 0.7em;">
+// オブジェクトの平坦化
+function flattenObject(obj, prefix = '') {
+return Object.keys(obj).reduce((acc, k) => {
+const pre = prefix.length ? prefix + '.' : '';
+if (typeof obj[k] === 'object' && obj[k] !== null) {
+Object.assign(acc, flattenObject(obj[k], pre + k));
+} else {
+acc[pre + k] = obj[k];
+}
+return acc;
+}, {});
+}
+
+// 配列のグループ化
+function groupBy(array, key) {
+return array.reduce((groups, item) => {
+const group = item[key];
+groups[group] = groups[group] || [];
+groups[group].push(item);
+return groups;
+}, {});
+}
+
+</div>
+</div>
+
+  </div>
+</div>
+
+---
+
+## 10.3 外部サービス統合パターン
+
+<div class="card animated">
+  <h3>🔌 API オーケストレーション</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>サーキットブレーカーパターン</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+// サーキットブレーカーの実装
+class CircuitBreaker {
+  constructor(threshold = 5, timeout = 60000) {
+    this.threshold = threshold;
+    this.timeout = timeout;
+    this.failureCount = 0;
+    this.state = 'CLOSED'; // CLOSED, OPEN, HALF_OPEN
+    this.nextAttempt = Date.now();
+  }
+
+async call(fn) {
+if (this.state === 'OPEN') {
+if (Date.now() < this.nextAttempt) {
+throw new Error('Circuit breaker is OPEN');
+}
+this.state = 'HALF_OPEN';
+}
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+
+}
+}
+
+</div>
+</div>
+<div>
+<h4>レート制限対応</h4>
+<div class="code-example" style="font-size: 0.7em;">
+// レート制限を考慮した API 呼び出し
+class RateLimitedAPI {
+constructor(requestsPerMinute = 60) {
+this.requestsPerMinute = requestsPerMinute;
+this.requests = [];
+}
+
+async makeRequest(apiCall) {
+const now = Date.now();
+const oneMinuteAgo = now - 60000;
+
+    // 1分以内のリクエストをフィルタ
+    this.requests = this.requests.filter(time => time > oneMinuteAgo);
+
+    if (this.requests.length >= this.requestsPerMinute) {
+      const waitTime = this.requests[0] + 60000 - now;
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+    }
+
+    this.requests.push(now);
+    return await apiCall();
+
+}
+}
+
+</div>
+</div>
+
+  </div>
+</div>
+
+---
+
+# 11. 実践ワークショップ
+
+## 11.1 ハンズオン: E コマース注文処理システム
+
+<div class="card animated">
+  <h3>🛒 実践的なワークフロー構築</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>システム要件</h4>
+      <ul>
+        <li><strong>注文受信</strong> - Webhook で注文データ取得</li>
+        <li><strong>在庫確認</strong> - 在庫管理システムとの連携</li>
+        <li><strong>決済処理</strong> - 決済サービス API 呼び出し</li>
+        <li><strong>配送手配</strong> - 配送業者 API との連携</li>
+        <li><strong>通知送信</strong> - 顧客とスタッフへの通知</li>
+        <li><strong>データ記録</strong> - CRM・分析システムへの登録</li>
+      </ul>
+    </div>
+    <div>
+      <h4>実装フロー</h4>
+      <ol>
+        <li><strong>Webhook 設定</strong> - 注文データの受信</li>
+        <li><strong>データ検証</strong> - 必須項目と形式チェック</li>
+        <li><strong>在庫チェック</strong> - 商品在庫の確認</li>
+        <li><strong>決済処理</strong> - クレジットカード決済</li>
+        <li><strong>注文確定</strong> - 在庫の減算と注文確定</li>
+        <li><strong>配送準備</strong> - 配送ラベル作成</li>
+        <li><strong>通知送信</strong> - Email と SMS 通知</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>💻 実装例: 注文処理ワークフロー</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>Step 1: データ検証</h4>
+      <div class="code-example" style="font-size: 0.6em;">
+// 注文データの検証
+const order = $json;
+
+// 必須フィールドの確認
+const requiredFields = ['orderId', 'customerId', 'items', 'total'];
+const missingFields = requiredFields.filter(field => !order[field]);
+
+if (missingFields.length > 0) {
+throw new Error(`Missing fields: ${missingFields.join(', ')}`);
+}
+
+// 商品データの検証
+for (const item of order.items) {
+if (!item.productId || !item.quantity || !item.price) {
+throw new Error(`Invalid item data: ${JSON.stringify(item)}`);
+}
+}
+
+return [{ json: { ...order, validated: true } }];
+
+</div>
+</div>
+<div>
+<h4>Step 2: 在庫確認</h4>
+<div class="code-example" style="font-size: 0.6em;">
+// 在庫確認ロジック
+const items = $json.items;
+const stockCheckResults = [];
+
+for (const item of items) {
+// 在庫 API 呼び出し（HTTP Request ノードで実行）
+const stockResponse = await fetch(`/api/inventory/${item.productId}`);
+const stock = await stockResponse.json();
+
+if (stock.available < item.quantity) {
+stockCheckResults.push({
+productId: item.productId,
+requested: item.quantity,
+available: stock.available,
+status: 'insufficient'
+});
+} else {
+stockCheckResults.push({
+productId: item.productId,
+requested: item.quantity,
+available: stock.available,
+status: 'available'
+});
+}
+}
+
+return [{ json: { items, stockCheckResults } }];
+
+</div>
+</div>
+
+  </div>
+</div>
+
+---
+
+## 11.2 チーム演習とコードレビュー
+
+<div class="card animated">
+  <h3>👥 協働学習のアプローチ</h3>
+  
+  <div class="grid-3">
+    <div>
+      <h4 style="color: var(--rp-iris);">🔍 ペアプログラミング</h4>
+      <ul style="font-size: 0.9em;">
+        <li>2人1組でワークフロー作成</li>
+        <li>一人が設計、一人が実装</li>
+        <li>定期的な役割交換</li>
+        <li>リアルタイムでの知識共有</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-foam);">📋 コードレビュー</h4>
+      <ul style="font-size: 0.9em;">
+        <li>ワークフローの構造確認</li>
+        <li>エラーハンドリングの妥当性</li>
+        <li>パフォーマンスの最適化</li>
+        <li>セキュリティ観点での検証</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🎯 ベストプラクティス</h4>
+      <ul style="font-size: 0.9em;">
+        <li>命名規則の統一</li>
+        <li>ドキュメント化の習慣</li>
+        <li>テスト戦略の確立</li>
+        <li>運用を考慮した設計</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## 11.3 Q&A セッション
+
+<div class="card animated">
+  <h3>❓ よくある質問と回答</h3>
+  
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <div style="overflow-x: auto; max-width: 100%;">
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>質問カテゴリ</th>
+            <th>よくある質問</th>
+            <th>回答のポイント</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>パフォーマンス</strong></td>
+            <td>大量データ処理時の最適化は？</td>
+            <td>バッチ処理、並列実行、メモリ管理</td>
+          </tr>
+          <tr>
+            <td><strong>エラー対応</strong></td>
+            <td>APIエラーの適切な処理方法は？</td>
+            <td>リトライ機能、フォールバック、ログ記録</td>
+          </tr>
+          <tr>
+            <td><strong>セキュリティ</strong></td>
+            <td>機密情報の安全な管理方法は？</td>
+            <td>環境変数、暗号化、アクセス制御</td>
+          </tr>
+          <tr>
+            <td><strong>運用</strong></td>
+            <td>本番環境での監視方法は？</td>
+            <td>ログ監視、アラート設定、パフォーマンス測定</td>
+          </tr>
+          <tr>
+            <td><strong>拡張性</strong></td>
+            <td>将来の要件変更への対応は？</td>
+            <td>モジュール化、設定の外部化、バージョン管理</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+---
+
+# 12. まとめと今後の学習方針
+
+## 12.1 学習内容の振り返り
+
+<div class="card animated">
+  <h3>📚 学習達成度の確認</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>習得したスキル</h4>
+      <ul>
+        <li><strong>基礎知識</strong>
+          <ul>
+            <li>n8n の概要と特徴</li>
+            <li>UI の使い方とナビゲーション</li>
+            <li>ワークフローの基本概念</li>
+          </ul>
+        </li>
+        <li><strong>実践スキル</strong>
+          <ul>
+            <li>Credential 管理</li>
+            <li>Slack 連携の実装</li>
+            <li>データ処理とエラーハンドリング</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>応用技術</h4>
+      <ul>
+        <li><strong>高度な機能</strong>
+          <ul>
+            <li>Structured Output の活用</li>
+            <li>RAG システムの構築</li>
+            <li>外部サービスとの統合</li>
+          </ul>
+        </li>
+        <li><strong>運用知識</strong>
+          <ul>
+            <li>本番環境での管理</li>
+            <li>監視とメンテナンス</li>
+            <li>セキュリティ対策</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## 12.2 次のステップと推奨学習リソース
+
+<div class="card animated">
+  <h3>🚀 継続的な学習のために</h3>
+  
+  <div class="grid-3">
+    <div>
+      <h4 style="color: var(--rp-iris);">📖 学習リソース</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>公式ドキュメント</strong>
+          <ul>
+            <li>docs.n8n.io</li>
+            <li>最新機能の確認</li>
+          </ul>
+        </li>
+        <li><strong>コミュニティ</strong>
+          <ul>
+            <li>community.n8n.io</li>
+            <li>Discord サーバー</li>
+          </ul>
+        </li>
+        <li><strong>YouTube チャンネル</strong>
+          <ul>
+            <li>公式チュートリアル</li>
+            <li>ユースケース事例</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-foam);">🛠️ 実践プロジェクト</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>個人プロジェクト</strong>
+          <ul>
+            <li>日常業務の自動化</li>
+            <li>データ収集システム</li>
+          </ul>
+        </li>
+        <li><strong>チームプロジェクト</strong>
+          <ul>
+            <li>部署横断の自動化</li>
+            <li>顧客サポート改善</li>
+          </ul>
+        </li>
+        <li><strong>オープンソース</strong>
+          <ul>
+            <li>カスタムノード開発</li>
+            <li>テンプレート共有</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🎯 認定・資格</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>n8n 認定</strong>
+          <ul>
+            <li>公式認定プログラム</li>
+            <li>スキル証明</li>
+          </ul>
+        </li>
+        <li><strong>関連技術</strong>
+          <ul>
+            <li>API 設計・開発</li>
+            <li>クラウドサービス</li>
+          </ul>
+        </li>
+        <li><strong>業界認定</strong>
+          <ul>
+            <li>自動化エンジニア</li>
+            <li>システム統合</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## 12.3 30 日間のアクションプラン
+
+<div class="card animated">
+  <h3>📅 具体的な学習スケジュール</h3>
+  
+  <div class="grid-4">
+    <div style="text-align: center; padding: 1em; background: var(--rp-iris); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">Week 1</h4>
+      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
+        <li>• 基本ワークフロー作成</li>
+        <li>• HTTP Request 練習</li>
+        <li>• データ変換の習得</li>
+      </ul>
+    </div>
+    <div style="text-align: center; padding: 1em; background: var(--rp-foam); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">Week 2</h4>
+      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
+        <li>• Slack 連携実装</li>
+        <li>• Webhook 設定</li>
+        <li>• エラーハンドリング</li>
+      </ul>
+    </div>
+    <div style="text-align: center; padding: 1em; background: var(--rp-gold); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">Week 3</h4>
+      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
+        <li>• 複雑なワークフロー</li>
+        <li>• 外部サービス統合</li>
+        <li>• パフォーマンス最適化</li>
+      </ul>
+    </div>
+    <div style="text-align: center; padding: 1em; background: var(--rp-rose); border-radius: 8px;">
+      <h4 style="color: white; margin-bottom: 0.5em;">Week 4</h4>
+      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
+        <li>• 本番環境デプロイ</li>
+        <li>• 監視・運用設定</li>
+        <li>• チーム共有・発表</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## 12.4 コミュニティ参加と情報共有
+
+<div class="card animated">
+  <h3>🌐 n8n エコシステムへの参加</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>コミュニティリソース</h4>
+      <ul>
+        <li><strong>公式フォーラム</strong>
+          <ul>
+            <li>community.n8n.io</li>
+            <li>質問・回答・議論</li>
+          </ul>
+        </li>
+        <li><strong>GitHub</strong>
+          <ul>
+            <li>github.com/n8n-io/n8n</li>
+            <li>Issue 報告・機能要望</li>
+          </ul>
+        </li>
+        <li><strong>Discord</strong>
+          <ul>
+            <li>リアルタイム議論</li>
+            <li>カジュアルな情報交換</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>貢献の方法</h4>
+      <ul>
+        <li><strong>ナレッジ共有</strong>
+          <ul>
+            <li>ブログ記事の執筆</li>
+            <li>チュートリアル作成</li>
+          </ul>
+        </li>
+        <li><strong>コード貢献</strong>
+          <ul>
+            <li>カスタムノード開発</li>
+            <li>バグ修正・機能改善</li>
+          </ul>
+        </li>
+        <li><strong>コミュニティ支援</strong>
+          <ul>
+            <li>質問への回答</li>
+            <li>イベント・勉強会開催</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>🎉 最終メッセージ</h3>
+  
+  <div style="text-align: center; padding: 2em;">
+    <h2 style="color: var(--rp-iris); margin-bottom: 1em;">おめでとうございます！</h2>
+    <p style="font-size: 24px; margin-bottom: 1.5em;">
+      皆さんは n8n の基礎から応用まで、包括的な知識とスキルを身につけました。
+    </p>
+    <div class="highlight-box" style="margin: 2em 0;">
+      <p style="font-size: 20px; margin-bottom: 1em;">
+        <strong>これからが本当のスタートです。</strong>
+      </p>
+      <p style="font-size: 18px;">
+        学んだ知識を活用して、日々の業務を効率化し、<br>
+        新しい価値を創造していってください。
+      </p>
+    </div>
+    <p style="font-size: 22px; color: var(--rp-foam);">
+      自動化の力で、より創造的で意味のある仕事に集中できるようになることを願っています。
+    </p>
+    <div style="margin-top: 2em; font-size: 28px;">
+      <span style="color: var(--rp-gold);">🚀</span>
+      <span style="color: var(--rp-iris); font-weight: bold;">Happy Automating!</span>
+      <span style="color: var(--rp-foam);">🤖</span>
+    </div>
+  </div>
+</div>
