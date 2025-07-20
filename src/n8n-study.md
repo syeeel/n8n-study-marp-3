@@ -290,7 +290,7 @@ style: |
 
 <!-- タイトルスライド -->
 
-# <span>n8n 実践編</span>
+# <span>n8n 応用編</span>
 
 ## 自動化ワークフロー構築マスタークラス
 
@@ -347,7 +347,7 @@ style: |
 
 ## 1.1 n8n とは何か（簡単な復習）
 
-<div class="card animated">
+<div>
   <h3>🔧 n8nの基本概念</h3>
   
   <div class="grid-2">
@@ -377,7 +377,7 @@ style: |
 
 ## 1.2 n8n の特徴と利点
 
-<div class="card animated">
+<div>
   <h3>⭐ n8nの強み</h3>
   
   <div class="grid-3">
@@ -413,7 +413,7 @@ style: |
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🆚 他のツールとの比較</h3>
   
   <div style="display: flex; justify-content: center; margin: 20px 0;">
@@ -462,7 +462,7 @@ style: |
 
 ## 1.3 UI 概要とナビゲーション
 
-<div class="card animated">
+<div>
   <h3>🖥️ n8n UI の構成</h3>
   
   <div class="grid-2">
@@ -579,7 +579,7 @@ Tab          # ノード検索<br>
 
 ## 2.1 ワークフローの作成方法
 
-<div class="card animated">
+<div>
   
   <div class="grid-2">
     <div>
@@ -610,7 +610,7 @@ Tab          # ノード検索<br>
 
 ## 2.2 ノードの種類と役割
 
-<div class="card animated">  
+<div>  
   <div class="grid-3">
     <div>
       <h4 style="color: var(--rp-iris);">🚀 トリガーノード</h4>
@@ -647,7 +647,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎯 よく使用されるノード詳細</h3>
   
   <div style="display: flex; justify-content: center; margin: 20px 0;">
@@ -702,7 +702,7 @@ Tab          # ノード検索<br>
 
 ## 2.3 データフローの理解
 
-<div class="card animated">
+<div>
   <h3>🌊 データの流れ</h3>
   
   <div class="grid-2">
@@ -739,7 +739,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📊 データ参照方法</h3>
   
   <div class="grid-2">
@@ -773,7 +773,7 @@ Tab          # ノード検索<br>
 
 ## 2.4 実行モード（Manual、Trigger、Webhook）
 
-<div class="card animated">
+<div>
   <h3>🔄 実行モードの種類</h3>
   
   <div class="grid-3">
@@ -818,7 +818,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div >
   <h3>⚙️ 実行モードの設定詳細</h3>
   
   <div class="grid-2">
@@ -853,7 +853,7 @@ Tab          # ノード検索<br>
 
 ## 2.5 デバッグとテストの方法
 
-<div class="card animated">
+<div>
   <h3>🐛 効果的なデバッグ手法</h3>
   
   <div class="grid-2">
@@ -882,7 +882,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🔍 よくあるエラーと対処法</h3>
   
   <div style="display: flex; justify-content: center; margin: 20px 0;">
@@ -929,7 +929,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📈 パフォーマンステスト</h3>
   
   <div class="grid-3">
@@ -969,7 +969,7 @@ Tab          # ノード検索<br>
 
 ## 3.1 Credential とは何か
 
-<div class="card animated">
+<div>
   <h3>🔐 Credentialの基本概念</h3>
   
   <div class="grid-2">
@@ -998,7 +998,7 @@ Tab          # ノード検索<br>
 
 ## 3.2 各種サービスの Credential 設定方法
 
-<div class="card animated">
+<div>
   <h3>🌐 主要サービスのCredential設定</h3>
   
   <div class="grid-3">
@@ -1051,7 +1051,7 @@ Host: api.example.com
 
 ---
 
-<div class="card animated">
+<div>
   <h3>⚙️ Credential設定の実践手順</h3>
   
   <div class="grid-2">
@@ -1119,41 +1119,11 @@ Host: api.example.com
 
 ---
 
-## 3.4 環境変数との連携
-
-<div class="card animated">
-  <h3>🌍 環境変数を活用したCredential管理</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>環境変数の利点</h4>
-      <ul>
-        <li><strong>環境分離</strong> - 開発/本番環境の切り分け</li>
-        <li><strong>セキュリティ</strong> - コードに機密情報を含めない</li>
-        <li><strong>柔軟性</strong> - デプロイ時の設定変更が容易</li>
-        <li><strong>チーム開発</strong> - 個人の認証情報管理</li>
-      </ul>
-    </div>
-    <div>
-      <h4>設定例</h4>
-      <div class="code-example" style="font-size: 0.8em;">
-
-### 環境変数設定
-
-export OPENAI_API_KEY="sk-xxx...xxx"
-
-### n8n での参照
-
-{{ $env.OPENAI_API_KEY }}
-
----
-
 # 4. Slack 連携の実装
 
 ## 4.1 Slack Credential の設定
 
-<div class="card animated">
-  <h3>🚀 Slack アプリの作成とCredential設定</h3>
+<div>
   
   <div class="grid-2">
     <div>
@@ -1186,33 +1156,19 @@ export OPENAI_API_KEY="sk-xxx...xxx"
 
 ## 4.2 メッセージ送信の基本
 
-<div class="card animated">
+<div>
   <h3>💬 Slackメッセージ送信の実装</h3>
   
   <div class="grid-2">
     <div>
       <h4>基本的なメッセージ送信</h4>
       <div class="code-example" style="font-size: 0.8em;">
-# シンプルなテキストメッセージ
-{
-  "channel": "#general",
-  "text": "Hello from n8n!"
-}
 
-# リッチテキストメッセージ
+#### シンプルなテキストメッセージ
 
 {
-"channel": "#alerts",
-"text": "System Alert",
-"blocks": [
-{
-"type": "section",
-"text": {
-"type": "mrkdwn",
-"text": "*Alert:* System maintenance required"
-}
-}
-]
+"channel": "#general",
+"text": "Hello from n8n!"
 }
 
 </div>
@@ -1234,7 +1190,7 @@ export OPENAI_API_KEY="sk-xxx...xxx"
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎨 Block Kit を使用したリッチメッセージ</h3>
   
   <div class="grid-2">
@@ -1286,252 +1242,6 @@ export OPENAI_API_KEY="sk-xxx...xxx"
 }
       </div>
     </div>
-  </div>
-</div>
-
----
-
-## 4.3 チャンネル操作
-
-<div class="card animated">
-  <h3>📢 チャンネルの管理と操作</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>チャンネル関連の操作</h4>
-      <ul>
-        <li><strong>チャンネル一覧取得</strong> - conversations.list</li>
-        <li><strong>チャンネル作成</strong> - conversations.create</li>
-        <li><strong>チャンネル情報取得</strong> - conversations.info</li>
-        <li><strong>メンバー管理</strong> - conversations.invite</li>
-        <li><strong>履歴取得</strong> - conversations.history</li>
-      </ul>
-    </div>
-    <div>
-      <h4>実装例</h4>
-      <div class="code-example" style="font-size: 0.8em;">
-# チャンネル作成
-{
-  "name": "project-alerts",
-  "is_private": false
-}
-
-# メンバー招待
-
-{
-"channel": "C1234567890",
-"users": "U1234567890,U0987654321"
-}
-
-# 履歴取得
-
-{
-"channel": "C1234567890",
-"limit": 100,
-"oldest": "1234567890.123456"
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 4.4 ファイルアップロード
-
-<div class="card animated">
-  <h3>📎 ファイル共有とアップロード</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>ファイルアップロードの方法</h4>
-      <ul>
-        <li><strong>直接アップロード</strong> - ローカルファイルから</li>
-        <li><strong>URL指定</strong> - 外部URLから取得</li>
-        <li><strong>Base64データ</strong> - エンコードされたデータ</li>
-        <li><strong>生成ファイル</strong> - n8nで作成したファイル</li>
-      </ul>
-    </div>
-    <div>
-      <h4>対応ファイル形式</h4>
-      <ul>
-        <li><strong>画像</strong> - JPG、PNG、GIF、SVG</li>
-        <li><strong>ドキュメント</strong> - PDF、DOC、XLS、PPT</li>
-        <li><strong>テキスト</strong> - TXT、CSV、JSON、XML</li>
-        <li><strong>アーカイブ</strong> - ZIP、RAR、TAR</li>
-        <li><strong>動画・音声</strong> - MP4、AVI、MP3</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="card animated">
-  <h3>💾 ファイルアップロード実装例</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>CSVレポートのアップロード</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-# 1. データをCSV形式に変換（Codeノード）
-const csvData = items.map(item => 
-  `${item.id},${item.name},${item.date}`
-).join('\n');
-
-return [{ json: { csvContent: csvData } }];
-
-# 2. Slack にファイルアップロード
-
-{
-"channels": "#reports",
-"content": "{{ $json.csvContent }}",
-"filename": "daily*report*{{ $now.format('YYYY-MM-DD') }}.csv",
-"filetype": "csv",
-"title": "Daily Report - {{ $now.format('YYYY/MM/DD') }}"
-}
-
-</div>
-</div>
-<div>
-<h4>スクリーンショット共有</h4>
-<div class="code-example" style="font-size: 0.7em;">
-
-# 画像 URL からアップロード
-
-{
-"channels": "#screenshots",
-"file": "https://example.com/screenshot.png",
-"filename": "screenshot.png",
-"title": "System Status Screenshot",
-"initial_comment": "Current system status as of {{ $now }}"
-}
-
-# Base64 データから
-
-{
-"channels": "#images",
-"content": "{{ $binary.data }}",
-"filename": "generated_chart.png",
-"filetype": "png"
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 4.5 Interactive 要素の活用
-
-<div class="card animated">
-  <h3>🎛️ インタラクティブな要素</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">🔘 ボタン</h4>
-      <ul style="font-size: 0.9em;">
-        <li>アクション実行</li>
-        <li>承認フロー</li>
-        <li>選択肢提示</li>
-        <li>外部リンク</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-{
-  "type": "button",
-  "text": {
-    "type": "plain_text",
-    "text": "Approve"
-  },
-  "style": "primary",
-  "value": "approve_123"
-}
-      </div>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">📋 選択メニュー</h4>
-      <ul style="font-size: 0.9em;">
-        <li>ドロップダウン</li>
-        <li>複数選択</li>
-        <li>ユーザー選択</li>
-        <li>チャンネル選択</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-{
-  "type": "static_select",
-  "placeholder": {
-    "type": "plain_text",
-    "text": "Select priority"
-  },
-  "options": [
-    {
-      "text": { "type": "plain_text", "text": "High" },
-      "value": "high"
-    }
-  ]
-}
-      </div>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">📝 入力フィールド</h4>
-      <ul style="font-size: 0.9em;">
-        <li>テキスト入力</li>
-        <li>数値入力</li>
-        <li>日付選択</li>
-        <li>時刻選択</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-{
-  "type": "plain_text_input",
-  "placeholder": {
-    "type": "plain_text",
-    "text": "Enter comment"
-  },
-  "multiline": true
-}
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="card animated">
-  <h3>🔄 インタラクティブ要素の応答処理</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>Webhook応答の設定</h4>
-      <ul>
-        <li><strong>Interactivity Webhook URL</strong> を設定</li>
-        <li><strong>Request URL</strong> にn8n Webhook URLを指定</li>
-        <li><strong>ペイロード解析</strong> でユーザーアクションを取得</li>
-        <li><strong>条件分岐</strong> でアクション別の処理を実装</li>
-      </ul>
-    </div>
-    <div>
-      <h4>応答処理の実装例</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-# Webhookで受信したペイロードの解析
-const payload = JSON.parse($json.payload);
-const action = payload.actions[0];
-
-// アクションに応じた処理
-if (action.action_id === 'approve') {
-// 承認処理を実行
-return [{ json: { action: 'approve', user: payload.user.id } }];
-} else if (action.action_id === 'reject') {
-// 拒否処理を実行
-return [{ json: { action: 'reject', user: payload.user.id } }];
-}
-
-</div>
-</div>
-
   </div>
 </div>
 
@@ -1643,7 +1353,7 @@ return [{ json: { action: 'reject', user: payload.user.id } }];
 
 ## 5.3 データバリデーション
 
-<div class="card animated">
+<div>
   <h3>✅ バリデーション機能の実装</h3>
   
   <div class="grid-3">
@@ -1656,16 +1366,6 @@ return [{ json: { action: 'reject', user: payload.user.id } }];
         <li>範囲の確認</li>
       </ul>
       <div class="code-example" style="font-size: 0.6em;">
-// Code ノードでのバリデーション
-const Ajv = require('ajv');
-const ajv = new Ajv();
-
-const validate = ajv.compile(schema);
-const valid = validate(data);
-
-if (!valid) {
-throw new Error(ajv.errorsText(validate.errors));
-}
 
 </div>
 </div>
@@ -1677,19 +1377,7 @@ throw new Error(ajv.errorsText(validate.errors));
 <li>復旧処理の実装</li>
 <li>ログ記録</li>
 </ul>
-<div class="code-example" style="font-size: 0.6em;">
-// エラー情報の構造化
-{
-"valid": false,
-"errors": [
-{
-"field": "email",
-"message": "Invalid email format",
-"value": "invalid-email"
-}
-]
-}
-</div>
+
 </div>
 <div>
 <h4 style="color: var(--rp-gold);">🔄 自動修正</h4>
@@ -1699,15 +1387,6 @@ throw new Error(ajv.errorsText(validate.errors));
 <li>フォーマット変換</li>
 <li>クリーニング処理</li>
 </ul>
-<div class="code-example" style="font-size: 0.6em;">
-// データの自動修正
-if (data.email) {
-data.email = data.email.toLowerCase().trim();
-}
-if (!data.created_at) {
-data.created_at = new Date().toISOString();
-}
-</div>
 </div>
 
   </div>
@@ -1719,7 +1398,7 @@ data.created_at = new Date().toISOString();
 
 ## 6.1 Pinecone とは
 
-<div class="card animated">
+<div>
   <h3>🌲 Pinecone ベクトルデータベースの概要</h3>
   
   <div class="grid-2">
@@ -1750,7 +1429,7 @@ data.created_at = new Date().toISOString();
 
 ## 6.2 ベクトル検索の実装
 
-<div class="card animated">
+<div>
   <h3>🔍 ベクトル検索ワークフローの構築</h3>
   
   <div class="grid-2">
