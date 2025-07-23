@@ -356,7 +356,7 @@ style: |
       <ul>
         <li>Node-based automation tool</li>
         <li>視覚的なワークフロー作成</li>
-        <li>200+ のサービス連携</li>
+        <li>400+ のサービス連携</li>
         <li>オープンソース</li>
         <li>セルフホスト可能</li>
       </ul>
@@ -375,92 +375,7 @@ style: |
 
 ---
 
-## 1.2 n8n の特徴と利点
-
-<div>
-  <h3>⭐ n8nの強み</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">🎨 視覚的操作</h4>
-      <ul style="font-size: 0.9em;">
-        <li>ドラッグ&ドロップ</li>
-        <li>フローチャート形式</li>
-        <li>直感的なUI</li>
-        <li>コードレス開発</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">🔌 豊富な連携</h4>
-      <ul style="font-size: 0.9em;">
-        <li>200+ プリビルトノード</li>
-        <li>REST API対応</li>
-        <li>Webhook対応</li>
-        <li>カスタムノード作成可能</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🛡️ セキュリティ</h4>
-      <ul style="font-size: 0.9em;">
-        <li>セルフホスト可能</li>
-        <li>データ暗号化</li>
-        <li>権限管理</li>
-        <li>監査ログ</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-<div>
-  <h3>🆚 他のツールとの比較</h3>
-  
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <div style="overflow-x: auto; max-width: 100%;">
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>特徴</th>
-            <th>n8n</th>
-            <th>Zapier</th>
-            <th>Power Automate</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>料金</strong></td>
-            <td>オープンソース / 有料プラン</td>
-            <td>有料プランのみ</td>
-            <td>Microsoft 365連携</td>
-          </tr>
-          <tr>
-            <td><strong>セルフホスト</strong></td>
-            <td>✅ 可能</td>
-            <td>❌ 不可</td>
-            <td>❌ 不可</td>
-          </tr>
-          <tr>
-            <td><strong>カスタマイズ性</strong></td>
-            <td>✅ 高い</td>
-            <td>⚠️ 限定的</td>
-            <td>⚠️ 中程度</td>
-          </tr>
-          <tr>
-            <td><strong>学習コスト</strong></td>
-            <td>⚠️ 中程度</td>
-            <td>✅ 低い</td>
-            <td>⚠️ 中程度</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
----
-
-## 1.3 UI 概要とナビゲーション
+## 1.2 UI 概要とナビゲーション
 
 <div>
   <h3>🖥️ n8n UI の構成</h3>
@@ -700,74 +615,16 @@ Tab          # ノード検索<br>
 
 ---
 
-## 2.3 データフローの理解
+## 2.3 関数とノードの関連性
 
 <div>
-  <h3>🌊 データの流れ</h3>
+  <h3>🔗 ノードと関数の関連性</h3>
   
-  <div class="grid-2">
-    <div>
-      <h4>データ構造の基本</h4>
-      <ul>
-        <li><strong>JSON形式</strong> - 全てのデータはJSONで流れる</li>
-        <li><strong>アイテム単位</strong> - 配列の各要素が一つのアイテム</li>
-        <li><strong>フィールド</strong> - アイテム内のプロパティ</li>
-        <li><strong>メタデータ</strong> - 実行に関する情報</li>
-      </ul>
-    </div>
-    <div>
-      <h4>データ例</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-[
-  {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "created_at": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": 2,
-    "name": "Jane Smith", 
-    "email": "jane@example.com",
-    "created_at": "2024-01-02T00:00:00Z"
-  }
-]
-      </div>
-    </div>
+  <div style="text-align: center; margin-bottom: 2em;">
+    <img src="images/node-function-image.png" alt="ノードと関数の関連性" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
+
 </div>
-
----
-
-<div>
-  <h3>📊 データ参照方法</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>式エディタの使用</h4>
-      <ul>
-        <li><strong>{{ }}</strong> - 式の記述</li>
-        <li><strong>$json</strong> - 現在のJSONデータ</li>
-        <li><strong>$node</strong> - 特定ノードのデータ</li>
-        <li><strong>$parameter</strong> - パラメータ値</li>
-        <li><strong>$workflow</strong> - ワークフロー情報</li>
-      </ul>
-    </div>
-    <div>
-      <h4>実際の使用例</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-
-### 現在のデータから名前取得
-
-{{ $json.name }}
-
-### 前のノードのデータ参照
-
-{{ $node["HTTP Request"].json.data }}
-
-### 条件式での使用
-
-{{ $json.age > 18 }}
 
 ---
 
@@ -815,39 +672,6 @@ Tab          # ノード検索<br>
     </div>
   </div>
 </div>
-
----
-
-<div >
-  <h3>⚙️ 実行モードの設定詳細</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>Schedule Trigger設定例</h4>
-      <div class="code-example" style="font-size: 0.8em;">
-
-### 毎日午前 9 時に実行
-
-0 9 \* \* \*
-
-### 毎週月曜日の午前 10 時
-
-0 10 \* \* 1
-
-### 毎月 1 日の午後 2 時
-
-0 14 1 \* \*
-
-</div>
-</div>
-<div>
-<h4>Webhook 設定のポイント</h4>
-<ul>
-<li><strong>URL パス</strong> - ユニークなパス設定</li>
-<li><strong>HTTP メソッド</strong> - GET/POST 等の選択</li>
-<li><strong>認証</strong> - セキュリティ設定</li>
-<li><strong>レスポンス</strong> - 返却データの設定</li>
-</ul>
 
 ---
 
@@ -923,42 +747,6 @@ Tab          # ノード検索<br>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
-
----
-
-<div>
-  <h3>📈 パフォーマンステスト</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">⚡ 実行時間測定</h4>
-      <ul style="font-size: 0.9em;">
-        <li>各ノードの処理時間</li>
-        <li>全体の実行時間</li>
-        <li>ボトルネックの特定</li>
-        <li>最適化ポイントの発見</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">📊 リソース使用量</h4>
-      <ul style="font-size: 0.9em;">
-        <li>メモリ使用量</li>
-        <li>CPU使用率</li>
-        <li>ネットワーク使用量</li>
-        <li>ストレージ使用量</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔧 最適化手法</h4>
-      <ul style="font-size: 0.9em;">
-        <li>並列処理の活用</li>
-        <li>データ量の制限</li>
-        <li>キャッシュの活用</li>
-        <li>不要な処理の削除</li>
-      </ul>
     </div>
   </div>
 </div>
@@ -1247,6 +1035,164 @@ Host: api.example.com
 
 ---
 
+## 4.6 プロンプトエンジニアリング
+
+<div class="card animated">
+  <h3>🎯 プロンプトエンジニアリングとは</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>プロンプトエンジニアリングの重要性</h4>
+      <ul>
+        <li><strong>精度向上</strong> - より正確な結果を得る</li>
+        <li><strong>一貫性確保</strong> - 安定した出力品質</li>
+        <li><strong>効率化</strong> - 試行錯誤の時間短縮</li>
+        <li><strong>コスト削減</strong> - APIコールの最適化</li>
+        <li><strong>ユーザビリティ</strong> - より使いやすいAI活用</li>
+      </ul>
+    </div>
+    <div>
+      <h4>n8nでの適用場面</h4>
+      <ul>
+        <li><strong>OpenAI ノード</strong> - GPTとの対話最適化</li>
+        <li><strong>Claude ノード</strong> - Anthropic AI活用</li>
+        <li><strong>データ変換</strong> - 自然言語での指示</li>
+        <li><strong>コンテンツ生成</strong> - 品質の高い文章作成</li>
+        <li><strong>分析・要約</strong> - 構造化された分析結果</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div>
+  <h3>📝 効果的なプロンプト設計のテクニック</h3>
+  
+  <div>
+    <h4>基本原則</h4>
+    <div class="grid-3">
+      <div>
+        <h5 style="color: var(--rp-iris);">🎯 明確性</h5>
+        <ul style="font-size: 0.9em;">
+          <li>具体的な指示</li>
+          <li>曖昧な表現を避ける</li>
+          <li>期待する結果を明示</li>
+          <li>制約条件の明記</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-foam);">🏗️ 構造化</h5>
+        <ul style="font-size: 0.9em;">
+          <li>段階的な指示</li>
+          <li>論理的な順序</li>
+          <li>セクション分け</li>
+          <li>例示の活用</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-gold);">🎭 役割定義</h5>
+        <ul style="font-size: 0.9em;">
+          <li>AIの役割を明確化</li>
+          <li>専門性の設定</li>
+          <li>口調・スタイル指定</li>
+          <li>制限事項の設定</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+---
+
+<div class="card animated">
+  <h3>🛠️ 実践的なプロンプト最適化手法</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>チェーン・オブ・ソート（思考の連鎖）</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+以下の手順で問題を解決してください：
+
+1. **問題の理解**
+
+   - 与えられた情報を整理
+   - 解決すべき課題を明確化
+
+2. **分析の実行**
+
+   - データパターンの特定
+   - 関連性の調査
+
+3. **結論の導出**
+   - 論理的推論に基づく結論
+   - 信頼度の評価
+
+各ステップの思考過程を明示してください。
+
+</div>
+</div>
+<div>
+<h4>フューショット学習</h4>
+<div class="code-example" style="font-size: 0.7em;">
+以下の例を参考に、同様の分析を行ってください：
+
+**例 1:**
+入力: {"売上": 100000, "前年比": 1.2}
+出力: {"評価": "好調", "理由": "前年比 20%増"}
+
+**例 2:**
+入力: {"売上": 80000, "前年比": 0.9}
+出力: {"評価": "課題あり", "理由": "前年比 10%減"}
+
+**分析対象:**
+{{ $json.sales_data }}
+
+</div>
+</div>
+
+  </div>
+
+  <div style="margin-top: 2em;">
+    <h4>プロンプトの反復改善プロセス</h4>
+    <div class="highlight-box">
+      <ol>
+        <li><strong>ベースライン作成</strong> - 初期プロンプトでテスト</li>
+        <li><strong>結果評価</strong> - 出力品質の客観的評価</li>
+        <li><strong>問題特定</strong> - 不適切な結果の原因分析</li>
+        <li><strong>プロンプト調整</strong> - 具体的な改善点の適用</li>
+        <li><strong>A/Bテスト</strong> - 複数バージョンの比較</li>
+        <li><strong>最適化</strong> - 最良の結果を得るプロンプトを採用</li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="margin-top: 2em;">
+    <h4>n8nでのプロンプト管理のベストプラクティス</h4>
+    <div class="grid-2">
+      <div>
+        <h5>テンプレート化</h5>
+        <ul style="font-size: 0.9em;">
+          <li>再利用可能なプロンプトテンプレート</li>
+          <li>変数を使った動的プロンプト</li>
+          <li>バージョン管理による追跡</li>
+          <li>チーム間での共有</li>
+        </ul>
+      </div>
+      <div>
+        <h5>検証・テスト</h5>
+        <ul style="font-size: 0.9em;">
+          <li>テストデータでの動作確認</li>
+          <li>エッジケースの検証</li>
+          <li>パフォーマンス測定</li>
+          <li>継続的な改善</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
 # 5. Structured Output の活用
 
 ## 5.1 Structured Output とは
@@ -1351,52 +1297,74 @@ Host: api.example.com
 
 ---
 
-## 5.3 データバリデーション
+# 6. Pinecone による RAG システム
+
+## 6.1 RAG とは
 
 <div>
-  <h3>✅ バリデーション機能の実装</h3>
+  <h3>🧠 RAG (Retrieval-Augmented Generation) の概要</h3>
   
-  <div class="grid-3">
+  <div class="grid-2">
     <div>
-      <h4 style="color: var(--rp-iris);">🔍 型チェック</h4>
-      <ul style="font-size: 0.9em;">
-        <li>データ型の検証</li>
-        <li>必須フィールドの確認</li>
-        <li>形式の検証</li>
-        <li>範囲の確認</li>
+      <h4>RAG とは何か</h4>
+      <ul>
+        <li><strong>検索拡張生成</strong> - Retrieval-Augmented Generation</li>
+        <li><strong>外部知識の活用</strong> - LLMの知識を補完</li>
+        <li><strong>リアルタイム情報</strong> - 最新データの活用</li>
+        <li><strong>幻覚の抑制</strong> - 根拠のある回答生成</li>
+        <li><strong>専門知識対応</strong> - 特定分野の詳細情報</li>
       </ul>
-      <div class="code-example" style="font-size: 0.6em;">
+    </div>
+    <div>
+      <h4>RAG システムの仕組み</h4>
+      <ul>
+        <li><strong>Step 1</strong> - ユーザーの質問を受信</li>
+        <li><strong>Step 2</strong> - 関連文書をベクトル検索</li>
+        <li><strong>Step 3</strong> - 検索結果をコンテキストとして追加</li>
+        <li><strong>Step 4</strong> - LLMが拡張された情報で回答生成</li>
+        <li><strong>Step 5</strong> - 根拠と共に回答を返却</li>
+      </ul>
+    </div>
+  </div>
 
-</div>
-</div>
-<div>
-<h4 style="color: var(--rp-foam);">⚠️ エラーハンドリング</h4>
-<ul style="font-size: 0.9em;">
-<li>詳細なエラーメッセージ</li>
-<li>エラー位置の特定</li>
-<li>復旧処理の実装</li>
-<li>ログ記録</li>
-</ul>
+---
 
-</div>
-<div>
-<h4 style="color: var(--rp-gold);">🔄 自動修正</h4>
-<ul style="font-size: 0.9em;">
-<li>データの正規化</li>
-<li>デフォルト値の設定</li>
-<li>フォーマット変換</li>
-<li>クリーニング処理</li>
-</ul>
-</div>
+## 6.2 RAG の利点
 
+  <div style="margin-top: 1.5em;">
+    <h3>RAGの活用</h4>
+    <div class="grid-3">
+      <div>
+        <h5 style="color: var(--rp-iris);">🎯 精度向上</h5>
+        <ul style="font-size: 0.9em;">
+          <li>事実に基づく回答</li>
+          <li>幻覚の大幅な削減</li>
+          <li>情報の信頼性向上</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-foam);">⚡ 効率性</h5>
+        <ul style="font-size: 0.9em;">
+          <li>コスト効率的な運用</li>
+          <li>高速な情報取得</li>
+          <li>スケーラブルな設計</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-gold);">🔄 柔軟性</h5>
+        <ul style="font-size: 0.9em;">
+          <li>知識ベースの更新容易</li>
+          <li>多様なデータソース対応</li>
+          <li>カスタマイズ可能</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
 ---
 
-# 6. Pinecone による RAG システム
-
-## 6.1 Pinecone とは
+## 6.3 Pinecone とは
 
 <div>
   <h3>🌲 Pinecone ベクトルデータベースの概要</h3>
@@ -1427,145 +1395,79 @@ Host: api.example.com
 
 ---
 
-## 6.2 ベクトル検索の実装
+## 6.4 Text Embeddings の実装
 
 <div>
-  <h3>🔍 ベクトル検索ワークフローの構築</h3>
+  <h3>📊 Amazon Titan Text Embeddings v2 の活用</h3>
   
   <div class="grid-2">
     <div>
-      <h4>データ準備とインデックス作成</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-# 1. テキストの埋め込み生成（OpenAI ノード）
-{
-  "input": "{{ $json.content }}",
-  "model": "text-embedding-ada-002"
-}
-
-# 2. Pinecone インデックスへの保存
-
-{
-"id": "{{ $json.id }}",
-"values": "{{ $json.embedding }}",
-"metadata": {
-"title": "{{ $json.title }}",
-"content": "{{ $json.content }}",
-"created_at": "{{ $json.created_at }}"
-}
-}
-
-# 3. バッチ挿入の最適化
-
-{
-"vectors": [
-{
-"id": "doc1",
-"values": [0.1, 0.2, ...],
-"metadata": {"title": "Document 1"}
-}
-]
-}
-
-</div>
-</div>
-<div>
-<h4>検索クエリの実装</h4>
-<div class="code-example" style="font-size: 0.7em;">
-
-# 1. ユーザークエリの埋め込み生成
-
-{
-"input": "{{ $json.query }}",
-"model": "text-embedding-ada-002"
-}
-
-# 2. Pinecone での類似性検索
-
-{
-"vector": "{{ json.embedding }}",
-"topK": 5,
-"includeMetadata": true,
-"filter": {
-"category": {"$eq": "technical"}
-}
-}
-
-# 3. 結果のフィルタリングと整形
-
-const results = $json.matches.map(match => ({
-score: match.score,
-title: match.metadata.title,
-content: match.metadata.content
-}));
-
-</div>
-</div>
-
+      <img src="images/embeddings-image.png" alt="Text Embeddings Visualization" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+    <div>
+      <h4>Titan Text Embeddings v2 の特徴</h4>
+      <ul>
+        <li><strong>高次元ベクトル</strong> - 1024次元の密なベクトル表現</li>
+        <li><strong>多言語対応</strong> - 100以上の言語をサポート</li>
+        <li><strong>スケーラブル</strong> - 大量テキストの効率的処理</li>
+        <li><strong>コスト効率</strong> - 従量課金制で経済的</li>
+      </ul>
+      <h4>RAG システムでの活用</h4>
+      <ul>
+        <li><strong>文書の埋め込み</strong> - テキストをベクトル化</li>
+        <li><strong>クエリの埋め込み</strong> - 検索クエリをベクトル化</li>
+        <li><strong>類似性計算</strong> - コサイン類似度による検索</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 ---
 
-## 6.3 LLM との連携
-
-<div class="card animated">
-  <h3>🤖 RAG システムの完全な実装</h3>
+<div>
+  <h3>🔍 RAG システムでのベクトル検索実装</h3>
   
   <div class="grid-2">
     <div>
-      <h4>コンテキスト生成</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 検索結果からコンテキストを生成
-const context = searchResults
-  .filter(result => result.score > 0.8)
-  .map(result => `Title: ${result.title}\nContent: ${result.content}`)
-  .join('\n\n---\n\n');
-
-const prompt = `
-Context information:
-${context}
-
-Question: ${userQuery}
-
-Please answer the question based on the provided context.
-If the answer is not in the context, say "I don't have information about that."
-`;
-
-return [{ json: { prompt, context } }];
-
+      <h4>検索時の埋め込み処理</h4>
+      <ul>
+        <li><strong>クエリの埋め込み</strong> - ユーザーの質問をベクトル化</li>
+        <li><strong>同一モデル使用</strong> - <strong>保存時と同じTitan Text Embeddings v2を使用してください</strong></li>
+        <li><strong>ベクトル次元統一</strong> - 1024次元での一貫性</li>
+      </ul>
+      <h4>Pinecone での検索プロセス</h4>
+      <ul>
+        <li><strong>類似度検索</strong> - コサイン類似度による計算</li>
+        <li><strong>スコアベース抽出</strong> - 関連度の高い文書を選択</li>
+        <li><strong>結果ランキング</strong> - 関連度順での結果取得</li>
+      </ul>
+    </div>
+    <div>
+      <img src="images/pinecone-image.png" alt="Pinecone Vector Search" style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+  </div>
 </div>
-</div>
+
+---
+
+## 6.5 LLM との連携
+
 <div>
-<h4>回答生成と品質管理</h4>
-<div class="code-example" style="font-size: 0.7em;">
-
-# OpenAI ノードでの回答生成
-
-{
-"model": "gpt-4",
-"messages": [
-{
-"role": "system",
-"content": "You are a helpful assistant. Use only the provided context to answer questions."
-},
-{
-"role": "user",
-"content": "{{ $json.prompt }}"
-}
-],
-"temperature": 0.7,
-"max_tokens": 500
-}
-
-# 回答の品質チェック
-
-const response = $json.choices[0].message.content;
-const hasSourceInfo = response.includes("based on") || response.includes("according to");
-const confidence = $json.usage.total_tokens < 400 ? "high" : "medium";
-
-</div>
-</div>
-
+  <h3>🤖 LLM と RAG の統合</h3>
+  
+  <div class="grid-2">
+    <div>
+      <img src="images/llm-rag-image.png" alt="LLM and RAG Integration" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+    <div>
+      <h4>AI Agent での RAG Tool 活用</h4>
+      <ul>
+        <li><strong>Tool としての RAG</strong> - AI Agent が必要に応じて知識ベースを検索</li>
+        <li><strong>動的な情報取得</strong> - ユーザーの質問に応じて関連文書を自動検索</li>
+        <li><strong>文脈に基づく回答</strong> - 検索結果を基にした正確な応答生成</li>
+        <li><strong>知識の拡張</strong> - 事前学習データを超えた最新情報の活用</li>
+      </ul>
+      
   </div>
 </div>
 
@@ -1575,1143 +1477,21 @@ const confidence = $json.usage.total_tokens < 400 ? "high" : "medium";
 
 ## 7.1 一般的なエラーの種類と対処法
 
-<div class="card animated">
-  <h3>🚨 エラーの分類と対応戦略</h3>
-  
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <div style="overflow-x: auto; max-width: 100%;">
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>エラータイプ</th>
-            <th>原因</th>
-            <th>症状</th>
-            <th>対処法</th>
-            <th>予防策</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>認証エラー</strong></td>
-            <td>無効な認証情報</td>
-            <td>401 Unauthorized</td>
-            <td>Credential の再設定</td>
-            <td>定期的なトークン更新</td>
-          </tr>
-          <tr>
-            <td><strong>レート制限</strong></td>
-            <td>API 呼び出し過多</td>
-            <td>429 Too Many Requests</td>
-            <td>Wait ノード追加</td>
-            <td>呼び出し頻度の調整</td>
-          </tr>
-          <tr>
-            <td><strong>データエラー</strong></td>
-            <td>不正なデータ形式</td>
-            <td>400 Bad Request</td>
-            <td>データバリデーション</td>
-            <td>スキーマ検証の実装</td>
-          </tr>
-          <tr>
-            <td><strong>タイムアウト</strong></td>
-            <td>処理時間超過</td>
-            <td>504 Gateway Timeout</td>
-            <td>タイムアウト値調整</td>
-            <td>処理の最適化</td>
-          </tr>
-          <tr>
-            <td><strong>ネットワークエラー</strong></td>
-            <td>接続の問題</td>
-            <td>Connection failed</td>
-            <td>リトライ機能実装</td>
-            <td>冗長化・監視</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
----
-
-## 7.2 高度なデバッグ手法
-
-<div class="card animated">
-  <h3>🔧 効果的なデバッグ戦略</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">📊 ログ活用</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>詳細ログ</strong> - 実行ステップの記録</li>
-        <li><strong>エラーログ</strong> - エラー内容の詳細</li>
-        <li><strong>パフォーマンスログ</strong> - 実行時間の測定</li>
-        <li><strong>カスタムログ</strong> - 独自の情報記録</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-// Code ノードでのログ出力
-console.log('Processing item:', $json.id);
-console.error('Error occurred:', error.message);
-console.time('processing-time');
-// 処理実行
-console.timeEnd('processing-time');
-      </div>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">🔍 データ追跡</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>データフロー可視化</strong> - 各段階のデータ確認</li>
-        <li><strong>変数監視</strong> - 変数値の変化追跡</li>
-        <li><strong>条件分岐</strong> - 実行パスの確認</li>
-        <li><strong>データ変換</strong> - 変換前後の比較</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-// データ追跡用の情報追加
-const debugInfo = {
-  nodeId: 'data-transform',
-  inputData: $input.all(),
-  timestamp: new Date().toISOString(),
-  executionId: $execution.id
-};
-
-return [{ json: { ...processedData, _debug: debugInfo } }];
-
-</div>
-</div>
-<div>
-<h4 style="color: var(--rp-gold);">⚡ パフォーマンス分析</h4>
-<ul style="font-size: 0.9em;">
-<li><strong>実行時間測定</strong> - ボトルネック特定</li>
-<li><strong>メモリ使用量</strong> - リソース監視</li>
-<li><strong>API 呼び出し回数</strong> - 効率性評価</li>
-<li><strong>並列処理</strong> - 最適化の検討</li>
-</ul>
-<div class="code-example" style="font-size: 0.6em;">
-// パフォーマンス測定
-const startTime = Date.now();
-const initialMemory = process.memoryUsage();
-
-// 処理実行
-
-const endTime = Date.now();
-const finalMemory = process.memoryUsage();
-
-return [{
-json: {
-executionTime: endTime - startTime,
-memoryUsed: finalMemory.heapUsed - initialMemory.heapUsed
-}
-}];
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 7.3 エラー回復とリトライ機能
-
-<div class="card animated">
-  <h3>🔄 堅牢なエラーハンドリング実装</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>リトライ戦略の実装</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 指数バックオフによるリトライ
-const maxRetries = 3;
-let retryCount = 0;
-let lastError;
-
-while (retryCount < maxRetries) {
-try {
-const result = await makeAPICall();
-return [{ json: result }];
-} catch (error) {
-lastError = error;
-retryCount++;
-if (retryCount < maxRetries) {
-const delay = Math.pow(2, retryCount) \* 1000; // 指数バックオフ
-await new Promise(resolve => setTimeout(resolve, delay));
-}
-
-}
-}
-
-throw new Error(`Failed after ${maxRetries} retries: ${lastError.message}`);
-
-</div>
-</div>
-<div>
-<h4>回復処理の設計</h4>
-<ul>
-<li><strong>フォールバック</strong> - 代替処理の実行</li>
-<li><strong>部分回復</strong> - 可能な部分だけ処理</li>
-<li><strong>状態保存</strong> - 中断ポイントの記録</li>
-<li><strong>通知機能</strong> - エラー発生の報告</li>
-<li><strong>手動介入</strong> - 人的確認が必要な場合</li>
-</ul>
-<div class="code-example" style="font-size: 0.7em;">
-// フォールバック処理
-try {
-result = await primaryAPI();
-} catch (error) {
-console.warn('Primary API failed, using fallback');
-try {
-result = await fallbackAPI();
-} catch (fallbackError) {
-// 手動処理用キューに追加
-await addToManualQueue(originalData);
-throw new Error('Both primary and fallback failed');
-}
-}
-</div>
-</div>
-
-  </div>
-</div>
-
 ---
 
 # 8. 実用的なワークフロー例
-
-## 8.1 顧客サポート自動化
-
-<div class="card animated">
-  <h3>🎧 カスタマーサポートワークフロー</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>ワークフローの構成</h4>
-      <ol>
-        <li><strong>メール受信</strong> - Email Trigger</li>
-        <li><strong>内容分析</strong> - OpenAI による分類</li>
-        <li><strong>優先度判定</strong> - IF ノードによる分岐</li>
-        <li><strong>チケット作成</strong> - CRM への登録</li>
-        <li><strong>自動回答</strong> - テンプレート返信</li>
-        <li><strong>担当者通知</strong> - Slack 通知</li>
-      </ol>
-    </div>
-    <div>
-      <h4>実装のポイント</h4>
-      <ul>
-        <li><strong>感情分析</strong> - 緊急性の自動判定</li>
-        <li><strong>カテゴリ分類</strong> - 適切な部署への振り分け</li>
-        <li><strong>FAQ 自動回答</strong> - よくある質問の即答</li>
-        <li><strong>エスカレーション</strong> - 複雑な案件の人間対応</li>
-        <li><strong>追跡機能</strong> - 対応状況の監視</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="card animated">
-  <h3>💡 実装例: メール分析と自動分類</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>OpenAI を使用した分析</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-{
-  "model": "gpt-4",
-  "messages": [
-    {
-      "role": "system",
-      "content": "Analyze customer email and categorize: URGENT, HIGH, MEDIUM, LOW. Also determine department: TECH, BILLING, GENERAL"
-    },
-    {
-      "role": "user",
-      "content": "{{ $json.emailContent }}"
-    }
-  ],
-  "functions": [
-    {
-      "name": "categorize_email",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "priority": {"type": "string", "enum": ["URGENT", "HIGH", "MEDIUM", "LOW"]},
-          "department": {"type": "string", "enum": ["TECH", "BILLING", "GENERAL"]},
-          "sentiment": {"type": "string", "enum": ["POSITIVE", "NEUTRAL", "NEGATIVE"]},
-          "summary": {"type": "string"}
-        }
-      }
-    }
-  ]
-}
-      </div>
-    </div>
-    <div>
-      <h4>分岐とアクション</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// IF ノード: 優先度による分岐
-{{ $json.priority === "URGENT" }}
-
-// 緊急時の処理
-{
-"channel": "#support-urgent",
-"text": "🚨 URGENT: New ticket #{{ $json.ticketId }}",
-"blocks": [
-{
-"type": "section",
-"text": {
-"type": "mrkdwn",
-"text": "_Customer:_ {{ $json.customerName }}\n*Issue:* {{ $json.summary }}"
-}
-},
-{
-"type": "actions",
-"elements": [
-{
-"type": "button",
-"text": {"type": "plain_text", "text": "Take Case"},
-"value": "{{ $json.ticketId }}"
-}
-]
-}
-]
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 8.2 レポート自動生成
-
-<div class="card animated">
-  <h3>📊 日次・週次レポート自動化</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>データ収集と集計</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 複数ソースからのデータ収集
-const salesData = await fetchSalesData();
-const trafficData = await fetchTrafficData();
-const supportData = await fetchSupportData();
-
-// データの統合と集計
-const report = {
-date: new Date().toISOString().split('T')[0],
-sales: {
-total: salesData.reduce((sum, item) => sum + item.amount, 0),
-transactions: salesData.length,
-avgOrderValue: salesData.reduce((sum, item) => sum + item.amount, 0) / salesData.length
-},
-traffic: {
-visitors: trafficData.uniqueVisitors,
-pageViews: trafficData.pageViews,
-conversionRate: (salesData.length / trafficData.uniqueVisitors \* 100).toFixed(2)
-},
-support: {
-tickets: supportData.totalTickets,
-resolved: supportData.resolvedTickets,
-avgResponseTime: supportData.avgResponseTime
-}
-};
-
-return [{ json: report }];
-
-</div>
-</div>
-<div>
-<h4>可視化と配信</h4>
-<ul>
-<li><strong>チャート生成</strong> - Chart.js でグラフ作成</li>
-<li><strong>HTML レポート</strong> - テンプレートエンジン使用</li>
-<li><strong>PDF 変換</strong> - レポートの PDF 化</li>
-<li><strong>配信設定</strong> - 関係者への自動送信</li>
-<li><strong>ダッシュボード更新</strong> - リアルタイム表示</li>
-</ul>
-<div class="code-example" style="font-size: 0.7em;">
-// HTML レポートテンプレート
-const htmlTemplate = `
-
-<h1>Daily Report - ${report.date}</h1>
-<div class="metrics">
-  <div class="metric">
-    <h3>Sales</h3>
-    <p>Total: $${report.sales.total}</p>
-    <p>Transactions: ${report.sales.transactions}</p>
-  </div>
-  <div class="metric">
-    <h3>Traffic</h3>
-    <p>Visitors: ${report.traffic.visitors}</p>
-    <p>Conversion: ${report.traffic.conversionRate}%</p>
-  </div>
-</div>
-`;
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-## 8.3 在庫管理自動化
-
-<div class="card animated">
-  <h3>📦 在庫監視とアラートシステム</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>在庫監視ロジック</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 在庫データの取得と分析
-const inventoryData = await fetchInventoryData();
-
-const lowStockItems = inventoryData.filter(item => {
-const daysOfStock = item.currentStock / item.avgDailySales;
-return daysOfStock < item.reorderPoint;
-});
-
-const outOfStockItems = inventoryData.filter(item =>
-item.currentStock <= 0
-);
-
-const fastMovingItems = inventoryData.filter(item =>
-item.avgDailySales > item.expectedDailySales \* 1.5
-);
-
-// アラートレベルの決定
-const alertLevel = outOfStockItems.length > 0 ? 'CRITICAL' :
-lowStockItems.length > 5 ? 'HIGH' : 'MEDIUM';
-
-return [{
-json: {
-alertLevel,
-lowStockItems,
-outOfStockItems,
-fastMovingItems,
-totalItems: inventoryData.length
-}
-}];
-
-</div>
-</div>
-<div>
-<h4>自動発注システム</h4>
-<ul>
-<li><strong>発注ポイント</strong> - 在庫レベルでの自動発注</li>
-<li><strong>季節要因</strong> - 過去データによる需要予測</li>
-<li><strong>サプライヤー連携</strong> - API を通じた自動発注</li>
-<li><strong>承認ワークフロー</strong> - 高額商品の承認プロセス</li>
-<li><strong>配送追跡</strong> - 発注後の進捗管理</li>
-</ul>
-<div class="code-example" style="font-size: 0.7em;">
-// 自動発注の実装
-for (const item of lowStockItems) {
-if (item.autoReorder && item.value < 10000) {
-// 自動発注実行
-const orderQuantity = item.reorderQuantity;
-await createPurchaseOrder({
-supplierId: item.supplierId,
-productId: item.id,
-quantity: orderQuantity,
-urgency: item.currentStock === 0 ? 'URGENT' : 'NORMAL'
-});
-} else {
-// 承認待ちキューに追加
-await addToApprovalQueue(item);
-}
-}
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-# 9. 運用とメンテナンス
-
-## 9.1 本番環境でのワークフロー管理
-
-<div class="card animated">
-  <h3>🏭 本番運用のベストプラクティス</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">🔄 デプロイ戦略</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>段階的デプロイ</strong> - Dev → Staging → Prod</li>
-        <li><strong>ブルーグリーンデプロイ</strong> - ダウンタイム最小化</li>
-        <li><strong>カナリアリリース</strong> - 段階的な本番適用</li>
-        <li><strong>ロールバック準備</strong> - 迅速な巻き戻し</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">📊 監視とアラート</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>実行監視</strong> - ワークフローの成功・失敗率</li>
-        <li><strong>パフォーマンス監視</strong> - 実行時間・リソース使用量</li>
-        <li><strong>エラー監視</strong> - エラー率とパターン分析</li>
-        <li><strong>SLA 監視</strong> - サービスレベルの維持</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔐 セキュリティ管理</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>アクセス制御</strong> - ユーザー権限の管理</li>
-        <li><strong>監査ログ</strong> - 操作履歴の記録</li>
-        <li><strong>機密情報保護</strong> - Credential の暗号化</li>
-        <li><strong>コンプライアンス</strong> - 規制要件の遵守</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-## 9.2 バックアップとディザスタリカバリ
-
-<div class="card animated">
-  <h3>💾 データ保護とビジネス継続性</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>バックアップ戦略</h4>
-      <ul>
-        <li><strong>定期バックアップ</strong> - 自動スケジュールによる保存</li>
-        <li><strong>増分バックアップ</strong> - 効率的なストレージ利用</li>
-        <li><strong>クロスリージョン</strong> - 地理的分散によるリスク軽減</li>
-        <li><strong>バージョン管理</strong> - 複数世代の保持</li>
-        <li><strong>復旧テスト</strong> - 定期的な復旧訓練</li>
-      </ul>
-    </div>
-    <div>
-      <h4>ディザスタリカバリ計画</h4>
-      <ul>
-        <li><strong>RTO (Recovery Time Objective)</strong> - 復旧目標時間</li>
-        <li><strong>RPO (Recovery Point Objective)</strong> - 復旧目標地点</li>
-        <li><strong>代替サイト</strong> - 障害時の運用継続</li>
-        <li><strong>緊急時対応</strong> - エスカレーション手順</li>
-        <li><strong>文書化</strong> - 復旧手順の明文化</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 ---
 
 # 10. 応用テクニック
 
-## 10.1 高度な制御フロー
-
-<div class="card animated">
-  <h3>🌊 複雑な条件分岐とループ</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>高度な条件分岐</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 複数条件の組み合わせ
-{{ $json.status === "active" && $json.priority > 5 }}
-
-// 配列の条件チェック
-{{ $json.tags.includes("urgent") }}
-
-// 正規表現による判定
-{{ /^\d{4}-\d{2}-\d{2}/.test($json.date) }}
-
-// ネストしたプロパティの確認
-{{ $json.user?.profile?.verified === true }}
-
-</div>
-</div>
-<div>
-<h4>動的なループ処理</h4>
-<div class="code-example" style="font-size: 0.7em;">
-// 配列の各要素に対して処理
-for (const item of $input.all()) {
-if (item.json.amount > 1000) {
-// 高額な取引の処理
-await processHighValueTransaction(item.json);
-}
-}
-
-// 条件に基づくバッチ処理
-const batchSize = 50;
-for (let i = 0; i < items.length; i += batchSize) {
-const batch = items.slice(i, i + batchSize);
-await processBatch(batch);
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 10.2 カスタム関数とヘルパー
-
-<div class="card animated">
-  <h3>🔧 再利用可能な関数の作成</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>ユーティリティ関数</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// 日付フォーマット関数
-function formatDate(date, format = 'YYYY-MM-DD') {
-  const d = new Date(date);
-  return d.toISOString().split('T')[0];
-}
-
-// データ検証関数
-function validateEmail(email) {
-const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-return regex.test(email);
-}
-
-// エラーハンドリング関数
-function safeJsonParse(jsonString, defaultValue = {}) {
-try {
-return JSON.parse(jsonString);
-} catch (error) {
-console.error('JSON parse error:', error);
-return defaultValue;
-}
-}
-
-</div>
-</div>
-<div>
-<h4>データ変換ヘルパー</h4>
-<div class="code-example" style="font-size: 0.7em;">
-// オブジェクトの平坦化
-function flattenObject(obj, prefix = '') {
-return Object.keys(obj).reduce((acc, k) => {
-const pre = prefix.length ? prefix + '.' : '';
-if (typeof obj[k] === 'object' && obj[k] !== null) {
-Object.assign(acc, flattenObject(obj[k], pre + k));
-} else {
-acc[pre + k] = obj[k];
-}
-return acc;
-}, {});
-}
-
-// 配列のグループ化
-function groupBy(array, key) {
-return array.reduce((groups, item) => {
-const group = item[key];
-groups[group] = groups[group] || [];
-groups[group].push(item);
-return groups;
-}, {});
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 10.3 外部サービス統合パターン
-
-<div class="card animated">
-  <h3>🔌 API オーケストレーション</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>サーキットブレーカーパターン</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-// サーキットブレーカーの実装
-class CircuitBreaker {
-  constructor(threshold = 5, timeout = 60000) {
-    this.threshold = threshold;
-    this.timeout = timeout;
-    this.failureCount = 0;
-    this.state = 'CLOSED'; // CLOSED, OPEN, HALF_OPEN
-    this.nextAttempt = Date.now();
-  }
-
-async call(fn) {
-if (this.state === 'OPEN') {
-if (Date.now() < this.nextAttempt) {
-throw new Error('Circuit breaker is OPEN');
-}
-this.state = 'HALF_OPEN';
-}
-try {
-const result = await fn();
-this.onSuccess();
-return result;
-} catch (error) {
-this.onFailure();
-throw error;
-}
-
-}
-}
-
-</div>
-</div>
-<div>
-<h4>レート制限対応</h4>
-<div class="code-example" style="font-size: 0.7em;">
-// レート制限を考慮した API 呼び出し
-class RateLimitedAPI {
-constructor(requestsPerMinute = 60) {
-this.requestsPerMinute = requestsPerMinute;
-this.requests = [];
-}
-
-async makeRequest(apiCall) {
-const now = Date.now();
-const oneMinuteAgo = now - 60000;
-// 1 分以内のリクエストをフィルタ
-this.requests = this.requests.filter(time => time > oneMinuteAgo);
-if (this.requests.length >= this.requestsPerMinute) {
-const waitTime = this.requests[0] + 60000 - now;
-await new Promise(resolve => setTimeout(resolve, waitTime));
-}
-this.requests.push(now);
-return await apiCall();
-
-}
-}
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-# 11. 実践ワークショップ
-
-## 11.1 ハンズオン: E コマース注文処理システム
-
-<div class="card animated">
-  <h3>🛒 実践的なワークフロー構築</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>システム要件</h4>
-      <ul>
-        <li><strong>注文受信</strong> - Webhook で注文データ取得</li>
-        <li><strong>在庫確認</strong> - 在庫管理システムとの連携</li>
-        <li><strong>決済処理</strong> - 決済サービス API 呼び出し</li>
-        <li><strong>配送手配</strong> - 配送業者 API との連携</li>
-        <li><strong>通知送信</strong> - 顧客とスタッフへの通知</li>
-        <li><strong>データ記録</strong> - CRM・分析システムへの登録</li>
-      </ul>
-    </div>
-    <div>
-      <h4>実装フロー</h4>
-      <ol>
-        <li><strong>Webhook 設定</strong> - 注文データの受信</li>
-        <li><strong>データ検証</strong> - 必須項目と形式チェック</li>
-        <li><strong>在庫チェック</strong> - 商品在庫の確認</li>
-        <li><strong>決済処理</strong> - クレジットカード決済</li>
-        <li><strong>注文確定</strong> - 在庫の減算と注文確定</li>
-        <li><strong>配送準備</strong> - 配送ラベル作成</li>
-        <li><strong>通知送信</strong> - Email と SMS 通知</li>
-      </ol>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="card animated">
-  <h3>💻 実装例: 注文処理ワークフロー</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>Step 1: データ検証</h4>
-      <div class="code-example" style="font-size: 0.6em;">
-// 注文データの検証
-const order = $json;
-
-// 必須フィールドの確認
-const requiredFields = ['orderId', 'customerId', 'items', 'total'];
-const missingFields = requiredFields.filter(field => !order[field]);
-
-if (missingFields.length > 0) {
-throw new Error(`Missing fields: ${missingFields.join(', ')}`);
-}
-
-// 商品データの検証
-for (const item of order.items) {
-if (!item.productId || !item.quantity || !item.price) {
-throw new Error(`Invalid item data: ${JSON.stringify(item)}`);
-}
-}
-
-return [{ json: { ...order, validated: true } }];
-
-</div>
-</div>
-<div>
-<h4>Step 2: 在庫確認</h4>
-<div class="code-example" style="font-size: 0.6em;">
-// 在庫確認ロジック
-const items = $json.items;
-const stockCheckResults = [];
-
-for (const item of items) {
-// 在庫 API 呼び出し（HTTP Request ノードで実行）
-const stockResponse = await fetch(`/api/inventory/${item.productId}`);
-const stock = await stockResponse.json();
-
-if (stock.available < item.quantity) {
-stockCheckResults.push({
-productId: item.productId,
-requested: item.quantity,
-available: stock.available,
-status: 'insufficient'
-});
-} else {
-stockCheckResults.push({
-productId: item.productId,
-requested: item.quantity,
-available: stock.available,
-status: 'available'
-});
-}
-}
-
-return [{ json: { items, stockCheckResults } }];
-
-</div>
-</div>
-
-  </div>
-</div>
-
----
-
-## 11.2 チーム演習とコードレビュー
-
-<div class="card animated">
-  <h3>👥 協働学習のアプローチ</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">🔍 ペアプログラミング</h4>
-      <ul style="font-size: 0.9em;">
-        <li>2人1組でワークフロー作成</li>
-        <li>一人が設計、一人が実装</li>
-        <li>定期的な役割交換</li>
-        <li>リアルタイムでの知識共有</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">📋 コードレビュー</h4>
-      <ul style="font-size: 0.9em;">
-        <li>ワークフローの構造確認</li>
-        <li>エラーハンドリングの妥当性</li>
-        <li>パフォーマンスの最適化</li>
-        <li>セキュリティ観点での検証</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🎯 ベストプラクティス</h4>
-      <ul style="font-size: 0.9em;">
-        <li>命名規則の統一</li>
-        <li>ドキュメント化の習慣</li>
-        <li>テスト戦略の確立</li>
-        <li>運用を考慮した設計</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-## 11.3 Q&A セッション
-
-<div class="card animated">
-  <h3>❓ よくある質問と回答</h3>
-  
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <div style="overflow-x: auto; max-width: 100%;">
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>質問カテゴリ</th>
-            <th>よくある質問</th>
-            <th>回答のポイント</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>パフォーマンス</strong></td>
-            <td>大量データ処理時の最適化は？</td>
-            <td>バッチ処理、並列実行、メモリ管理</td>
-          </tr>
-          <tr>
-            <td><strong>エラー対応</strong></td>
-            <td>APIエラーの適切な処理方法は？</td>
-            <td>リトライ機能、フォールバック、ログ記録</td>
-          </tr>
-          <tr>
-            <td><strong>セキュリティ</strong></td>
-            <td>機密情報の安全な管理方法は？</td>
-            <td>環境変数、暗号化、アクセス制御</td>
-          </tr>
-          <tr>
-            <td><strong>運用</strong></td>
-            <td>本番環境での監視方法は？</td>
-            <td>ログ監視、アラート設定、パフォーマンス測定</td>
-          </tr>
-          <tr>
-            <td><strong>拡張性</strong></td>
-            <td>将来の要件変更への対応は？</td>
-            <td>モジュール化、設定の外部化、バージョン管理</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
 ---
 
 # 12. まとめと今後の学習方針
 
-## 12.1 学習内容の振り返り
-
-<div class="card animated">
-  <h3>📚 学習達成度の確認</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>習得したスキル</h4>
-      <ul>
-        <li><strong>基礎知識</strong>
-          <ul>
-            <li>n8n の概要と特徴</li>
-            <li>UI の使い方とナビゲーション</li>
-            <li>ワークフローの基本概念</li>
-          </ul>
-        </li>
-        <li><strong>実践スキル</strong>
-          <ul>
-            <li>Credential 管理</li>
-            <li>Slack 連携の実装</li>
-            <li>データ処理とエラーハンドリング</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4>応用技術</h4>
-      <ul>
-        <li><strong>高度な機能</strong>
-          <ul>
-            <li>Structured Output の活用</li>
-            <li>RAG システムの構築</li>
-            <li>外部サービスとの統合</li>
-          </ul>
-        </li>
-        <li><strong>運用知識</strong>
-          <ul>
-            <li>本番環境での管理</li>
-            <li>監視とメンテナンス</li>
-            <li>セキュリティ対策</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 ---
 
-## 12.2 次のステップと推奨学習リソース
-
-<div class="card animated">
-  <h3>🚀 継続的な学習のために</h3>
-  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">📖 学習リソース</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>公式ドキュメント</strong>
-          <ul>
-            <li>docs.n8n.io</li>
-            <li>最新機能の確認</li>
-          </ul>
-        </li>
-        <li><strong>コミュニティ</strong>
-          <ul>
-            <li>community.n8n.io</li>
-            <li>Discord サーバー</li>
-          </ul>
-        </li>
-        <li><strong>YouTube チャンネル</strong>
-          <ul>
-            <li>公式チュートリアル</li>
-            <li>ユースケース事例</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">🛠️ 実践プロジェクト</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>個人プロジェクト</strong>
-          <ul>
-            <li>日常業務の自動化</li>
-            <li>データ収集システム</li>
-          </ul>
-        </li>
-        <li><strong>チームプロジェクト</strong>
-          <ul>
-            <li>部署横断の自動化</li>
-            <li>顧客サポート改善</li>
-          </ul>
-        </li>
-        <li><strong>オープンソース</strong>
-          <ul>
-            <li>カスタムノード開発</li>
-            <li>テンプレート共有</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🎯 認定・資格</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>n8n 認定</strong>
-          <ul>
-            <li>公式認定プログラム</li>
-            <li>スキル証明</li>
-          </ul>
-        </li>
-        <li><strong>関連技術</strong>
-          <ul>
-            <li>API 設計・開発</li>
-            <li>クラウドサービス</li>
-          </ul>
-        </li>
-        <li><strong>業界認定</strong>
-          <ul>
-            <li>自動化エンジニア</li>
-            <li>システム統合</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 ---
-
-## 12.3 30 日間のアクションプラン
-
-<div class="card animated">
-  <h3>📅 具体的な学習スケジュール</h3>
-  
-  <div class="grid-4">
-    <div style="text-align: center; padding: 1em; background: var(--rp-iris); border-radius: 8px;">
-      <h4 style="color: white; margin-bottom: 0.5em;">Week 1</h4>
-      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
-        <li>• 基本ワークフロー作成</li>
-        <li>• HTTP Request 練習</li>
-        <li>• データ変換の習得</li>
-      </ul>
-    </div>
-    <div style="text-align: center; padding: 1em; background: var(--rp-foam); border-radius: 8px;">
-      <h4 style="color: white; margin-bottom: 0.5em;">Week 2</h4>
-      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
-        <li>• Slack 連携実装</li>
-        <li>• Webhook 設定</li>
-        <li>• エラーハンドリング</li>
-      </ul>
-    </div>
-    <div style="text-align: center; padding: 1em; background: var(--rp-gold); border-radius: 8px;">
-      <h4 style="color: white; margin-bottom: 0.5em;">Week 3</h4>
-      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
-        <li>• 複雑なワークフロー</li>
-        <li>• 外部サービス統合</li>
-        <li>• パフォーマンス最適化</li>
-      </ul>
-    </div>
-    <div style="text-align: center; padding: 1em; background: var(--rp-rose); border-radius: 8px;">
-      <h4 style="color: white; margin-bottom: 0.5em;">Week 4</h4>
-      <ul style="color: white; font-size: 0.8em; list-style: none; padding: 0;">
-        <li>• 本番環境デプロイ</li>
-        <li>• 監視・運用設定</li>
-        <li>• チーム共有・発表</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-## 12.4 コミュニティ参加と情報共有
-
-<div class="card animated">
-  <h3>🌐 n8n エコシステムへの参加</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>コミュニティリソース</h4>
-      <ul>
-        <li><strong>公式フォーラム</strong>
-          <ul>
-            <li>community.n8n.io</li>
-            <li>質問・回答・議論</li>
-          </ul>
-        </li>
-        <li><strong>GitHub</strong>
-          <ul>
-            <li>github.com/n8n-io/n8n</li>
-            <li>Issue 報告・機能要望</li>
-          </ul>
-        </li>
-        <li><strong>Discord</strong>
-          <ul>
-            <li>リアルタイム議論</li>
-            <li>カジュアルな情報交換</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4>貢献の方法</h4>
-      <ul>
-        <li><strong>ナレッジ共有</strong>
-          <ul>
-            <li>ブログ記事の執筆</li>
-            <li>チュートリアル作成</li>
-          </ul>
-        </li>
-        <li><strong>コード貢献</strong>
-          <ul>
-            <li>カスタムノード開発</li>
-            <li>バグ修正・機能改善</li>
-          </ul>
-        </li>
-        <li><strong>コミュニティ支援</strong>
-          <ul>
-            <li>質問への回答</li>
-            <li>イベント・勉強会開催</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 ---
 
