@@ -424,7 +424,7 @@ style: |
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎛️ 重要なナビゲーション機能</h3>
   
   <div class="grid-2">
@@ -455,7 +455,7 @@ Tab          # ノード検索<br>
 
 ---
 
-<div class="card animated">
+<div>
   <h3>💡 効率的な作業のコツ</h3>
   
   <div class="grid-3">
@@ -813,6 +813,7 @@ function calculateDiscount(price, rate) {<br>
         <li><strong>時間短縮</strong> - 手動作業を大幅に削減</li>
         <li><strong>学習効果</strong> - 生成されたワークフローから学習可能</li>
       </ul>
+              <p style="font-size: 0.8em;">例 : n8nのJSONファイルを出力してください。SlackのApp mentionをトリガーにしてAWS BedrockのAI Agentがユーザからの問合せを回答し、またSlackに返信するワークフローです。</p>
     </div>
     <div>
       <img src="images/n8n-ai-create-image.png" alt="AI Workflow Creation" style="width: 100%; height: 470px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
@@ -1113,6 +1114,8 @@ Host: api.example.com
 
 # 5 プロンプトエンジニアリング
 
+## 5.1 プロンプトエンジニアリングの基礎
+
 <div>
   <h3>🎯 プロンプトエンジニアリングとは</h3>
   
@@ -1141,6 +1144,8 @@ Host: api.example.com
 </div>
 
 ---
+
+## 5.2 プロンプト設計
 
 <div>
   <h3>📝 効果的なプロンプト設計のテクニック</h3>
@@ -1180,7 +1185,7 @@ Host: api.example.com
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🛠️ 実践的なプロンプト最適化手法</h3>
   
   <div class="grid-2">
@@ -1217,6 +1222,35 @@ Host: api.example.com
 分析対象:<br>
 {{ $json.sales_data }}
 
+</div>
+
+---
+
+## 5.4 User Prompt と System Message の役割
+
+<div>
+  <h3>💬 プロンプトの構成要素</h3>
+  
+  <div class="grid-2">
+    <div>
+      <img src="images/prompt-image.png" alt="User Prompt and System Message" style="width: 100%; height: 480px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+    <div>
+      <h4>System Message の役割</h4>
+      <ul>
+        <li><strong>AIの性格・役割定義</strong> - AIがどのような専門家として振る舞うか</li>
+        <li><strong>制約条件の設定</strong> - 回答の範囲や禁止事項</li>
+        <li><strong>出力形式の指定</strong> - JSONや特定フォーマット指定</li>
+      </ul>
+      <h4>User Prompt の役割</h4>
+      <ul>
+        <li><strong>具体的な質問・要求</strong> - ユーザーが求める情報</li>
+        <li><strong>コンテキスト提供</strong> - 背景情報や状況説明</li>
+        <li><strong>入力データ</strong> - 処理対象となるデータ</li>
+        <li><strong>期待する出力</strong> - 求める結果の明確化</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 ---
@@ -1496,6 +1530,48 @@ Host: api.example.com
         <li><strong>知識の拡張</strong> - 事前学習データを超えた最新情報の活用</li>
       </ul>
       
+  </div>
+</div>
+
+---
+
+# 8. 実習・演習
+
+## 8.1 ハンズオン演習
+
+<div>
+  
+  <div class="grid-2">
+    <div>
+      <h4>基本演習</h4>
+      <ul>
+        <li><strong>AIエージェントにおけるTool利用</strong>
+          <ul>
+            <li>AIエージェントの作成</li>
+            <li>Serp APIの登録と設定</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>応用演習</h4>
+      <ul>
+        <li><strong>Structured Output Parserの設定</strong>
+          <ul>
+            <li>AIエージェントの作成</li>
+            <li>AIエージェントの出力安定化</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><strong>RAGを用いたAIエージェント作成</strong>
+          <ul>
+            <li>AIエージェントの作成</li>
+            <li>Pineconeへの接続</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
