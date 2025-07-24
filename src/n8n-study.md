@@ -305,9 +305,9 @@ style: |
 <div class="card animated">
   <ol>
     <li><strong>基礎知識の確認</strong> - n8nの概要・UI・特徴</li>
-    <li><strong>ワークフローの基本</strong> - 作成方法・ノード・実行モード</li>
+    <li><strong>ワークフローの基本</strong> - 作成方法・ノード・実行モード・AI活用</li>
     <li><strong>Credential管理</strong> - 認証情報の安全な管理</li>
-    <li><strong>Slack連携の実装</strong> - メッセージ・チャンネル・ファイル操作</li>
+    <li><strong>Slack連携の実装</strong> - メッセージ・認証設定・Block Kit</li>
   </ol>
 </div>
 
