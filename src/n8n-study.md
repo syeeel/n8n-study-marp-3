@@ -300,7 +300,7 @@ style: |
 
 # 目次
 
-## Part 1: 基礎とワークフロー
+## Part 1: ワークフローとクレデンシャル
 
 <div class="card animated">
   <ol>
@@ -323,21 +323,6 @@ style: |
     <li><strong>PineconeによるRAG</strong> - ベクトル検索・LLM連携</li>
     <li><strong>エラーハンドリング</strong> - デバッグ・最適化</li>
     <li><strong>実用的なワークフロー例</strong> - 具体的な実装例</li>
-  </ol>
-</div>
-
----
-
-# 目次
-
-## Part 3: 運用と応用
-
-<div class="card animated">
-  <ol start="9">
-    <li><strong>運用とメンテナンス</strong> - 管理・バックアップ・セキュリティ</li>
-    <li><strong>応用テクニック</strong> - 条件分岐・ループ・カスタム関数</li>
-    <li><strong>実践ワークショップ</strong> - ハンズオン・Q&A</li>
-    <li><strong>まとめと今後の学習方針</strong> - 振り返り・参考資料</li>
   </ol>
 </div>
 
