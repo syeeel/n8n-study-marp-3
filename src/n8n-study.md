@@ -590,10 +590,10 @@ Tab          # ノード検索<br>
             <td>外部サービス連携</td>
           </tr>
           <tr>
-            <td><strong>Set</strong></td>
-            <td>データ変換・設定</td>
-            <td>フィールドマッピング</td>
-            <td>データ整形</td>
+            <td><strong>AI Agent</strong></td>
+            <td>AIエージェント機能の提供</td>
+            <td>プロンプトエンジニアリング</td>
+            <td>AIエージェント/AIワークフロー</td>
           </tr>
           <tr>
             <td><strong>IF</strong></td>
@@ -617,8 +617,44 @@ Tab          # ノード検索<br>
 
 ## 2.3 関数とノードの関連性
 
+<div >
+  <h3>🔧 関数の基本構造：入力 → 処理 → 出力</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>関数の3つの要素</h4>
+      <div style="margin-bottom: 1.5em;">
+        <div style="padding: 0.8em; background: var(--rp-iris-alpha); border-radius: 6px; margin-bottom: 0.8em;">
+          <h5 style="color: var(--rp-iris); margin: 0 0 0.3em 0;">📥 入力 (Input)</h5>
+          <p style="margin: 0; font-size: 0.9em;">関数のパラメータとして受け取るデータ</p>
+        </div>
+        <div style="padding: 0.8em; background: var(--rp-foam-alpha); border-radius: 6px; margin-bottom: 0.8em;">
+          <h5 style="color: var(--rp-foam); margin: 0 0 0.3em 0;">⚙️ 処理 (Processing)</h5>
+          <p style="margin: 0; font-size: 0.9em;">入力データを変換・計算する処理</p>
+        </div>
+        <div style="padding: 0.8em; background: var(--rp-gold-alpha); border-radius: 6px;">
+          <h5 style="color: var(--rp-gold); margin: 0 0 0.3em 0;">📤 出力 (Output)</h5>
+          <p style="margin: 0; font-size: 0.9em;">処理結果を返却するデータ</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="code-example" style="font-size: 1.00em;">
+function calculateDiscount(price, rate) {<br>
+  // 📥 入力: price（価格）, rate（割引率）<br> 
+  // ⚙️ 処理: 割引計算<br>
+  const discountAmount = price * (rate / 100);<br>
+  const finalPrice = price - discountAmount;<br>
+  // 📤 出力: 計算結果を返却<br>
+  return finalPrice;
+}
+</div>
+
+---
+
 <div>
-  <h3>🔗 ノードと関数の関連性</h3>
+  <h2>🔗 ノードと関数の関連性</h3>
+  <h3>n8nのノードも関数と同じように入力、処理、出力を行う</h2>
   
   <div style="text-align: center; margin-bottom: 2em;">
     <img src="images/node-function-image.png" alt="ノードと関数の関連性" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
@@ -706,47 +742,80 @@ Tab          # ノード検索<br>
 
 ---
 
+## 2.6 ワークフローのエクスポート・インポート
+
 <div>
-  <h3>🔍 よくあるエラーと対処法</h3>
+  <h3>📤 ワークフローのエクスポート</h3>
   
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <div style="overflow-x: auto; max-width: 100%;">
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>エラータイプ</th>
-            <th>よくある原因</th>
-            <th>確認方法</th>
-            <th>対処法</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>接続エラー</strong></td>
-            <td>認証情報の不備</td>
-            <td>Credential設定確認</td>
-            <td>正しい認証情報を設定</td>
-          </tr>
-          <tr>
-            <td><strong>データエラー</strong></td>
-            <td>フィールド参照ミス</td>
-            <td>JSON構造の確認</td>
-            <td>正しいパス指定</td>
-          </tr>
-          <tr>
-            <td><strong>タイムアウト</strong></td>
-            <td>処理時間超過</td>
-            <td>実行時間確認</td>
-            <td>タイムアウト値調整</td>
-          </tr>
-          <tr>
-            <td><strong>レート制限</strong></td>
-            <td>API呼び出し過多</td>
-            <td>API制限値確認</td>
-            <td>Waitノード追加</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="grid-2">
+    <div>
+      <h4>エクスポート機能の概要</h4>
+      <ul>
+        <li><strong>JSON形式</strong> - ワークフロー全体をJSON形式で保存</li>
+        <li><strong>設定の保持</strong> - ノード設定・接続情報も含む</li>
+        <li><strong>バージョン管理</strong> - 開発段階の保存</li>
+        <li><strong>バックアップ</strong> - 重要なワークフローの保管</li>
+      </ul>
+    </div>
+    <div>
+      <h5 style="color: var(--rp-iris); margin-top: 1.5em;">エクスポート手順</h5>
+      <ol style="font-size: 0.9em;">
+        <li>ワークフロー画面右上の <strong>メニュー</strong> をクリック</li>
+        <li><strong>「Export」</strong> を選択</li>
+        <li>エクスポート形式を選択（JSON推奨）</li>
+        <li>ファイルをダウンロード</li>
+      </ol>
+  </div>
+</div>
+
+---
+
+## 2.7 ワークフローのインポート
+
+<div>
+  <h3>📦 ワークフローの共有と管理</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>インポート機能の概要</h4>
+      <ul>
+        <li><strong>ワークフロー復元</strong> - 保存したワークフローを読み込み</li>
+        <li><strong>チーム共有</strong> - 他の開発者とワークフロー共有</li>
+        <li><strong>環境移行</strong> - 開発環境から本番環境への移行</li>
+        <li><strong>テンプレート活用</strong> - 既存のワークフローを元に新規作成</li>
+      </ul>
+      </div>
+      <div>
+      <h5 style="color: var(--rp-foam); margin-top: 1.5em;">インポート手順</h5>
+      <ol style="font-size: 0.9em;">
+        <li>ワークフロー一覧画面で <strong>「Import」</strong> をクリック</li>
+        <li>JSONファイルを選択またはテキスト貼り付け</li>
+        <li>ワークフロー名を設定</li>
+        <li><strong>「Import」</strong> で完了</li>
+      </ol>
+    </div>
+  </div>
+
+---
+
+## 2.8 AI を活用したワークフロー作成
+
+<div>
+  <h3>🤖 AI でワークフローを自動生成</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>AI によるワークフロー作成の特徴</h4>
+      <ul>
+        <li><strong>自然言語での指示</strong> - 日本語で要求を伝えるだけ</li>
+        <li><strong>自動ノード配置</strong> - 適切なノードを自動選択・配置</li>
+        <li><strong>設定の最適化</strong> - ベストプラクティスに基づく設定</li>
+        <li><strong>時間短縮</strong> - 手動作業を大幅に削減</li>
+        <li><strong>学習効果</strong> - 生成されたワークフローから学習可能</li>
+      </ul>
+    </div>
+    <div>
+      <img src="images/n8n-ai-create-image.png" alt="AI Workflow Creation" style="width: 100%; height: 470px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
     </div>
   </div>
 </div>
@@ -848,7 +917,7 @@ Host: api.example.com
       <ol>
         <li><strong>Credentialsメニューを開く</strong></li>
         <li><strong>"Add Credential"をクリック</strong></li>
-        <li><strong>サービスタイプを選択</strong></li>
+        <li><strong>サービスタイプを選択</strong></li>  
         <li><strong>必要な情報を入力</strong></li>
         <li><strong>接続テストを実行</strong></li>
         <li><strong>保存して完了</strong></li>
@@ -980,6 +1049,13 @@ Host: api.example.com
 
 <div>
   <h3>🎨 Block Kit を使用したリッチメッセージ</h3>
+  <div style="margin-bottom: 1em;">
+    <p><strong>参考リンク:</strong></p>
+    <ul>
+      <li><a href="https://api.slack.com/block-kit" target="_blank">Block Kit - Slack API Documentation</a></li>
+      <li><a href="https://app.slack.com/block-kit-builder" target="_blank">Block Kit Builder - Interactive Tool</a></li>
+    </ul>
+  </div>
   
   <div class="grid-2">
     <div>
@@ -1035,9 +1111,9 @@ Host: api.example.com
 
 ---
 
-## 4.6 プロンプトエンジニアリング
+# 5 プロンプトエンジニアリング
 
-<div class="card animated">
+<div>
   <h3>🎯 プロンプトエンジニアリングとは</h3>
   
   <div class="grid-2">
@@ -1111,22 +1187,17 @@ Host: api.example.com
     <div>
       <h4>チェーン・オブ・ソート（思考の連鎖）</h4>
       <div class="code-example" style="font-size: 0.7em;">
-以下の手順で問題を解決してください：
-
-1. **問題の理解**
-
-   - 与えられた情報を整理
-   - 解決すべき課題を明確化
-
-2. **分析の実行**
-
-   - データパターンの特定
-   - 関連性の調査
-
-3. **結論の導出**
-   - 論理的推論に基づく結論
-   - 信頼度の評価
-
+以下の手順で問題を解決してください：<br><br>
+1. 問題の理解<br>
+   - 与えられた情報を整理<br>
+   - 解決すべき課題を明確化<br><br>
+2. 分析の実行<br>
+   - データパターンの特定<br>
+   - 関連性の調査<br><br>
+3. 結論の導出<br>
+   - 論理的推論に基づく結論<br>
+   - 信頼度の評価<br>
+<br>
 各ステップの思考過程を明示してください。
 
 </div>
@@ -1134,70 +1205,27 @@ Host: api.example.com
 <div>
 <h4>フューショット学習</h4>
 <div class="code-example" style="font-size: 0.7em;">
-以下の例を参考に、同様の分析を行ってください：
-
-**例 1:**
-入力: {"売上": 100000, "前年比": 1.2}
-出力: {"評価": "好調", "理由": "前年比 20%増"}
-
-**例 2:**
-入力: {"売上": 80000, "前年比": 0.9}
-出力: {"評価": "課題あり", "理由": "前年比 10%減"}
-
-**分析対象:**
+以下の例を参考に、同様の分析を行ってください：<br><br>
+例 1:<br>
+入力: {"売上": 100000, "前年比": 1.2}<br>
+出力: {"評価": "好調", "理由": "前年比 20%増"}<br>
+<br>
+例 2:<br>
+入力: {"売上": 80000, "前年比": 0.9}<br>
+出力: {"評価": "課題あり", "理由": "前年比 10%減"}<br>
+<br>
+分析対象:<br>
 {{ $json.sales_data }}
 
-</div>
-</div>
-
-  </div>
-
-  <div style="margin-top: 2em;">
-    <h4>プロンプトの反復改善プロセス</h4>
-    <div class="highlight-box">
-      <ol>
-        <li><strong>ベースライン作成</strong> - 初期プロンプトでテスト</li>
-        <li><strong>結果評価</strong> - 出力品質の客観的評価</li>
-        <li><strong>問題特定</strong> - 不適切な結果の原因分析</li>
-        <li><strong>プロンプト調整</strong> - 具体的な改善点の適用</li>
-        <li><strong>A/Bテスト</strong> - 複数バージョンの比較</li>
-        <li><strong>最適化</strong> - 最良の結果を得るプロンプトを採用</li>
-      </ol>
-    </div>
-  </div>
-
-  <div style="margin-top: 2em;">
-    <h4>n8nでのプロンプト管理のベストプラクティス</h4>
-    <div class="grid-2">
-      <div>
-        <h5>テンプレート化</h5>
-        <ul style="font-size: 0.9em;">
-          <li>再利用可能なプロンプトテンプレート</li>
-          <li>変数を使った動的プロンプト</li>
-          <li>バージョン管理による追跡</li>
-          <li>チーム間での共有</li>
-        </ul>
-      </div>
-      <div>
-        <h5>検証・テスト</h5>
-        <ul style="font-size: 0.9em;">
-          <li>テストデータでの動作確認</li>
-          <li>エッジケースの検証</li>
-          <li>パフォーマンス測定</li>
-          <li>継続的な改善</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 </div>
 
 ---
 
-# 5. Structured Output の活用
+# 6. Structured Output の活用
 
-## 5.1 Structured Output とは
+## 6.1 Structured Output とは
 
-<div class="card animated">
+<div>
   <h3>🏗️ Structured Output の概念</h3>
   
   <div class="grid-2">
@@ -1226,9 +1254,9 @@ Host: api.example.com
 
 ---
 
-## 5.2 JSON スキーマの定義
+## 6.2 JSON スキーマの定義
 
-<div class="card animated">
+<div>
   <h3>📋 JSON スキーマの作成</h3>
   
   <div class="grid-2">
@@ -1297,9 +1325,9 @@ Host: api.example.com
 
 ---
 
-# 6. Pinecone による RAG システム
+# 7. Pinecone による RAG システム
 
-## 6.1 RAG とは
+## 7.1 RAG とは
 
 <div>
   <h3>🧠 RAG (Retrieval-Augmented Generation) の概要</h3>
@@ -1329,7 +1357,7 @@ Host: api.example.com
 
 ---
 
-## 6.2 RAG の利点
+## 7.2 RAG の利点
 
   <div style="margin-top: 1.5em;">
     <h3>RAGの活用</h4>
@@ -1364,7 +1392,7 @@ Host: api.example.com
 
 ---
 
-## 6.3 Pinecone とは
+## 7.3 Pinecone とは
 
 <div>
   <h3>🌲 Pinecone ベクトルデータベースの概要</h3>
@@ -1395,7 +1423,7 @@ Host: api.example.com
 
 ---
 
-## 6.4 Text Embeddings の実装
+## 7.4 Text Embeddings の実装
 
 <div>
   <h3>📊 Amazon Titan Text Embeddings v2 の活用</h3>
@@ -1450,7 +1478,7 @@ Host: api.example.com
 
 ---
 
-## 6.5 LLM との連携
+## 7.5 LLM との連携
 
 <div>
   <h3>🤖 LLM と RAG の統合</h3>
@@ -1473,28 +1501,6 @@ Host: api.example.com
 
 ---
 
-# 7. エラーハンドリングとデバッグ
-
-## 7.1 一般的なエラーの種類と対処法
-
----
-
-# 8. 実用的なワークフロー例
-
----
-
-# 10. 応用テクニック
-
----
-
-# 12. まとめと今後の学習方針
-
----
-
----
-
----
-
 <div class="card animated">
   <h3>🎉 最終メッセージ</h3>
   
@@ -1503,21 +1509,12 @@ Host: api.example.com
     <p style="font-size: 24px; margin-bottom: 1.5em;">
       皆さんは n8n の基礎から応用まで、包括的な知識とスキルを身につけました。
     </p>
-    <div class="highlight-box" style="margin: 2em 0;">
-      <p style="font-size: 20px; margin-bottom: 1em;">
-        <strong>これからが本当のスタートです。</strong>
-      </p>
-      <p style="font-size: 18px;">
-        学んだ知識を活用して、日々の業務を効率化し、<br>
-        新しい価値を創造していってください。
-      </p>
-    </div>
     <p style="font-size: 22px; color: var(--rp-foam);">
-      自動化の力で、より創造的で意味のある仕事に集中できるようになることを願っています。
+      AIエージェントの力で、より創造的で意味のある仕事に集中できるようになることを願っています。
     </p>
-    <div style="margin-top: 2em; font-size: 28px;">
+    <div style="margin-top: 2em; font-size: 34px;">
       <span style="color: var(--rp-gold);">🚀</span>
-      <span style="color: var(--rp-iris); font-weight: bold;">Happy Automating!</span>
+      <span style="color: var(--rp-iris); font-weight: bold;">Let's build AI Agents !</span>
       <span style="color: var(--rp-foam);">🤖</span>
     </div>
   </div>
