@@ -1139,7 +1139,7 @@ ol li::marker {
 }
 ;" data-marpit-pagination-total="39">
 <h1 id="%E7%9B%AE%E6%AC%A1">目次</h1>
-<h2 id="part-1-%E5%9F%BA%E7%A4%8E%E3%81%A8%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC">Part 1: 基礎とワークフロー</h2>
+<h2 id="part-1-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8%E3%82%AF%E3%83%AC%E3%83%87%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB">Part 1: ワークフローとクレデンシャル</h2>
 <div class="card animated">
   <ol>
     <li><strong>基礎知識の確認</strong> - n8nの概要・UI・特徴</li>
@@ -1717,10 +1717,10 @@ ol li::marker {
 <h2 id="part-2-%E3%83%87%E3%83%BC%E3%82%BF%E5%87%A6%E7%90%86%E3%81%A8%E9%AB%98%E5%BA%A6%E3%81%AA%E6%A9%9F%E8%83%BD">Part 2: データ処理と高度な機能</h2>
 <div class="card animated">
   <ol start="5">
+    <li><strong>プロンプトエンジニアリング</strong> - 効果的なプロンプト設計・System Message活用</li>
     <li><strong>Structured Outputの活用</strong> - JSONスキーマ・バリデーション</li>
-    <li><strong>PineconeによるRAG</strong> - ベクトル検索・LLM連携</li>
-    <li><strong>エラーハンドリング</strong> - デバッグ・最適化</li>
-    <li><strong>実用的なワークフロー例</strong> - 具体的な実装例</li>
+    <li><strong>PineconeによるRAGシステム</strong> - ベクトル検索・LLM連携・Text Embeddings</li>
+    <li><strong>実習・演習</strong> - ハンズオン形式での実践演習</li>
   </ol>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
@@ -2288,15 +2288,32 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="%E7%9B%AE%E6%AC%A1-2">目次</h1>
-<h2 id="part-3-%E9%81%8B%E7%94%A8%E3%81%A8%E5%BF%9C%E7%94%A8">Part 3: 運用と応用</h2>
-<div class="card animated">
-  <ol start="9">
-    <li><strong>運用とメンテナンス</strong> - 管理・バックアップ・セキュリティ</li>
-    <li><strong>応用テクニック</strong> - 条件分岐・ループ・カスタム関数</li>
-    <li><strong>実践ワークショップ</strong> - ハンズオン・Q&A</li>
-    <li><strong>まとめと今後の学習方針</strong> - 振り返り・参考資料</li>
-  </ol>
+<h1 id="1-%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98%E3%81%AE%E7%A2%BA%E8%AA%8D">1. 基礎知識の確認</h1>
+<h2 id="11-n8n-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E7%B0%A1%E5%8D%98%E3%81%AA%E5%BE%A9%E7%BF%92">1.1 n8n とは何か（簡単な復習）</h2>
+<div>
+  <h3>🔧 n8nの基本概念</h3>
+  <div class="grid-2">
+    <div>
+      <h4>n8nとは</h4>
+      <ul>
+        <li>Node-based automation tool</li>
+        <li>視覚的なワークフロー作成</li>
+        <li>400+ のサービス連携</li>
+        <li>オープンソース</li>
+        <li>セルフホスト可能</li>
+      </ul>
+    </div>
+    <div>
+      <h4>主要な用途</h4>
+      <ul>
+        <li><strong>API連携</strong> - サービス間のデータ転送</li>
+        <li><strong>データ処理</strong> - 変換・集計・分析</li>
+        <li><strong>通知システム</strong> - アラート・レポート</li>
+        <li><strong>業務自動化</strong> - 反復作業の自動化</li>
+        <li><strong>AIエージェント作成</strong> - 業務のAI化</li>
+      </ul>
+    </div>
+  </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
@@ -2863,28 +2880,46 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="1-%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98%E3%81%AE%E7%A2%BA%E8%AA%8D">1. 基礎知識の確認</h1>
-<h2 id="11-n8n-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E7%B0%A1%E5%8D%98%E3%81%AA%E5%BE%A9%E7%BF%92">1.1 n8n とは何か（簡単な復習）</h2>
+<h2 id="12-ui-%E6%A6%82%E8%A6%81%E3%81%A8%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">1.2 UI 概要とナビゲーション</h2>
 <div>
-  <h3>🔧 n8nの基本概念</h3>
+  <h3>🖥️ n8n UI の構成</h3>
   <div class="grid-2">
     <div>
-      <h4>n8nとは</h4>
+      <h4>メイン画面の要素</h4>
       <ul>
-        <li>Node-based automation tool</li>
-        <li>視覚的なワークフロー作成</li>
-        <li>400+ のサービス連携</li>
-        <li>オープンソース</li>
-        <li>セルフホスト可能</li>
+        <li><strong>左サイドバー</strong>
+          <ul>
+            <li>ワークフロー一覧</li>
+            <li>Credentials</li>
+            <li>Executions</li>
+            <li>Settings</li>
+          </ul>
+        </li>
+        <li><strong>中央エリア</strong>
+          <ul>
+            <li>キャンバス（ワークフロー編集）</li>
+            <li>ノード配置・接続</li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div>
-      <h4>主要な用途</h4>
+      <h4>右パネルの機能</h4>
       <ul>
-        <li><strong>API連携</strong> - サービス間のデータ転送</li>
-        <li><strong>データ処理</strong> - 変換・集計・分析</li>
-        <li><strong>通知システム</strong> - アラート・レポート</li>
-        <li><strong>業務自動化</strong> - 反復作業の自動化</li>
+        <li><strong>ノード設定</strong>
+          <ul>
+            <li>パラメータ設定</li>
+            <li>認証情報選択</li>
+            <li>テスト実行</li>
+          </ul>
+        </li>
+        <li><strong>データビューア</strong>
+          <ul>
+            <li>入力データ確認</li>
+            <li>出力データ確認</li>
+            <li>JSON表示</li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -3454,46 +3489,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="12-ui-%E6%A6%82%E8%A6%81%E3%81%A8%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">1.2 UI 概要とナビゲーション</h2>
 <div>
-  <h3>🖥️ n8n UI の構成</h3>
+  <h3>🎛️ 重要なナビゲーション機能</h3>
   <div class="grid-2">
     <div>
-      <h4>メイン画面の要素</h4>
-      <ul>
-        <li><strong>左サイドバー</strong>
-          <ul>
-            <li>ワークフロー一覧</li>
-            <li>Credentials</li>
-            <li>Executions</li>
-            <li>Settings</li>
-          </ul>
-        </li>
-        <li><strong>中央エリア</strong>
-          <ul>
-            <li>キャンバス（ワークフロー編集）</li>
-            <li>ノード配置・接続</li>
-          </ul>
-        </li>
-      </ul>
+      <h4>キーボードショートカット</h4>
+      <div class="code-example" style="font-size: 0.8em;">
+Command + S     # 保存<br />
+Command + Z     # 元に戻す<br />
+Delete       # ノード削除<br />
+Command + A     # 全選択<br />
+Command + C/V   # コピー&ペースト<br />
+Space + カーソル移動       # 画面スクロース<br />
+Tab          # ノード検索<br />
+      </div>
     </div>
     <div>
-      <h4>右パネルの機能</h4>
+      <h4>便利な機能</h4>
       <ul>
-        <li><strong>ノード設定</strong>
-          <ul>
-            <li>パラメータ設定</li>
-            <li>認証情報選択</li>
-            <li>テスト実行</li>
-          </ul>
-        </li>
-        <li><strong>データビューア</strong>
-          <ul>
-            <li>入力データ確認</li>
-            <li>出力データ確認</li>
-            <li>JSON表示</li>
-          </ul>
-        </li>
+        <li><strong>ズーム機能</strong> - command + マウスホイール</li>
+        <li><strong>選択範囲</strong> - ドラッグ</li>
+        <li><strong>接続線</strong> - ドラッグで接続</li>
+        <li><strong>ノードメニュー</strong> - Ctrl + クリック</li>
+        <li><strong>整列機能</strong> - option + shift + T</li>
       </ul>
     </div>
   </div>
@@ -4064,28 +4082,32 @@ ol li::marker {
 }
 ;" data-marpit-pagination-total="39">
 <div>
-  <h3>🎛️ 重要なナビゲーション機能</h3>
-  <div class="grid-2">
+  <h3>💡 効率的な作業のコツ</h3>
+  <div class="grid-3">
     <div>
-      <h4>キーボードショートカット</h4>
-      <div class="code-example" style="font-size: 0.8em;">
-Command + S     # 保存<br />
-Command + Z     # 元に戻す<br />
-Delete       # ノード削除<br />
-Command + A     # 全選択<br />
-Command + C/V   # コピー&ペースト<br />
-Space + カーソル移動       # 画面スクロース<br />
-Tab          # ノード検索<br />
-      </div>
+      <h4 style="color: var(--rp-iris);">🔍 検索活用</h4>
+      <ul style="font-size: 0.9em;">
+        <li>Tabキーでノード検索</li>
+        <li>カテゴリ別フィルタ</li>
+        <li>テンプレート活用</li>
+      </ul>
     </div>
     <div>
-      <h4>便利な機能</h4>
-      <ul>
-        <li><strong>ズーム機能</strong> - command + マウスホイール</li>
-        <li><strong>選択範囲</strong> - ドラッグ</li>
-        <li><strong>接続線</strong> - ドラッグで接続</li>
-        <li><strong>ノードメニュー</strong> - Ctrl + クリック</li>
-        <li><strong>整列機能</strong> - option + shift + T</li>
+      <h4 style="color: var(--rp-foam);">📋 整理整頓</h4>
+      <ul style="font-size: 0.9em;">
+        <li>ノードに分かりやすい名前</li>
+        <li>Sticky Noteでコメント</li>
+        <li>グループ化で見やすく</li>
+        <li>一貫したレイアウト</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🔄 効率化</h4>
+      <ul style="font-size: 0.9em;">
+        <li>テンプレート保存</li>
+        <li>よく使う設定を複製</li>
+        <li>実行履歴を活用</li>
+        <li>エラーログを確認</li>
       </ul>
     </div>
   </div>
@@ -4655,33 +4677,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
+<h1 id="2-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%9F%BA%E6%9C%AC">2. ワークフローの基本</h1>
+<h2 id="21-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95">2.1 ワークフローの作成方法</h2>
 <div>
-  <h3>💡 効率的な作業のコツ</h3>
-  <div class="grid-3">
+  <div class="grid-2">
     <div>
-      <h4 style="color: var(--rp-iris);">🔍 検索活用</h4>
-      <ul style="font-size: 0.9em;">
-        <li>Tabキーでノード検索</li>
-        <li>カテゴリ別フィルタ</li>
-        <li>テンプレート活用</li>
-      </ul>
+      <h4>作成手順</h4>
+      <ol>
+        <li><strong>新規ワークフロー作成</strong> - "New Workflow"</li>
+        <li><strong>トリガーノード追加</strong> - 開始点の設定</li>
+        <li><strong>アクションノード追加</strong> - 処理内容の定義</li>
+        <li><strong>ノード接続</strong> - データフローの構築</li>
+        <li><strong>設定とテスト</strong> - パラメータ設定と動作確認</li>
+        <li><strong>保存とアクティブ化</strong> - 本番運用開始</li>
+      </ol>
     </div>
     <div>
-      <h4 style="color: var(--rp-foam);">📋 整理整頓</h4>
-      <ul style="font-size: 0.9em;">
-        <li>ノードに分かりやすい名前</li>
-        <li>Sticky Noteでコメント</li>
-        <li>グループ化で見やすく</li>
-        <li>一貫したレイアウト</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔄 効率化</h4>
-      <ul style="font-size: 0.9em;">
-        <li>テンプレート保存</li>
-        <li>よく使う設定を複製</li>
-        <li>実行履歴を活用</li>
-        <li>エラーログを確認</li>
+      <h4>ワークフロー設計のポイント</h4>
+      <ul>
+        <li><strong>目的の明確化</strong> - 何を自動化するか</li>
+        <li><strong>データフローの設計</strong> - 入力から出力まで</li>
+        <li><strong>エラーハンドリング</strong> - 失敗時の対応</li>
+        <li><strong>テスト戦略</strong> - 段階的な検証</li>
+        <li><strong>ドキュメント化</strong> - 後で理解できるように</li>
       </ul>
     </div>
   </div>
@@ -5251,29 +5269,37 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="2-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%9F%BA%E6%9C%AC">2. ワークフローの基本</h1>
-<h2 id="21-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95">2.1 ワークフローの作成方法</h2>
-<div>
-  <div class="grid-2">
+<h2 id="22-%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%A8%E5%BD%B9%E5%89%B2">2.2 ノードの種類と役割</h2>
+<div>  
+  <div class="grid-3">
     <div>
-      <h4>作成手順</h4>
-      <ol>
-        <li><strong>新規ワークフロー作成</strong> - "New Workflow"</li>
-        <li><strong>トリガーノード追加</strong> - 開始点の設定</li>
-        <li><strong>アクションノード追加</strong> - 処理内容の定義</li>
-        <li><strong>ノード接続</strong> - データフローの構築</li>
-        <li><strong>設定とテスト</strong> - パラメータ設定と動作確認</li>
-        <li><strong>保存とアクティブ化</strong> - 本番運用開始</li>
-      </ol>
+      <h4 style="color: var(--rp-iris);">🚀 トリガーノード</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>Manual Trigger</strong> - 手動実行</li>
+        <li><strong>Webhook</strong> - HTTP リクエスト受信</li>
+        <li><strong>Schedule Trigger</strong> - 時間ベース実行</li>
+        <li><strong>Email Trigger</strong> - メール受信</li>
+        <li><strong>File Trigger</strong> - ファイル変更監視</li>
+      </ul>
     </div>
     <div>
-      <h4>ワークフロー設計のポイント</h4>
-      <ul>
-        <li><strong>目的の明確化</strong> - 何を自動化するか</li>
-        <li><strong>データフローの設計</strong> - 入力から出力まで</li>
-        <li><strong>エラーハンドリング</strong> - 失敗時の対応</li>
-        <li><strong>テスト戦略</strong> - 段階的な検証</li>
-        <li><strong>ドキュメント化</strong> - 後で理解できるように</li>
+      <h4 style="color: var(--rp-foam);">⚡ アクションノード</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>HTTP Request</strong> - API呼び出し</li>
+        <li><strong>Email</strong> - メール送信</li>
+        <li><strong>Slack</strong> - Slack操作</li>
+        <li><strong>Google Sheets</strong> - スプレッドシート操作</li>
+        <li><strong>AI Agent</strong> - AIによる処理</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🔧 処理ノード</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>Set</strong> - データ設定・変換</li>
+        <li><strong>Code</strong> - JavaScript実行</li>
+        <li><strong>IF</strong> - 条件分岐</li>
+        <li><strong>Switch</strong> - 多分岐</li>
+        <li><strong>Loop</strong> - 繰り返し処理</li>
       </ul>
     </div>
   </div>
@@ -5843,38 +5869,52 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="22-%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%A8%E5%BD%B9%E5%89%B2">2.2 ノードの種類と役割</h2>
-<div>  
-  <div class="grid-3">
-    <div>
-      <h4 style="color: var(--rp-iris);">🚀 トリガーノード</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>Manual Trigger</strong> - 手動実行</li>
-        <li><strong>Webhook</strong> - HTTP リクエスト受信</li>
-        <li><strong>Schedule Trigger</strong> - 時間ベース実行</li>
-        <li><strong>Email Trigger</strong> - メール受信</li>
-        <li><strong>File Trigger</strong> - ファイル変更監視</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-foam);">⚡ アクションノード</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>HTTP Request</strong> - API呼び出し</li>
-        <li><strong>Email</strong> - メール送信</li>
-        <li><strong>Slack</strong> - Slack操作</li>
-        <li><strong>Google Sheets</strong> - スプレッドシート操作</li>
-        <li><strong>Database</strong> - DB操作</li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔧 処理ノード</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>Set</strong> - データ設定・変換</li>
-        <li><strong>Code</strong> - JavaScript実行</li>
-        <li><strong>IF</strong> - 条件分岐</li>
-        <li><strong>Switch</strong> - 多分岐</li>
-        <li><strong>Loop</strong> - 繰り返し処理</li>
-      </ul>
+<div>
+  <h3>🎯 よく使用されるノード詳細</h3>
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <div style="overflow-x: auto; max-width: 100%;">
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>ノード名</th>
+            <th>主な用途</th>
+            <th>設定のポイント</th>
+            <th>使用例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Manual Trigger</strong></td>
+            <td>手動実行・テスト</td>
+            <td>シンプルな設定</td>
+            <td>開発・デバッグ時</td>
+          </tr>
+          <tr>
+            <td><strong>HTTP Request</strong></td>
+            <td>API呼び出し</td>
+            <td>URL・メソッド・認証</td>
+            <td>外部サービス連携</td>
+          </tr>
+          <tr>
+            <td><strong>AI Agent</strong></td>
+            <td>AIエージェント機能の提供</td>
+            <td>プロンプトエンジニアリング</td>
+            <td>AIエージェント/AIワークフロー</td>
+          </tr>
+          <tr>
+            <td><strong>IF</strong></td>
+            <td>条件分岐</td>
+            <td>条件式の設定</td>
+            <td>データによる処理切り替え</td>
+          </tr>
+          <tr>
+            <td><strong>Code</strong></td>
+            <td>複雑な処理</td>
+            <td>JavaScript記述</td>
+            <td>カスタムロジック実装</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -6443,54 +6483,37 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<div>
-  <h3>🎯 よく使用されるノード詳細</h3>
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <div style="overflow-x: auto; max-width: 100%;">
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>ノード名</th>
-            <th>主な用途</th>
-            <th>設定のポイント</th>
-            <th>使用例</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Manual Trigger</strong></td>
-            <td>手動実行・テスト</td>
-            <td>シンプルな設定</td>
-            <td>開発・デバッグ時</td>
-          </tr>
-          <tr>
-            <td><strong>HTTP Request</strong></td>
-            <td>API呼び出し</td>
-            <td>URL・メソッド・認証</td>
-            <td>外部サービス連携</td>
-          </tr>
-          <tr>
-            <td><strong>AI Agent</strong></td>
-            <td>AIエージェント機能の提供</td>
-            <td>プロンプトエンジニアリング</td>
-            <td>AIエージェント/AIワークフロー</td>
-          </tr>
-          <tr>
-            <td><strong>IF</strong></td>
-            <td>条件分岐</td>
-            <td>条件式の設定</td>
-            <td>データによる処理切り替え</td>
-          </tr>
-          <tr>
-            <td><strong>Code</strong></td>
-            <td>複雑な処理</td>
-            <td>JavaScript記述</td>
-            <td>カスタムロジック実装</td>
-          </tr>
-        </tbody>
-      </table>
+<h2 id="23-%E9%96%A2%E6%95%B0%E3%81%A8%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E9%96%A2%E9%80%A3%E6%80%A7">2.3 関数とノードの関連性</h2>
+<div >
+  <h3>🔧 関数の基本構造：入力 → 処理 → 出力</h3>
+  <div class="grid-2">
+    <div>
+      <h4>関数の3つの要素</h4>
+      <div style="margin-bottom: 1.5em;">
+        <div style="padding: 0.8em; background: var(--rp-iris-alpha); border-radius: 6px; margin-bottom: 0.8em;">
+          <h5 style="color: var(--rp-iris); margin: 0 0 0.3em 0;">📥 入力 (Input)</h5>
+          <p style="margin: 0; font-size: 0.9em;">関数のパラメータとして受け取るデータ</p>
+        </div>
+        <div style="padding: 0.8em; background: var(--rp-foam-alpha); border-radius: 6px; margin-bottom: 0.8em;">
+          <h5 style="color: var(--rp-foam); margin: 0 0 0.3em 0;">⚙️ 処理 (Processing)</h5>
+          <p style="margin: 0; font-size: 0.9em;">入力データを変換・計算する処理</p>
+        </div>
+        <div style="padding: 0.8em; background: var(--rp-gold-alpha); border-radius: 6px;">
+          <h5 style="color: var(--rp-gold); margin: 0 0 0.3em 0;">📤 出力 (Output)</h5>
+          <p style="margin: 0; font-size: 0.9em;">処理結果を返却するデータ</p>
+        </div>
+      </div>
     </div>
-  </div>
+    <div>
+      <div class="code-example" style="font-size: 1.00em;">
+function calculateDiscount(price, rate) {<br />
+  // 📥 入力: price（価格）, rate（割引率）<br /> 
+  // ⚙️ 処理: 割引計算<br />
+  const discountAmount = price * (rate / 100);<br />
+  const finalPrice = price - discountAmount;<br />
+  // 📤 出力: 計算結果を返却<br />
+  return finalPrice;
+}
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
@@ -7057,37 +7080,12 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="23-%E9%96%A2%E6%95%B0%E3%81%A8%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E9%96%A2%E9%80%A3%E6%80%A7">2.3 関数とノードの関連性</h2>
-<div >
-  <h3>🔧 関数の基本構造：入力 → 処理 → 出力</h3>
-  <div class="grid-2">
-    <div>
-      <h4>関数の3つの要素</h4>
-      <div style="margin-bottom: 1.5em;">
-        <div style="padding: 0.8em; background: var(--rp-iris-alpha); border-radius: 6px; margin-bottom: 0.8em;">
-          <h5 style="color: var(--rp-iris); margin: 0 0 0.3em 0;">📥 入力 (Input)</h5>
-          <p style="margin: 0; font-size: 0.9em;">関数のパラメータとして受け取るデータ</p>
-        </div>
-        <div style="padding: 0.8em; background: var(--rp-foam-alpha); border-radius: 6px; margin-bottom: 0.8em;">
-          <h5 style="color: var(--rp-foam); margin: 0 0 0.3em 0;">⚙️ 処理 (Processing)</h5>
-          <p style="margin: 0; font-size: 0.9em;">入力データを変換・計算する処理</p>
-        </div>
-        <div style="padding: 0.8em; background: var(--rp-gold-alpha); border-radius: 6px;">
-          <h5 style="color: var(--rp-gold); margin: 0 0 0.3em 0;">📤 出力 (Output)</h5>
-          <p style="margin: 0; font-size: 0.9em;">処理結果を返却するデータ</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="code-example" style="font-size: 1.00em;">
-function calculateDiscount(price, rate) {<br />
-  // 📥 入力: price（価格）, rate（割引率）<br /> 
-  // ⚙️ 処理: 割引計算<br />
-  const discountAmount = price * (rate / 100);<br />
-  const finalPrice = price - discountAmount;<br />
-  // 📤 出力: 計算結果を返却<br />
-  return finalPrice;
-}
+<div>
+  <h2>🔗 ノードと関数の関連性</h3>
+  <h3>n8nのノードも関数と同じように入力、処理、出力を行う</h2>
+  <div style="text-align: center; margin-bottom: 2em;">
+    <img src="images/node-function-image.png" alt="ノードと関数の関連性" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
@@ -7654,11 +7652,46 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
+<h2 id="24-%E5%AE%9F%E8%A1%8C%E3%83%A2%E3%83%BC%E3%83%89manualtriggerwebhook">2.4 実行モード（Manual、Trigger、Webhook）</h2>
 <div>
-  <h2>🔗 ノードと関数の関連性</h3>
-  <h3>n8nのノードも関数と同じように入力、処理、出力を行う</h2>
-  <div style="text-align: center; margin-bottom: 2em;">
-    <img src="images/node-function-image.png" alt="ノードと関数の関連性" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <h3>🔄 実行モードの種類</h3>
+  <div class="grid-3">
+    <div>
+      <h4 style="color: var(--rp-iris);">🖱️ Manual（手動）</h4>
+      <ul style="font-size: 0.9em;">
+        <li>開発・テスト時に使用</li>
+        <li>即座に実行される</li>
+        <li>デバッグに最適</li>
+        <li>Manual Triggerノード使用</li>
+      </ul>
+      <div class="highlight-box" style="font-size: 0.8em;">
+        <strong>使用場面</strong>: ワークフロー開発・動作確認・一回限りの処理
+      </div>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-foam);">⏰ Trigger（定期実行）</h4>
+      <ul style="font-size: 0.9em;">
+        <li>スケジュールに基づく実行</li>
+        <li>Cron式での設定</li>
+        <li>定期的なデータ処理</li>
+        <li>Schedule Triggerノード使用</li>
+      </ul>
+      <div class="highlight-box" style="font-size: 0.8em;">
+        <strong>使用場面</strong>: 日次レポート・データ同期・ヘルスチェック
+      </div>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🔗 Webhook（イベント駆動）</h4>
+      <ul style="font-size: 0.9em;">
+        <li>外部からのHTTP リクエスト</li>
+        <li>リアルタイム処理</li>
+        <li>イベント駆動型</li>
+        <li>Webhookノード使用</li>
+      </ul>
+      <div class="highlight-box" style="font-size: 0.8em;">
+        <strong>使用場面</strong>: フォーム送信処理・API連携・通知システム
+      </div>
+    </div>
   </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
@@ -8226,45 +8259,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="24-%E5%AE%9F%E8%A1%8C%E3%83%A2%E3%83%BC%E3%83%89manualtriggerwebhook">2.4 実行モード（Manual、Trigger、Webhook）</h2>
+<h2 id="25-%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%A8%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95">2.5 デバッグとテストの方法</h2>
 <div>
-  <h3>🔄 実行モードの種類</h3>
-  <div class="grid-3">
+  <h3>🐛 効果的なデバッグ手法</h3>
+  <div class="grid-2">
     <div>
-      <h4 style="color: var(--rp-iris);">🖱️ Manual（手動）</h4>
-      <ul style="font-size: 0.9em;">
-        <li>開発・テスト時に使用</li>
-        <li>即座に実行される</li>
-        <li>デバッグに最適</li>
-        <li>Manual Triggerノード使用</li>
-      </ul>
-      <div class="highlight-box" style="font-size: 0.8em;">
-        <strong>使用場面</strong>: ワークフロー開発・動作確認・一回限りの処理
-      </div>
+      <h4>デバッグの基本手順</h4>
+      <ol>
+        <li><strong>単体テスト</strong> - 各ノードを個別にテスト</li>
+        <li><strong>データ確認</strong> - 各段階でのデータ状態確認</li>
+        <li><strong>エラーログ確認</strong> - 詳細なエラー情報の分析</li>
+        <li><strong>段階的実行</strong> - 部分的にワークフローを実行</li>
+        <li><strong>本番テスト</strong> - 実環境での動作確認</li>
+      </ol>
     </div>
     <div>
-      <h4 style="color: var(--rp-foam);">⏰ Trigger（定期実行）</h4>
-      <ul style="font-size: 0.9em;">
-        <li>スケジュールに基づく実行</li>
-        <li>Cron式での設定</li>
-        <li>定期的なデータ処理</li>
-        <li>Schedule Triggerノード使用</li>
+      <h4>デバッグツールの活用</h4>
+      <ul>
+        <li><strong>Execute Node</strong> - 単一ノードの実行</li>
+        <li><strong>Pin Data</strong> - テストデータの固定</li>
+        <li><strong>Execution Log</strong> - 実行履歴の確認</li>
+        <li><strong>JSON Viewer</strong> - データ構造の視覚化</li>
+        <li><strong>Error Information</strong> - エラーの詳細情報</li>
       </ul>
-      <div class="highlight-box" style="font-size: 0.8em;">
-        <strong>使用場面</strong>: 日次レポート・データ同期・ヘルスチェック
-      </div>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔗 Webhook（イベント駆動）</h4>
-      <ul style="font-size: 0.9em;">
-        <li>外部からのHTTP リクエスト</li>
-        <li>リアルタイム処理</li>
-        <li>イベント駆動型</li>
-        <li>Webhookノード使用</li>
-      </ul>
-      <div class="highlight-box" style="font-size: 0.8em;">
-        <strong>使用場面</strong>: フォーム送信処理・API連携・通知システム
-      </div>
     </div>
   </div>
 </div>
@@ -8833,30 +8850,27 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="25-%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%A8%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95">2.5 デバッグとテストの方法</h2>
+<h2 id="26-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">2.6 ワークフローのエクスポート・インポート</h2>
 <div>
-  <h3>🐛 効果的なデバッグ手法</h3>
+  <h3>📤 ワークフローのエクスポート</h3>
   <div class="grid-2">
     <div>
-      <h4>デバッグの基本手順</h4>
-      <ol>
-        <li><strong>単体テスト</strong> - 各ノードを個別にテスト</li>
-        <li><strong>データ確認</strong> - 各段階でのデータ状態確認</li>
-        <li><strong>エラーログ確認</strong> - 詳細なエラー情報の分析</li>
-        <li><strong>段階的実行</strong> - 部分的にワークフローを実行</li>
-        <li><strong>本番テスト</strong> - 実環境での動作確認</li>
-      </ol>
-    </div>
-    <div>
-      <h4>デバッグツールの活用</h4>
+      <h4>エクスポート機能の概要</h4>
       <ul>
-        <li><strong>Execute Node</strong> - 単一ノードの実行</li>
-        <li><strong>Pin Data</strong> - テストデータの固定</li>
-        <li><strong>Execution Log</strong> - 実行履歴の確認</li>
-        <li><strong>JSON Viewer</strong> - データ構造の視覚化</li>
-        <li><strong>Error Information</strong> - エラーの詳細情報</li>
+        <li><strong>JSON形式</strong> - ワークフロー全体をJSON形式で保存</li>
+        <li><strong>設定の保持</strong> - ノード設定・接続情報も含む</li>
+        <li><strong>バージョン管理</strong> - 開発段階の保存</li>
+        <li><strong>バックアップ</strong> - 重要なワークフローの保管</li>
       </ul>
     </div>
+    <div>
+      <h5 style="color: var(--rp-iris); margin-top: 1.5em;">エクスポート手順</h5>
+      <ol style="font-size: 0.9em;">
+        <li>ワークフロー画面右上の <strong>メニュー</strong> をクリック</li>
+        <li><strong>「Export」</strong> を選択</li>
+        <li>エクスポート形式を選択（JSON推奨）</li>
+        <li>ファイルをダウンロード</li>
+      </ol>
   </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
@@ -9424,29 +9438,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="26-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">2.6 ワークフローのエクスポート・インポート</h2>
+<h2 id="27-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">2.7 ワークフローのインポート</h2>
 <div>
-  <h3>📤 ワークフローのエクスポート</h3>
+  <h3>📦 ワークフローの共有と管理</h3>
   <div class="grid-2">
     <div>
-      <h4>エクスポート機能の概要</h4>
+      <h4>インポート機能の概要</h4>
       <ul>
-        <li><strong>JSON形式</strong> - ワークフロー全体をJSON形式で保存</li>
-        <li><strong>設定の保持</strong> - ノード設定・接続情報も含む</li>
-        <li><strong>バージョン管理</strong> - 開発段階の保存</li>
-        <li><strong>バックアップ</strong> - 重要なワークフローの保管</li>
+        <li><strong>ワークフロー復元</strong> - 保存したワークフローを読み込み</li>
+        <li><strong>チーム共有</strong> - 他の開発者とワークフロー共有</li>
+        <li><strong>環境移行</strong> - 開発環境から本番環境への移行</li>
+        <li><strong>テンプレート活用</strong> - 既存のワークフローを元に新規作成</li>
       </ul>
-    </div>
-    <div>
-      <h5 style="color: var(--rp-iris); margin-top: 1.5em;">エクスポート手順</h5>
+      </div>
+      <div>
+      <h5 style="color: var(--rp-foam); margin-top: 1.5em;">インポート手順</h5>
       <ol style="font-size: 0.9em;">
-        <li>ワークフロー画面右上の <strong>メニュー</strong> をクリック</li>
-        <li><strong>「Export」</strong> を選択</li>
-        <li>エクスポート形式を選択（JSON推奨）</li>
-        <li>ファイルをダウンロード</li>
+        <li>ワークフロー一覧画面で <strong>「Import」</strong> をクリック</li>
+        <li>JSONファイルを選択またはテキスト貼り付け</li>
+        <li>ワークフロー名を設定</li>
+        <li><strong>「Import」</strong> で完了</li>
       </ol>
+    </div>
   </div>
-</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -10012,29 +10026,26 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="27-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88">2.7 ワークフローのインポート</h2>
+<h2 id="28-ai-%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9F%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E4%BD%9C%E6%88%90">2.8 AI を活用したワークフロー作成</h2>
 <div>
-  <h3>📦 ワークフローの共有と管理</h3>
+  <h3>🤖 AI でワークフローを自動生成</h3>
   <div class="grid-2">
     <div>
-      <h4>インポート機能の概要</h4>
+      <h4>AI によるワークフロー作成の特徴</h4>
       <ul>
-        <li><strong>ワークフロー復元</strong> - 保存したワークフローを読み込み</li>
-        <li><strong>チーム共有</strong> - 他の開発者とワークフロー共有</li>
-        <li><strong>環境移行</strong> - 開発環境から本番環境への移行</li>
-        <li><strong>テンプレート活用</strong> - 既存のワークフローを元に新規作成</li>
+        <li><strong>自然言語での指示</strong> - 日本語で要求を伝えるだけ</li>
+        <li><strong>自動ノード配置</strong> - 適切なノードを自動選択・配置</li>
+        <li><strong>設定の最適化</strong> - ベストプラクティスに基づく設定</li>
+        <li><strong>時間短縮</strong> - 手動作業を大幅に削減</li>
+        <li><strong>学習効果</strong> - 生成されたワークフローから学習可能</li>
       </ul>
-      </div>
-      <div>
-      <h5 style="color: var(--rp-foam); margin-top: 1.5em;">インポート手順</h5>
-      <ol style="font-size: 0.9em;">
-        <li>ワークフロー一覧画面で <strong>「Import」</strong> をクリック</li>
-        <li>JSONファイルを選択またはテキスト貼り付け</li>
-        <li>ワークフロー名を設定</li>
-        <li><strong>「Import」</strong> で完了</li>
-      </ol>
+              <p style="font-size: 0.8em;">例 : n8nのJSONファイルを出力してください。SlackのApp mentionをトリガーにしてAWS BedrockのAI Agentがユーザからの問合せを回答し、またSlackに返信するワークフローです。</p>
+    </div>
+    <div>
+      <img src="images/n8n-ai-create-image.png" alt="AI Workflow Creation" style="width: 100%; height: 470px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
     </div>
   </div>
+</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -10600,23 +10611,28 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="28-ai-%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9F%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E4%BD%9C%E6%88%90">2.8 AI を活用したワークフロー作成</h2>
+<h1 id="3-credential%E8%AA%8D%E8%A8%BC%E6%83%85%E5%A0%B1%E3%81%AE%E7%AE%A1%E7%90%86">3. Credential（認証情報）の管理</h1>
+<h2 id="31-credential-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B">3.1 Credential とは何か</h2>
 <div>
-  <h3>🤖 AI でワークフローを自動生成</h3>
+  <h3>🔐 Credentialの基本概念</h3>
   <div class="grid-2">
     <div>
-      <h4>AI によるワークフロー作成の特徴</h4>
+      <h4>Credentialとは</h4>
       <ul>
-        <li><strong>自然言語での指示</strong> - 日本語で要求を伝えるだけ</li>
-        <li><strong>自動ノード配置</strong> - 適切なノードを自動選択・配置</li>
-        <li><strong>設定の最適化</strong> - ベストプラクティスに基づく設定</li>
-        <li><strong>時間短縮</strong> - 手動作業を大幅に削減</li>
-        <li><strong>学習効果</strong> - 生成されたワークフローから学習可能</li>
+        <li><strong>認証情報の集約管理</strong> - API キー、トークン、パスワード</li>
+        <li><strong>セキュアな保存</strong> - 暗号化されて保管</li>
+        <li><strong>再利用可能</strong> - 複数のワークフローで共有</li>
+        <li><strong>権限管理</strong> - ユーザーごとのアクセス制御</li>
       </ul>
-              <p style="font-size: 0.8em;">例 : n8nのJSONファイルを出力してください。SlackのApp mentionをトリガーにしてAWS BedrockのAI Agentがユーザからの問合せを回答し、またSlackに返信するワークフローです。</p>
     </div>
     <div>
-      <img src="images/n8n-ai-create-image.png" alt="AI Workflow Creation" style="width: 100%; height: 470px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+      <h4>なぜCredentialが重要なのか</h4>
+      <ul>
+        <li><strong>セキュリティ</strong> - 機密情報の安全な管理</li>
+        <li><strong>効率性</strong> - 一度設定すれば再利用可能</li>
+        <li><strong>メンテナンス性</strong> - 一箇所で更新すれば全体に反映</li>
+        <li><strong>監査性</strong> - アクセス履歴の追跡</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -11185,28 +11201,53 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="3-credential%E8%AA%8D%E8%A8%BC%E6%83%85%E5%A0%B1%E3%81%AE%E7%AE%A1%E7%90%86">3. Credential（認証情報）の管理</h1>
-<h2 id="31-credential-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B">3.1 Credential とは何か</h2>
+<h2 id="32-%E5%90%84%E7%A8%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE-credential-%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95">3.2 各種サービスの Credential 設定方法</h2>
 <div>
-  <h3>🔐 Credentialの基本概念</h3>
-  <div class="grid-2">
+  <h3>🌐 主要サービスのCredential設定</h3>
+  <div class="grid-3">
     <div>
-      <h4>Credentialとは</h4>
-      <ul>
-        <li><strong>認証情報の集約管理</strong> - API キー、トークン、パスワード</li>
-        <li><strong>セキュアな保存</strong> - 暗号化されて保管</li>
-        <li><strong>再利用可能</strong> - 複数のワークフローで共有</li>
-        <li><strong>権限管理</strong> - ユーザーごとのアクセス制御</li>
+      <h4 style="color: var(--rp-iris);">🔑 API Key型</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>OpenAI</strong> - API Key</li>
+        <li><strong>Slack</strong> - Bot User OAuth Token</li>
+        <li><strong>SendGrid</strong> - API Key</li>
+        <li><strong>Pinecone</strong> - API Key</li>
       </ul>
+      <div class="code-example" style="font-size: 0.7em;">
+# 設定例
+API Key: sk-xxx...xxx
+Environment: production
+      </div>
     </div>
     <div>
-      <h4>なぜCredentialが重要なのか</h4>
-      <ul>
-        <li><strong>セキュリティ</strong> - 機密情報の安全な管理</li>
-        <li><strong>効率性</strong> - 一度設定すれば再利用可能</li>
-        <li><strong>メンテナンス性</strong> - 一箇所で更新すれば全体に反映</li>
-        <li><strong>監査性</strong> - アクセス履歴の追跡</li>
+      <h4 style="color: var(--rp-foam);">🔄 OAuth2型</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>Google Sheets</strong> - OAuth2</li>
+        <li><strong>Microsoft 365</strong> - OAuth2</li>
+        <li><strong>GitHub</strong> - OAuth2</li>
+        <li><strong>Salesforce</strong> - OAuth2</li>
       </ul>
+      <div class="code-example" style="font-size: 0.7em;">
+# 設定項目
+Client ID: your-client-id
+Client Secret: your-secret
+Scope: read,write
+      </div>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">🔐 Basic認証型</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>HTTP Basic Auth</strong></li>
+        <li><strong>Legacy APIs</strong></li>
+        <li><strong>Internal Systems</strong></li>
+        <li><strong>Database接続</strong></li>
+      </ul>
+      <div class="code-example" style="font-size: 0.7em;">
+# 設定例
+Username: admin
+Password: secure-password
+Host: api.example.com
+      </div>
     </div>
   </div>
 </div>
@@ -11775,53 +11816,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="32-%E5%90%84%E7%A8%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE-credential-%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95">3.2 各種サービスの Credential 設定方法</h2>
 <div>
-  <h3>🌐 主要サービスのCredential設定</h3>
-  <div class="grid-3">
+  <h3>⚙️ Credential設定の実践手順</h3>
+  <div class="grid-2">
     <div>
-      <h4 style="color: var(--rp-iris);">🔑 API Key型</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>OpenAI</strong> - API Key</li>
-        <li><strong>Slack</strong> - Bot User OAuth Token</li>
-        <li><strong>SendGrid</strong> - API Key</li>
-        <li><strong>Pinecone</strong> - API Key</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.7em;">
-# 設定例
-API Key: sk-xxx...xxx
-Environment: production
-      </div>
+      <h4>設定手順</h4>
+      <ol>
+        <li><strong>Credentialsメニューを開く</strong></li>
+        <li><strong>"Add Credential"をクリック</strong></li>
+        <li><strong>サービスタイプを選択</strong></li>  
+        <li><strong>必要な情報を入力</strong></li>
+        <li><strong>接続テストを実行</strong></li>
+        <li><strong>保存して完了</strong></li>
+      </ol>
     </div>
     <div>
-      <h4 style="color: var(--rp-foam);">🔄 OAuth2型</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>Google Sheets</strong> - OAuth2</li>
-        <li><strong>Microsoft 365</strong> - OAuth2</li>
-        <li><strong>GitHub</strong> - OAuth2</li>
-        <li><strong>Salesforce</strong> - OAuth2</li>
+      <h4>設定時の注意点</h4>
+      <ul>
+        <li><strong>正確な情報入力</strong> - スペースや改行に注意</li>
+        <li><strong>権限スコープ</strong> - 必要最小限の権限設定</li>
+        <li><strong>有効期限確認</strong> - トークンの更新時期</li>
+        <li><strong>テスト実行</strong> - 設定後は必ず動作確認</li>
+        <li><strong>命名規則</strong> - 分かりやすい名前付け</li>
       </ul>
-      <div class="code-example" style="font-size: 0.7em;">
-# 設定項目
-Client ID: your-client-id
-Client Secret: your-secret
-Scope: read,write
-      </div>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">🔐 Basic認証型</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>HTTP Basic Auth</strong></li>
-        <li><strong>Legacy APIs</strong></li>
-        <li><strong>Internal Systems</strong></li>
-        <li><strong>Database接続</strong></li>
-      </ul>
-      <div class="code-example" style="font-size: 0.7em;">
-# 設定例
-Username: admin
-Password: secure-password
-Host: api.example.com
-      </div>
     </div>
   </div>
 </div>
@@ -12390,28 +12407,35 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<div>
-  <h3>⚙️ Credential設定の実践手順</h3>
-  <div class="grid-2">
+<h2 id="33-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E3%83%99%E3%82%B9%E3%83%88%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9">3.3 セキュリティのベストプラクティス</h2>
+<div class="card animated">
+  <h3>🛡️ セキュリティ対策</h3>
+  <div class="grid-3">
     <div>
-      <h4>設定手順</h4>
-      <ol>
-        <li><strong>Credentialsメニューを開く</strong></li>
-        <li><strong>"Add Credential"をクリック</strong></li>
-        <li><strong>サービスタイプを選択</strong></li>  
-        <li><strong>必要な情報を入力</strong></li>
-        <li><strong>接続テストを実行</strong></li>
-        <li><strong>保存して完了</strong></li>
-      </ol>
+      <h4 style="color: var(--rp-iris);">🔒 アクセス制御</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>最小権限の原則</strong></li>
+        <li><strong>役割ベースのアクセス</strong></li>
+        <li><strong>定期的な権限見直し</strong></li>
+        <li><strong>不要な権限の削除</strong></li>
+      </ul>
     </div>
     <div>
-      <h4>設定時の注意点</h4>
-      <ul>
-        <li><strong>正確な情報入力</strong> - スペースや改行に注意</li>
-        <li><strong>権限スコープ</strong> - 必要最小限の権限設定</li>
-        <li><strong>有効期限確認</strong> - トークンの更新時期</li>
-        <li><strong>テスト実行</strong> - 設定後は必ず動作確認</li>
-        <li><strong>命名規則</strong> - 分かりやすい名前付け</li>
+      <h4 style="color: var(--rp-foam);">🔄 定期メンテナンス</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>定期的なローテーション</strong></li>
+        <li><strong>有効期限の管理</strong></li>
+        <li><strong>未使用認証情報の削除</strong></li>
+        <li><strong>セキュリティログの監視</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color: var(--rp-gold);">📊 監査とモニタリング</h4>
+      <ul style="font-size: 0.9em;">
+        <li><strong>アクセスログの記録</strong></li>
+        <li><strong>異常検知アラート</strong></li>
+        <li><strong>使用状況の監視</strong></li>
+        <li><strong>コンプライアンス確認</strong></li>
       </ul>
     </div>
   </div>
@@ -12981,35 +13005,31 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="33-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E3%83%99%E3%82%B9%E3%83%88%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9">3.3 セキュリティのベストプラクティス</h2>
-<div class="card animated">
-  <h3>🛡️ セキュリティ対策</h3>
-  <div class="grid-3">
+<h1 id="4-slack-%E9%80%A3%E6%90%BA%E3%81%AE%E5%AE%9F%E8%A3%85">4. Slack 連携の実装</h1>
+<h2 id="41-slack-credential-%E3%81%AE%E8%A8%AD%E5%AE%9A">4.1 Slack Credential の設定</h2>
+<div>
+  <div class="grid-2">
     <div>
-      <h4 style="color: var(--rp-iris);">🔒 アクセス制御</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>最小権限の原則</strong></li>
-        <li><strong>役割ベースのアクセス</strong></li>
-        <li><strong>定期的な権限見直し</strong></li>
-        <li><strong>不要な権限の削除</strong></li>
-      </ul>
+      <h4>Slack App作成手順</h4>
+      <ol>
+        <li><strong>api.slack.com</strong> にアクセス</li>
+        <li><strong>"Create New App"</strong> をクリック</li>
+        <li><strong>"From scratch"</strong> を選択</li>
+        <li><strong>アプリ名とワークスペース</strong> を設定</li>
+        <li><strong>"OAuth & Permissions"</strong> で権限設定</li>
+        <li><strong>"Install to Workspace"</strong> を実行</li>
+        <li><strong>Bot User OAuth Token</strong> をコピー</li>
+      </ol>
     </div>
     <div>
-      <h4 style="color: var(--rp-foam);">🔄 定期メンテナンス</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>定期的なローテーション</strong></li>
-        <li><strong>有効期限の管理</strong></li>
-        <li><strong>未使用認証情報の削除</strong></li>
-        <li><strong>セキュリティログの監視</strong></li>
-      </ul>
-    </div>
-    <div>
-      <h4 style="color: var(--rp-gold);">📊 監査とモニタリング</h4>
-      <ul style="font-size: 0.9em;">
-        <li><strong>アクセスログの記録</strong></li>
-        <li><strong>異常検知アラート</strong></li>
-        <li><strong>使用状況の監視</strong></li>
-        <li><strong>コンプライアンス確認</strong></li>
+      <h4>必要な権限（Scopes）</h4>
+      <ul>
+        <li><strong>chat:write</strong> - メッセージ送信</li>
+        <li><strong>chat:write.public</strong> - パブリックチャンネル投稿</li>
+        <li><strong>channels:read</strong> - チャンネル情報取得</li>
+        <li><strong>users:read</strong> - ユーザー情報取得</li>
+        <li><strong>files:write</strong> - ファイルアップロード</li>
+        <li><strong>files:read</strong> - ファイル読み取り</li>
       </ul>
     </div>
   </div>
@@ -13579,33 +13599,31 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="4-slack-%E9%80%A3%E6%90%BA%E3%81%AE%E5%AE%9F%E8%A3%85">4. Slack 連携の実装</h1>
-<h2 id="41-slack-credential-%E3%81%AE%E8%A8%AD%E5%AE%9A">4.1 Slack Credential の設定</h2>
+<h2 id="42-%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E9%80%81%E4%BF%A1%E3%81%AE%E5%9F%BA%E6%9C%AC">4.2 メッセージ送信の基本</h2>
 <div>
+  <h3>💬 Slackメッセージ送信の実装</h3>
   <div class="grid-2">
     <div>
-      <h4>Slack App作成手順</h4>
-      <ol>
-        <li><strong>api.slack.com</strong> にアクセス</li>
-        <li><strong>"Create New App"</strong> をクリック</li>
-        <li><strong>"From scratch"</strong> を選択</li>
-        <li><strong>アプリ名とワークスペース</strong> を設定</li>
-        <li><strong>"OAuth & Permissions"</strong> で権限設定</li>
-        <li><strong>"Install to Workspace"</strong> を実行</li>
-        <li><strong>Bot User OAuth Token</strong> をコピー</li>
-      </ol>
-    </div>
-    <div>
-      <h4>必要な権限（Scopes）</h4>
-      <ul>
-        <li><strong>chat:write</strong> - メッセージ送信</li>
-        <li><strong>chat:write.public</strong> - パブリックチャンネル投稿</li>
-        <li><strong>channels:read</strong> - チャンネル情報取得</li>
-        <li><strong>users:read</strong> - ユーザー情報取得</li>
-        <li><strong>files:write</strong> - ファイルアップロード</li>
-        <li><strong>files:read</strong> - ファイル読み取り</li>
-      </ul>
-    </div>
+      <h4>基本的なメッセージ送信</h4>
+      <div class="code-example" style="font-size: 0.8em;">
+<h4 id="%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AA%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">シンプルなテキストメッセージ</h4>
+<p>{<br />
+&quot;channel&quot;: &quot;#general&quot;,<br />
+&quot;text&quot;: &quot;Hello from n8n!&quot;<br />
+}</p>
+</div>
+</div>
+<div>
+<h4>高度なメッセージ機能</h4>
+<ul>
+<li><strong>Markdown 記法</strong> - _太字_、_斜体_、`コード`</li>
+<li><strong>メンション</strong> - @user、@channel</li>
+<li><strong>チャンネルリンク</strong> - #channel-name</li>
+<li><strong>絵文字</strong> - :smile:、:warning:</li>
+<li><strong>URL</strong> - 自動リンク化</li>
+<li><strong>コードブロック</strong> - ```でコード整形</li>
+</ul>
+</div>
   </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
@@ -14173,31 +14191,64 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="42-%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E9%80%81%E4%BF%A1%E3%81%AE%E5%9F%BA%E6%9C%AC">4.2 メッセージ送信の基本</h2>
 <div>
-  <h3>💬 Slackメッセージ送信の実装</h3>
+  <h3>🎨 Block Kit を使用したリッチメッセージ</h3>
+  <div style="margin-bottom: 1em;">
+    <p><strong>参考リンク:</strong></p>
+    <ul>
+      <li><a href="https://api.slack.com/block-kit" target="_blank">Block Kit - Slack API Documentation</a></li>
+      <li><a href="https://app.slack.com/block-kit-builder" target="_blank">Block Kit Builder - Interactive Tool</a></li>
+    </ul>
+  </div>
   <div class="grid-2">
     <div>
-      <h4>基本的なメッセージ送信</h4>
-      <div class="code-example" style="font-size: 0.8em;">
-<h4 id="%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AA%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">シンプルなテキストメッセージ</h4>
-<p>{<br />
-&quot;channel&quot;: &quot;#general&quot;,<br />
-&quot;text&quot;: &quot;Hello from n8n!&quot;<br />
-}</p>
-</div>
-</div>
-<div>
-<h4>高度なメッセージ機能</h4>
-<ul>
-<li><strong>Markdown 記法</strong> - _太字_、_斜体_、`コード`</li>
-<li><strong>メンション</strong> - @user、@channel</li>
-<li><strong>チャンネルリンク</strong> - #channel-name</li>
-<li><strong>絵文字</strong> - :smile:、:warning:</li>
-<li><strong>URL</strong> - 自動リンク化</li>
-<li><strong>コードブロック</strong> - ```でコード整形</li>
-</ul>
-</div>
+      <h4>Block Kit の主要要素</h4>
+      <ul>
+        <li><strong>Section</strong> - テキストと画像の表示</li>
+        <li><strong>Divider</strong> - 区切り線</li>
+        <li><strong>Actions</strong> - ボタンやメニュー</li>
+        <li><strong>Context</strong> - 補足情報</li>
+        <li><strong>Header</strong> - 見出し</li>
+        <li><strong>Image</strong> - 画像表示</li>
+      </ul>
+    </div>
+    <div>
+      <h4>実装例</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "🚨 System Alert"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Status:* Critical\n*Time:* {{ $now }}"
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Acknowledge"
+          },
+          "value": "ack",
+          "action_id": "acknowledge"
+        }
+      ]
+    }
+  ]
+}
+      </div>
+    </div>
   </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
@@ -14765,63 +14816,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
+<h1 id="5-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0">5 プロンプトエンジニアリング</h1>
+<h2 id="51-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E5%9F%BA%E7%A4%8E">5.1 プロンプトエンジニアリングの基礎</h2>
 <div>
-  <h3>🎨 Block Kit を使用したリッチメッセージ</h3>
-  <div style="margin-bottom: 1em;">
-    <p><strong>参考リンク:</strong></p>
-    <ul>
-      <li><a href="https://api.slack.com/block-kit" target="_blank">Block Kit - Slack API Documentation</a></li>
-      <li><a href="https://app.slack.com/block-kit-builder" target="_blank">Block Kit Builder - Interactive Tool</a></li>
-    </ul>
-  </div>
+  <h3>🎯 プロンプトエンジニアリングとは</h3>
   <div class="grid-2">
     <div>
-      <h4>Block Kit の主要要素</h4>
+      <h4>プロンプトエンジニアリングの重要性</h4>
       <ul>
-        <li><strong>Section</strong> - テキストと画像の表示</li>
-        <li><strong>Divider</strong> - 区切り線</li>
-        <li><strong>Actions</strong> - ボタンやメニュー</li>
-        <li><strong>Context</strong> - 補足情報</li>
-        <li><strong>Header</strong> - 見出し</li>
-        <li><strong>Image</strong> - 画像表示</li>
+        <li><strong>精度向上</strong> - より正確な結果を得る</li>
+        <li><strong>一貫性確保</strong> - 安定した出力品質</li>
+        <li><strong>効率化</strong> - 試行錯誤の時間短縮</li>
+        <li><strong>コスト削減</strong> - APIコールの最適化</li>
+        <li><strong>ユーザビリティ</strong> - より使いやすいAI活用</li>
       </ul>
     </div>
     <div>
-      <h4>実装例</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-{
-  "blocks": [
-    {
-      "type": "header",
-      "text": {
-        "type": "plain_text",
-        "text": "🚨 System Alert"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "*Status:* Critical\n*Time:* {{ $now }}"
-      }
-    },
-    {
-      "type": "actions",
-      "elements": [
-        {
-          "type": "button",
-          "text": {
-            "type": "plain_text",
-            "text": "Acknowledge"
-          },
-          "value": "ack",
-          "action_id": "acknowledge"
-        }
-      ]
-    }
-  ]
-}
-      </div>
+      <h4>n8nでの適用場面</h4>
+      <ul>
+        <li><strong>的確な出力</strong> - 出力形式を指定</li>
+        <li><strong>データ変換</strong> - 自然言語での指示</li>
+        <li><strong>コンテンツ生成</strong> - 品質の高い文章作成</li>
+        <li><strong>分析・要約</strong> - 構造化された分析結果</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -15390,33 +15407,41 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="5-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0">5 プロンプトエンジニアリング</h1>
-<h2 id="51-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E5%9F%BA%E7%A4%8E">5.1 プロンプトエンジニアリングの基礎</h2>
+<h2 id="52-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88">5.2 プロンプト設計</h2>
 <div>
-  <h3>🎯 プロンプトエンジニアリングとは</h3>
-  <div class="grid-2">
-    <div>
-      <h4>プロンプトエンジニアリングの重要性</h4>
-      <ul>
-        <li><strong>精度向上</strong> - より正確な結果を得る</li>
-        <li><strong>一貫性確保</strong> - 安定した出力品質</li>
-        <li><strong>効率化</strong> - 試行錯誤の時間短縮</li>
-        <li><strong>コスト削減</strong> - APIコールの最適化</li>
-        <li><strong>ユーザビリティ</strong> - より使いやすいAI活用</li>
-      </ul>
-    </div>
-    <div>
-      <h4>n8nでの適用場面</h4>
-      <ul>
-        <li><strong>OpenAI ノード</strong> - GPTとの対話最適化</li>
-        <li><strong>Claude ノード</strong> - Anthropic AI活用</li>
-        <li><strong>データ変換</strong> - 自然言語での指示</li>
-        <li><strong>コンテンツ生成</strong> - 品質の高い文章作成</li>
-        <li><strong>分析・要約</strong> - 構造化された分析結果</li>
-      </ul>
+  <h3>📝 効果的なプロンプト設計のテクニック</h3>
+  <div>
+    <h4>基本原則</h4>
+    <div class="grid-3">
+      <div>
+        <h5 style="color: var(--rp-iris);">🎯 明確性</h5>
+        <ul style="font-size: 0.9em;">
+          <li>具体的な指示</li>
+          <li>曖昧な表現を避ける</li>
+          <li>期待する結果を明示</li>
+          <li>制約条件の明記</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-foam);">🏗️ 構造化</h5>
+        <ul style="font-size: 0.9em;">
+          <li>段階的な指示</li>
+          <li>論理的な順序</li>
+          <li>セクション分け</li>
+          <li>例示の活用</li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: var(--rp-gold);">🎭 役割定義</h5>
+        <ul style="font-size: 0.9em;">
+          <li>AIの役割を明確化</li>
+          <li>専門性の設定</li>
+          <li>口調・スタイル指定</li>
+          <li>制限事項の設定</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -15982,41 +16007,41 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="52-%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88">5.2 プロンプト設計</h2>
 <div>
-  <h3>📝 効果的なプロンプト設計のテクニック</h3>
-  <div>
-    <h4>基本原則</h4>
-    <div class="grid-3">
-      <div>
-        <h5 style="color: var(--rp-iris);">🎯 明確性</h5>
-        <ul style="font-size: 0.9em;">
-          <li>具体的な指示</li>
-          <li>曖昧な表現を避ける</li>
-          <li>期待する結果を明示</li>
-          <li>制約条件の明記</li>
-        </ul>
-      </div>
-      <div>
-        <h5 style="color: var(--rp-foam);">🏗️ 構造化</h5>
-        <ul style="font-size: 0.9em;">
-          <li>段階的な指示</li>
-          <li>論理的な順序</li>
-          <li>セクション分け</li>
-          <li>例示の活用</li>
-        </ul>
-      </div>
-      <div>
-        <h5 style="color: var(--rp-gold);">🎭 役割定義</h5>
-        <ul style="font-size: 0.9em;">
-          <li>AIの役割を明確化</li>
-          <li>専門性の設定</li>
-          <li>口調・スタイル指定</li>
-          <li>制限事項の設定</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <h3>🛠️ 実践的なプロンプト最適化手法</h3>
+  <div class="grid-2">
+    <div>
+      <h4>Chain of Thought :CoT（思考の連鎖）</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+以下の手順で問題を解決してください：<br /><br />
+1. 問題の理解<br />
+   - 与えられた情報を整理<br />
+   - 解決すべき課題を明確化<br /><br />
+2. 分析の実行<br />
+   - データパターンの特定<br />
+   - 関連性の調査<br /><br />
+3. 結論の導出<br />
+   - 論理的推論に基づく結論<br />
+   - 信頼度の評価<br />
+<br />
+各ステップの思考過程を明示してください。
+</div>
+</div>
+<div>
+<h4> Few-shot prompting</h4>
+<div class="code-example" style="font-size: 0.7em;">
+以下の例を参考に、同様の分析を行ってください：<br /><br />
+例 1:<br />
+入力: {"売上": 100000, "前年比": 1.2}<br />
+出力: {"評価": "好調", "理由": "前年比 20%増"}<br />
+<br />
+例 2:<br />
+入力: {"売上": 80000, "前年比": 0.9}<br />
+出力: {"評価": "課題あり", "理由": "前年比 10%減"}<br />
+<br />
+分析対象:<br />
+{{ $json.sales_data }}
+</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -16582,40 +16607,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
+<h2 id="54-user-prompt-%E3%81%A8-system-message-%E3%81%AE%E5%BD%B9%E5%89%B2">5.4 User Prompt と System Message の役割</h2>
 <div>
-  <h3>🛠️ 実践的なプロンプト最適化手法</h3>
+  <h3>💬 プロンプトの構成要素</h3>
   <div class="grid-2">
     <div>
-      <h4>チェーン・オブ・ソート（思考の連鎖）</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-以下の手順で問題を解決してください：<br /><br />
-1. 問題の理解<br />
-   - 与えられた情報を整理<br />
-   - 解決すべき課題を明確化<br /><br />
-2. 分析の実行<br />
-   - データパターンの特定<br />
-   - 関連性の調査<br /><br />
-3. 結論の導出<br />
-   - 論理的推論に基づく結論<br />
-   - 信頼度の評価<br />
-<br />
-各ステップの思考過程を明示してください。
-</div>
-</div>
-<div>
-<h4>フューショット学習</h4>
-<div class="code-example" style="font-size: 0.7em;">
-以下の例を参考に、同様の分析を行ってください：<br /><br />
-例 1:<br />
-入力: {"売上": 100000, "前年比": 1.2}<br />
-出力: {"評価": "好調", "理由": "前年比 20%増"}<br />
-<br />
-例 2:<br />
-入力: {"売上": 80000, "前年比": 0.9}<br />
-出力: {"評価": "課題あり", "理由": "前年比 10%減"}<br />
-<br />
-分析対象:<br />
-{{ $json.sales_data }}
+      <img src="images/prompt-image.png" alt="User Prompt and System Message" style="width: 100%; height: 480px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+    </div>
+    <div>
+      <h4>System Message の役割</h4>
+      <ul>
+        <li><strong>AIの性格・役割定義</strong> - AIがどのような専門家として振る舞うか</li>
+        <li><strong>制約条件の設定</strong> - 回答の範囲や禁止事項</li>
+        <li><strong>出力形式の指定</strong> - JSONや特定フォーマット指定</li>
+      </ul>
+      <h4>User Prompt の役割</h4>
+      <ul>
+        <li><strong>具体的な質問・要求</strong> - ユーザーが求める情報</li>
+        <li><strong>コンテキスト提供</strong> - 背景情報や状況説明</li>
+        <li><strong>入力データ</strong> - 処理対象となるデータ</li>
+        <li><strong>期待する出力</strong> - 求める結果の明確化</li>
+      </ul>
+    </div>
+  </div>
 </div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
@@ -17182,26 +17196,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="54-user-prompt-%E3%81%A8-system-message-%E3%81%AE%E5%BD%B9%E5%89%B2">5.4 User Prompt と System Message の役割</h2>
+<h1 id="6-structured-output-%E3%81%AE%E6%B4%BB%E7%94%A8">6. Structured Output の活用</h1>
+<h2 id="61-structured-output-%E3%81%A8%E3%81%AF">6.1 Structured Output とは</h2>
 <div>
-  <h3>💬 プロンプトの構成要素</h3>
+  <h3>🏗️ Structured Output の概念</h3>
   <div class="grid-2">
     <div>
-      <img src="images/prompt-image.png" alt="User Prompt and System Message" style="width: 100%; height: 480px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+      <h4>Structured Output の特徴</h4>
+      <ul>
+        <li><strong>構造化されたデータ出力</strong> - 予測可能な形式</li>
+        <li><strong>スキーマ定義</strong> - データ構造の事前定義</li>
+        <li><strong>バリデーション</strong> - データ整合性の確保</li>
+        <li><strong>型安全性</strong> - データ型の保証</li>
+        <li><strong>一貫性</strong> - 出力形式の統一</li>
+      </ul>
     </div>
     <div>
-      <h4>System Message の役割</h4>
+      <h4>活用場面</h4>
       <ul>
-        <li><strong>AIの性格・役割定義</strong> - AIがどのような専門家として振る舞うか</li>
-        <li><strong>制約条件の設定</strong> - 回答の範囲や禁止事項</li>
-        <li><strong>出力形式の指定</strong> - JSONや特定フォーマット指定</li>
-      </ul>
-      <h4>User Prompt の役割</h4>
-      <ul>
-        <li><strong>具体的な質問・要求</strong> - ユーザーが求める情報</li>
-        <li><strong>コンテキスト提供</strong> - 背景情報や状況説明</li>
-        <li><strong>入力データ</strong> - 処理対象となるデータ</li>
-        <li><strong>期待する出力</strong> - 求める結果の明確化</li>
+        <li><strong>API レスポンス</strong> - 一貫したデータ形式</li>
+        <li><strong>データ変換</strong> - 標準化された変換</li>
+        <li><strong>レポート生成</strong> - 定型レポート作成</li>
+        <li><strong>システム連携</strong> - データ交換の標準化</li>
+        <li><strong>エラーハンドリング</strong> - 予測可能なエラー情報</li>
       </ul>
     </div>
   </div>
@@ -17771,30 +17788,69 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="6-structured-output-%E3%81%AE%E6%B4%BB%E7%94%A8">6. Structured Output の活用</h1>
-<h2 id="61-structured-output-%E3%81%A8%E3%81%AF">6.1 Structured Output とは</h2>
+<h2 id="62-json-%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E5%AE%9A%E7%BE%A9">6.2 JSON スキーマの定義</h2>
 <div>
-  <h3>🏗️ Structured Output の概念</h3>
+  <h3>📋 JSON スキーマの作成</h3>
   <div class="grid-2">
     <div>
-      <h4>Structured Output の特徴</h4>
-      <ul>
-        <li><strong>構造化されたデータ出力</strong> - 予測可能な形式</li>
-        <li><strong>スキーマ定義</strong> - データ構造の事前定義</li>
-        <li><strong>バリデーション</strong> - データ整合性の確保</li>
-        <li><strong>型安全性</strong> - データ型の保証</li>
-        <li><strong>一貫性</strong> - 出力形式の統一</li>
-      </ul>
+      <h4>基本的なスキーマ構造</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "name", "email"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 150
+    }
+  }
+}
+      </div>
     </div>
     <div>
-      <h4>活用場面</h4>
-      <ul>
-        <li><strong>API レスポンス</strong> - 一貫したデータ形式</li>
-        <li><strong>データ変換</strong> - 標準化された変換</li>
-        <li><strong>レポート生成</strong> - 定型レポート作成</li>
-        <li><strong>システム連携</strong> - データ交換の標準化</li>
-        <li><strong>エラーハンドリング</strong> - 予測可能なエラー情報</li>
-      </ul>
+      <h4>複雑なスキーマ例</h4>
+      <div class="code-example" style="font-size: 0.7em;">
+{
+  "type": "object",
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "profile": { "$ref": "#/definitions/Profile" },
+        "preferences": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "birthDate": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}
+      </div>
     </div>
   </div>
 </div>
@@ -18363,72 +18419,32 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="62-json-%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E5%AE%9A%E7%BE%A9">6.2 JSON スキーマの定義</h2>
+<h1 id="7-pinecone-%E3%81%AB%E3%82%88%E3%82%8B-rag-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">7. Pinecone による RAG システム</h1>
+<h2 id="71-rag-%E3%81%A8%E3%81%AF">7.1 RAG とは</h2>
 <div>
-  <h3>📋 JSON スキーマの作成</h3>
+  <h3>🧠 RAG (Retrieval-Augmented Generation) の概要</h3>
   <div class="grid-2">
     <div>
-      <h4>基本的なスキーマ構造</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "required": ["id", "name", "email"],
-  "properties": {
-    "id": {
-      "type": "integer",
-      "minimum": 1
-    },
-    "name": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 100
-    },
-    "email": {
-      "type": "string",
-      "format": "email"
-    },
-    "age": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 150
-    }
-  }
-}
-      </div>
+      <h4>RAG とは何か</h4>
+      <ul>
+        <li><strong>検索拡張生成</strong> - Retrieval-Augmented Generation</li>
+        <li><strong>外部知識の活用</strong> - LLMの知識を補完</li>
+        <li><strong>リアルタイム情報</strong> - 最新データの活用</li>
+        <li><strong>幻覚の抑制</strong> - 根拠のある回答生成</li>
+        <li><strong>専門知識対応</strong> - 特定分野の詳細情報</li>
+      </ul>
     </div>
     <div>
-      <h4>複雑なスキーマ例</h4>
-      <div class="code-example" style="font-size: 0.7em;">
-{
-  "type": "object",
-  "properties": {
-    "user": {
-      "type": "object",
-      "properties": {
-        "profile": { "$ref": "#/definitions/Profile" },
-        "preferences": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      }
-    }
-  },
-  "definitions": {
-    "Profile": {
-      "type": "object",
-      "properties": {
-        "firstName": { "type": "string" },
-        "lastName": { "type": "string" },
-        "birthDate": { "type": "string", "format": "date" }
-      }
-    }
-  }
-}
-      </div>
+      <h4>RAG システムの仕組み</h4>
+      <ul>
+        <li><strong>Step 1</strong> - ユーザーの質問を受信</li>
+        <li><strong>Step 2</strong> - 関連文書をベクトル検索</li>
+        <li><strong>Step 3</strong> - 検索結果をコンテキストとして追加</li>
+        <li><strong>Step 4</strong> - LLMが拡張された情報で回答生成</li>
+        <li><strong>Step 5</strong> - 根拠と共に回答を返却</li>
+      </ul>
     </div>
   </div>
-</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -18994,32 +19010,29 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h1 id="7-pinecone-%E3%81%AB%E3%82%88%E3%82%8B-rag-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">7. Pinecone による RAG システム</h1>
-<h2 id="71-rag-%E3%81%A8%E3%81%AF">7.1 RAG とは</h2>
+<h2 id="72-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%81%A8%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E9%A1%9E%E4%BC%BC%E5%BA%A6">7.2 ベクトル検索とコサイン類似度</h2>
 <div>
-  <h3>🧠 RAG (Retrieval-Augmented Generation) の概要</h3>
+  <h3>🔍 ベクトル検索の仕組み</h3>
   <div class="grid-2">
     <div>
-      <h4>RAG とは何か</h4>
-      <ul>
-        <li><strong>検索拡張生成</strong> - Retrieval-Augmented Generation</li>
-        <li><strong>外部知識の活用</strong> - LLMの知識を補完</li>
-        <li><strong>リアルタイム情報</strong> - 最新データの活用</li>
-        <li><strong>幻覚の抑制</strong> - 根拠のある回答生成</li>
-        <li><strong>専門知識対応</strong> - 特定分野の詳細情報</li>
-      </ul>
+      <img src="images/graph-image.png" alt="Vector Search and Cosine Similarity" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
     </div>
     <div>
-      <h4>RAG システムの仕組み</h4>
+      <h4>ベクトル検索とは</h4>
       <ul>
-        <li><strong>Step 1</strong> - ユーザーの質問を受信</li>
-        <li><strong>Step 2</strong> - 関連文書をベクトル検索</li>
-        <li><strong>Step 3</strong> - 検索結果をコンテキストとして追加</li>
-        <li><strong>Step 4</strong> - LLMが拡張された情報で回答生成</li>
-        <li><strong>Step 5</strong> - 根拠と共に回答を返却</li>
+        <li><strong>数値ベクトル化</strong> - テキストを高次元数値に変換</li>
+        <li><strong>意味的類似性</strong> - 文字列ではなく意味で検索</li>
+        <li><strong>エンベディング</strong> - AIモデルによる特徴量抽出</li>
+        <li><strong>高速検索</strong> - 近似最近傍探索アルゴリズム</li>
       </ul>
-    </div>
+      <h4>コサイン類似度</h4>
+      <ul>
+        <li><strong>角度による類似性</strong> - ベクトル間の角度を測定</li>
+        <li><strong>-1から1の値</strong> - 1に近いほど類似</li>
+        <li><strong>長さに非依存</strong> - 文書の長さに影響されない</li>
+      </ul>
   </div>
+</div>
 <footer>©2025 n8n実践編勉強会 - 自動化ワークフロー構築</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-footer="©2025 n8n実践編勉強会 - 自動化ワークフロー構築" data-theme="default" data-lang="ja" data-style="/* Rosé Pine カラーパレット */
@@ -19585,7 +19598,7 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="72-rag-%E3%81%AE%E5%88%A9%E7%82%B9">7.2 RAG の利点</h2>
+<h2 id="73-rag-%E3%81%AE%E5%88%A9%E7%82%B9">7.3 RAG の利点</h2>
   <div style="margin-top: 1.5em;">
     <h3>RAGの活用</h4>
     <div class="grid-3">
@@ -20181,7 +20194,7 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="73-pinecone-%E3%81%A8%E3%81%AF">7.3 Pinecone とは</h2>
+<h2 id="74-pinecone-%E3%81%A8%E3%81%AF">7.4 Pinecone とは</h2>
 <div>
   <h3>🌲 Pinecone ベクトルデータベースの概要</h3>
   <div class="grid-2">
@@ -20772,7 +20785,7 @@ ol li::marker {
   margin: 1em 0;
 }
 ;" data-marpit-pagination-total="39">
-<h2 id="74-text-embeddings-%E3%81%AE%E5%AE%9F%E8%A3%85">7.4 Text Embeddings の実装</h2>
+<h2 id="75-text-embeddings-%E3%81%AE%E5%AE%9F%E8%A3%85">7.5 Text Embeddings の実装</h2>
 <div>
   <h3>📊 Amazon Titan Text Embeddings v2 の活用</h3>
   <div class="grid-2">

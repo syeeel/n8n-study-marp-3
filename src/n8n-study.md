@@ -319,10 +319,10 @@ style: |
 
 <div class="card animated">
   <ol start="5">
+    <li><strong>プロンプトエンジニアリング</strong> - 効果的なプロンプト設計・System Message活用</li>
     <li><strong>Structured Outputの活用</strong> - JSONスキーマ・バリデーション</li>
-    <li><strong>PineconeによるRAG</strong> - ベクトル検索・LLM連携</li>
-    <li><strong>エラーハンドリング</strong> - デバッグ・最適化</li>
-    <li><strong>実用的なワークフロー例</strong> - 具体的な実装例</li>
+    <li><strong>PineconeによるRAGシステム</strong> - ベクトル検索・LLM連携・Text Embeddings</li>
+    <li><strong>実習・演習</strong> - ハンズオン形式での実践演習</li>
   </ol>
 </div>
 
@@ -353,6 +353,7 @@ style: |
         <li><strong>データ処理</strong> - 変換・集計・分析</li>
         <li><strong>通知システム</strong> - アラート・レポート</li>
         <li><strong>業務自動化</strong> - 反復作業の自動化</li>
+        <li><strong>AIエージェント作成</strong> - 業務のAI化</li>
       </ul>
     </div>
   </div>
@@ -529,7 +530,7 @@ Tab          # ノード検索<br>
         <li><strong>Email</strong> - メール送信</li>
         <li><strong>Slack</strong> - Slack操作</li>
         <li><strong>Google Sheets</strong> - スプレッドシート操作</li>
-        <li><strong>Database</strong> - DB操作</li>
+        <li><strong>AI Agent</strong> - AIによる処理</li>
       </ul>
     </div>
     <div>
@@ -1118,8 +1119,7 @@ Host: api.example.com
     <div>
       <h4>n8nでの適用場面</h4>
       <ul>
-        <li><strong>OpenAI ノード</strong> - GPTとの対話最適化</li>
-        <li><strong>Claude ノード</strong> - Anthropic AI活用</li>
+        <li><strong>的確な出力</strong> - 出力形式を指定</li>
         <li><strong>データ変換</strong> - 自然言語での指示</li>
         <li><strong>コンテンツ生成</strong> - 品質の高い文章作成</li>
         <li><strong>分析・要約</strong> - 構造化された分析結果</li>
@@ -1175,7 +1175,7 @@ Host: api.example.com
   
   <div class="grid-2">
     <div>
-      <h4>チェーン・オブ・ソート（思考の連鎖）</h4>
+      <h4>Chain of Thought :CoT（思考の連鎖）</h4>
       <div class="code-example" style="font-size: 0.7em;">
 以下の手順で問題を解決してください：<br><br>
 1. 問題の理解<br>
@@ -1193,7 +1193,7 @@ Host: api.example.com
 </div>
 </div>
 <div>
-<h4>フューショット学習</h4>
+<h4> Few-shot prompting</h4>
 <div class="code-example" style="font-size: 0.7em;">
 以下の例を参考に、同様の分析を行ってください：<br><br>
 例 1:<br>
@@ -1376,7 +1376,35 @@ Host: api.example.com
 
 ---
 
-## 7.2 RAG の利点
+## 7.2 ベクトル検索とコサイン類似度
+
+<div>
+  <h3>🔍 ベクトル検索の仕組み</h3>
+  
+  <div class="grid-2">
+    <div>
+      <img src="images/graph-image.png" alt="Vector Search and Cosine Similarity" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+    <div>
+      <h4>ベクトル検索とは</h4>
+      <ul>
+        <li><strong>数値ベクトル化</strong> - テキストを高次元数値に変換</li>
+        <li><strong>意味的類似性</strong> - 文字列ではなく意味で検索</li>
+        <li><strong>エンベディング</strong> - AIモデルによる特徴量抽出</li>
+        <li><strong>高速検索</strong> - 近似最近傍探索アルゴリズム</li>
+      </ul>
+      <h4>コサイン類似度</h4>
+      <ul>
+        <li><strong>角度による類似性</strong> - ベクトル間の角度を測定</li>
+        <li><strong>-1から1の値</strong> - 1に近いほど類似</li>
+        <li><strong>長さに非依存</strong> - 文書の長さに影響されない</li>
+      </ul>
+  </div>
+</div>
+
+---
+
+## 7.3 RAG の利点
 
   <div style="margin-top: 1.5em;">
     <h3>RAGの活用</h4>
@@ -1411,7 +1439,7 @@ Host: api.example.com
 
 ---
 
-## 7.3 Pinecone とは
+## 7.4 Pinecone とは
 
 <div>
   <h3>🌲 Pinecone ベクトルデータベースの概要</h3>
@@ -1442,7 +1470,7 @@ Host: api.example.com
 
 ---
 
-## 7.4 Text Embeddings の実装
+## 7.5 Text Embeddings の実装
 
 <div>
   <h3>📊 Amazon Titan Text Embeddings v2 の活用</h3>
